@@ -55,7 +55,7 @@
           <li class="temporary-subheaders"><a href="#joinUs">Join Us</a></li>
           <li class="temporary-subheaders"><a href="#ourTeam">Our Team</a></li>
           <li><a href={{ route('gallery') }}>Gallery</a></li>
-          <li><a href="#">Contacts</a></li>
+          <li><a href="#">Community</a></li>
     
           <li class="mobile-socialMedia mobileLogIn">
 
