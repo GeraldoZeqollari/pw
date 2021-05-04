@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PostController;
+
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\UserPostController;
 use App\Http\Controllers\Auth\LoginController;
@@ -38,10 +39,14 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/posts', [PostController::class, 'index'])->name('posts');
-Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
-Route::post('/posts', [PostController::class, 'store']);
-Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
+Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
+Route::post('/feedback', [FeedbackController::class, 'store']);
 
-Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes');
-Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->name('posts.likes');
+//Route::get('/feedback/{post}', [FeedbackController::class, 'show'])->name('feedback.show');
+
+
+
+// Route::delete('/feedback/{post}', [FeedbackController::class, 'destroy'])->name('feedback.destroy');
+
+// Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes');
+// Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->name('posts.likes');

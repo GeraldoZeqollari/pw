@@ -6,7 +6,7 @@ use App\Models\Like;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Post extends Model
+class Feedback extends Model
 {
     use HasFactory;
 

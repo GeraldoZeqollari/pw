@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Like;
+use App\Models\Feedback;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -46,9 +47,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function posts()
+    public function feedbacks()
     {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(Feedback::class);
     }
 
     public function likes()

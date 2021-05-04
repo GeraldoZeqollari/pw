@@ -4,7 +4,7 @@
     <div class="flex justify-center">
         <div class="w-8/12 bg-white p-6 rounded-lg">
             @auth
-                <form action="{{ route('posts') }}" method="post" class="mb-4">
+                <form action="{{ route('feedbacks') }}" method="post" class="mb-4">
                     @csrf
                     <div class="mb-4">
                         <label for="body" class="sr-only">Body</label>
@@ -18,17 +18,17 @@
                     </div>
 
                     <div>
-                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded font-medium">Post</button>
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded font-medium">Feedback</button>
                     </div>
                 </form>
             @endauth
 
             @if ($posts->count())
-                @foreach ($posts as $post)
-                    <x-post :post="$post" />
+                @foreach ($feedbacks as $feedback)
+                    <x-feedback :feedback="$feedback" />
                 @endforeach
 
-                {{ $posts->links() }}
+                {{ $feedback->links() }}
             @else
                 <p>There are no posts</p>
             @endif

@@ -2,29 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\Feedback;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class FeedbackController extends Controller
 {
     public function __construct()
     {
         $this->middleware(['auth'])->only(['store', 'destroy']);
     }
-    
+
     public function index()
     {
-        $posts = Post::latest()->with(['user', 'likes'])->paginate(20);
+        $feedbacks = Feedback::latest()->with(['user', 'likes'])->paginate(20);
 
-        return view('posts.index', [
-            'posts' => $posts
+        return view('feedbacks.index', [
+            'feedbacks' => $feedbacks
         ]);
     }
 
-    public function show(Post $post)
+    public function show(Feedback $feedback)
     {
-        return view('posts.show', [
-            'post' => $post
+        return view('feedbacks.show', [
+            'feedback' => $feedback
         ]);
     }
 
@@ -39,11 +39,11 @@ class PostController extends Controller
         return back();
     }
 
-    public function destroy(Post $post)
+    public function destroy(Feedback $feedback)
     {
-        $this->authorize('delete', $post);
+        $this->authorize('delete', $feedback);
 
-        $post->delete();
+        $feedback->delete();
 
         return back();
     }
