@@ -52,13 +52,13 @@ class User extends Authenticatable
         return $this->hasMany(Feedback::class);
     }
 
-    public function likes()
-    {
-        return $this->hasMany(Like::class);
-    }
+    // public function likes()
+    // {
+    //     return $this->hasMany(Like::class);
+    // }
 
-    public function receivedLikes()
-    {
-        return $this->hasManyThrough(Like::class, Post::class);
-    }
+    // public function receivedLikes()
+    // {
+    //     return $this->hasManyThrough(Like::class, Feedback::class);
+    // }
 }

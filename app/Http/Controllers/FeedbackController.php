@@ -7,44 +7,22 @@ use Illuminate\Http\Request;
 
 class FeedbackController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware(['auth'])->only(['store', 'destroy']);
-    }
+   public function index(){
 
-    public function index()
-    {
-        $feedbacks = Feedback::latest()->with(['user', 'likes'])->paginate(20);
+        $feedbacks=Feedback::paginate(2);
+       return view('feedbacks.feedbackform', [
+           'feedbacks'=>$feedbacks
+       ]);
+   }
 
-        return view('feedbacks.index', [
-            'feedbacks' => $feedbacks
-        ]);
-    }
+   public function store(Request $request){
 
-    public function show(Feedback $feedback)
-    {
-        return view('feedbacks.show', [
-            'feedback' => $feedback
-        ]);
-    }
+    $this->validate($request, [
+        'body' => 'required'
+    ]);
+       
+    $request->user()->feedbacks()->create($request->only('body'));
 
-    public function store(Request $request)
-    {
-        $this->validate($request, [
-            'body' => 'required'
-        ]);
-
-        $request->user()->posts()->create($request->only('body'));
-
-        return back();
-    }
-
-    public function destroy(Feedback $feedback)
-    {
-        $this->authorize('delete', $feedback);
-
-        $feedback->delete();
-
-        return back();
-    }
+    return back();
+   }
 }
