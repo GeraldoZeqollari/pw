@@ -4,7 +4,7 @@
 <section class="container-first">
     <div class="container-first-text">
       <h1 class="container1-title">
-        Who are the biggest bitches of animal world Cats are!
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, in.
       </h1>
 
       <p class="container1-txt">Wanna find out more stuff about cats?</p>
