@@ -9,7 +9,7 @@ class FeedbackController extends Controller
 {
    public function index(){
 
-        $feedbacks=Feedback::paginate(2);
+        $feedbacks=Feedback::paginate(5);
        return view('feedbacks.feedbackform', [
            'feedbacks'=>$feedbacks
        ]);

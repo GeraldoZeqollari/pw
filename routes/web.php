@@ -10,9 +10,26 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 
 
-Route::get('/gallery', function () {
-    return view('pages.gallery');
-})->name('gallery');
+Route::get('/gallery/modern art', function () {
+    return view('pages.gallery.modernart');
+})->name('modernart');
+
+Route::get('/gallery/realism', function () {
+    return view('pages.gallery.realism');
+})->name('realism');
+
+Route::get('/gallery/medieval art', function () {
+    return view('pages.gallery.medievalart');
+})->name('medievalart');
+
+
+Route::get('/gallery/baroque', function () {
+    return view('pages.gallery.baroque');
+})->name('baroque');
+
+Route::get('/#ourGoal', function () {
+    return view('home');
+})->name('ourGoal');
 
 Route::get('/join us', function () {
     return view('pages.joinus');

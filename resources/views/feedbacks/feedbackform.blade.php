@@ -60,11 +60,11 @@
         
             @endauth
 
-
+        <div class="@guest reviews-pt @endguest">
         @if ($feedbacks->count())
             @foreach ($feedbacks as $feedback)
                 <div class="reviews">
-                    <a href=""> {{ $feedback->user->email }} </a>
+                    <a href=""> {{ $feedback->user->username }} </a>
                     <span>{{ $feedback->created_at->diffForHumans() }}</span>
                     <p>{{ $feedback->body }}</p>
                 </div>
@@ -76,7 +76,7 @@
                 <h1>There are no reviews yet</h1>
             </div>
         @endif
-
+        </div>
     </div>
 
 @endsection

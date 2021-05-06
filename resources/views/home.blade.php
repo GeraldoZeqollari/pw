@@ -19,7 +19,7 @@
     <div class="category-row">
       <div class="category-title">
         <h1>Modern Art</h1>
-        <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+        <a href={{route('modernart')}}>Read More <i class="fas fa-angle-double-right"></i></a>
       </div>
       <div class="category-img">
         <img src="../images/big-cat.jpg" width="100%" alt="" />
@@ -34,7 +34,7 @@
     <div class="category-row">
       <div class="category-title">
         <h1>Realism</h1>
-        <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+        <a href={{route('realism')}}>Read More <i class="fas fa-angle-double-right"></i></a>
       </div>
       <div class="category-img">
         <img src="../images/big-cat.jpg" width="100%" alt="" />
@@ -49,7 +49,7 @@
     <div class="category-row loadMore">
       <div class="category-title">
         <h1>Medieval Art</h1>
-        <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+        <a href={{route('medievalart')}}>Read More <i class="fas fa-angle-double-right"></i></a>
       </div>
       <div class="category-img">
         <img src="../images/big-cat.jpg" width="100%" alt="" />
@@ -64,7 +64,7 @@
     <div class="category-row loadMore">
       <div class="category-title">
         <h1>Baroque</h1>
-        <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+        <a href={{route('baroque')}}>Read More <i class="fas fa-angle-double-right"></i></a>
       </div>
       <div class="category-img">
         <img src="../images/big-cat.jpg" width="100%" alt="" />
