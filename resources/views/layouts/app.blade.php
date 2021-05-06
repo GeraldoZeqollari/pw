@@ -86,11 +86,22 @@
     </div>
     <div class="logIn">
       @auth
-      {{-- <form action="{{ route('logout') }}" method="POST">
-      @csrf
-      <button type="submit" class="logout-button">Log Out</button>
-      </form> --}}
-      <a> <i class="fas fa-user"></i></a>
+      <i class="fas fa-user user_icon"></i>
+{{--  onclick='user_submenu()' --}}
+      <div class="user_dropdown">
+        <ul>
+          <a href=""><li><i class="fas fa-user-circle"></i> My Profile</li></a>
+          <a href=""><li><i class="fas fa-user-cog"></i> Edit Profile</li></a>
+          <a href=""><li><i class="fas fa-question-circle"></i>Report bug</li></a>
+          {{-- <li><i class="fas fa-sign-out-alt"></i>
+          
+          </li> --}}
+          <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button id="user_btn" type="submit" class="logout-button">Log Out</button>
+            </form>
+        </ul>
+      </div>
 
       @endauth
 
