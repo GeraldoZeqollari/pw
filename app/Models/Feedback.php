@@ -9,12 +9,15 @@ class Feedback extends Model
 {
     use HasFactory;
 
-    protected $fillable=[
-        'body'
+    protected $fillable = [
+        'body',
+        'feedback_icon',
+        'feedback_type',
     ];
 
-    public function user(){
-        
+    public function user()
+    {
+
         return $this->belongsTo(User::class);
     }
 }

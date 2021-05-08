@@ -18,6 +18,8 @@ class CreateFeedbackTable extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->text('body');
             $table->timestamps();
+            $table->string('feedback_icon');
+            $table->string('feedback_type');
         });
     }
 
