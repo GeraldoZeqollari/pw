@@ -92,7 +92,7 @@
         <ul>
           <a href=""><li><i class="fas fa-user-circle"></i> My Profile</li></a>
           <a href=""><li><i class="fas fa-user-cog"></i> Edit Profile</li></a>
-          <a href=""><li><i class="fas fa-question-circle"></i>Report bug</li></a>
+          <a href={{ route('reportBug')}}><li><i class="fas fa-question-circle"></i>Report bug</li></a>
           {{-- <li><i class="fas fa-sign-out-alt"></i>
           
           </li> --}}
@@ -137,6 +137,10 @@
   @yield('gallery_realism')
   @yield('gallery_medieval')
   @yield('gallery_baroque')
+  @yield('artDetail')
+  @yield('reportBug')
+
+
   <footer class="footer">
     <div class="container">
       <div class="footer-row">

@@ -33,7 +33,7 @@ nav a {
 }
 nav .logo {
   color: #202020;
-  font-size: 44px;
+  font-size: 34px;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: bolder;
@@ -155,7 +155,7 @@ nav .logIn a {
   color: #202020;
   text-decoration: none;
   letter-spacing: 2px;
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
   position: relative;
   transition: all 200ms ease-in;
@@ -1383,6 +1383,20 @@ NEWS
 .login_container .main_holder .register-form {
   padding-top: 20px;
 }
+.login_container .main_holder_bug {
+  height: auto;
+  min-height: 0px;
+  padding-bottom: 30px;
+}
+.login_container .main_holder_bug textarea {
+  margin: 30px 0px;
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  border: 2px solid black;
+  background-color: transparent;
+  resize: none;
+}
 
 .error-form {
   color: red;
@@ -1810,6 +1824,64 @@ NEWS
 
 .pagination li:first-child {
   border-left-width: 1px;
+}
+
+.art_details {
+  padding-top: 105px;
+  width: min(90%, 100rem);
+  margin-inline: auto;
+}
+@media (max-width: 768px) {
+  .art_details {
+    width: 95%;
+  }
+}
+.art_details__img {
+  display: flex;
+  justify-content: center;
+}
+.art_details__img img {
+  min-width: 200px;
+}
+.art_details__desc__header {
+  display: flex;
+  margin-top: 50px;
+  border-top: 2px solid gray;
+  align-items: center;
+  position: relative;
+}
+.art_details__desc__header__title {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", "sans-serif";
+}
+.art_details__desc__header a {
+  text-decoration: none;
+  color: black;
+}
+.art_details__desc__header i {
+  font-size: 40px;
+  cursor: pointer;
+}
+.art_details__desc__header .pl {
+  padding-left: 50px;
+}
+.art_details__desc__header .fa-cart-arrow-down {
+  padding-left: 20px;
+}
+.art_details__desc__header .download_btn {
+  position: absolute;
+  right: 50px;
+}
+.art_details__desc__description p {
+  font-family: "Open Sans", "sans-serif";
+}
+.art_details__desc__data {
+  margin-top: 30px;
+  font-family: "Open Sans", "sans-serif";
+}
+.art_details__desc__data ul {
+  list-style-type: none;
 }
 
 *,

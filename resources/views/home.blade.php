@@ -9,7 +9,7 @@
 
       <p class="container1-txt">Wanna find out more stuff about cats?</p>
 
-      <a href="#" class="button-type button-type-white"> Learn More </a>
+      {{-- <a href="#" class="button-type button-type-white"> Learn More </a> --}}
     </div>
   </section>
 
