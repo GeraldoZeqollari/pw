@@ -18,6 +18,10 @@ Route::get('/art details', function () {
     return view('pages.artdetail');
 })->name('art_detail');
 
+Route::get('/account settings', function () {
+    return view('pages.usersettings');
+})->name('user_settings');
+
 Route::get('/report bug', function () {
     return view('pages.reportbug');
 })->name('reportBug');

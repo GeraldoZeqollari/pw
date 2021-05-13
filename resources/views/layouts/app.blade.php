@@ -91,7 +91,7 @@
       <div class="user_dropdown">
         <ul>
           <a href=""><li><i class="fas fa-user-circle"></i> My Profile</li></a>
-          <a href=""><li><i class="fas fa-user-cog"></i> Edit Profile</li></a>
+          <a href={{ route('user_settings') }}><li><i class="fas fa-user-cog"></i> Edit Profile</li></a>
           <a href={{ route('reportBug')}}><li><i class="fas fa-question-circle"></i>Report bug</li></a>
           {{-- <li><i class="fas fa-sign-out-alt"></i>
           
@@ -139,6 +139,7 @@
   @yield('gallery_baroque')
   @yield('artDetail')
   @yield('reportBug')
+  @yield('userSettings')
 
 
   <footer class="footer">
