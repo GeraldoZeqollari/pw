@@ -67,7 +67,9 @@
         margin-left: 10px;
         width: 80%;
         &__accountDetails,
-        &__paymentDetails {
+        &__paymentDetails,
+        &__favorited,
+        &__security {
             border: 1px solid black;
             padding: 30px;
             display: flex;
@@ -184,6 +186,7 @@
                 justify-content: center;
                 margin-top: 30px;
                 width: 100%;
+                cursor: pointer;
 
                 input {
                     width: 200px;
@@ -346,7 +349,173 @@
             }
 
             .mt {
-                margin-top: 20px;
+                margin-top: 15px;
+            }
+        }
+
+        &__favorited {
+            min-height: 280px;
+            &::after {
+                top: 93px;
+
+                @include mediaQ(phone) {
+                    top: 153px;
+                }
+            }
+
+            .no_fav {
+                // display: none;
+                h1 {
+                    font-family: v.$HeaderFont;
+                    font-size: 22px;
+                    text-align: center;
+                }
+            }
+
+            .fav_flexbox {
+                // border: 2px solid red;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                gap: 5px 10px;
+                // grid-template-areas: ". . .";
+
+                @include mediaQ(laptop) {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+
+                @include mediaQ(phone) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @include mediaQ(s-phone) {
+                    grid-template-columns: 1fr;
+                }
+                &__img {
+                    // width: 200px;
+                    // display: flex;
+                    // height: 200px;
+                    // border: 2px solid red;
+
+                    img {
+                        width: 100%;
+                        transition: all 0.5s ease;
+                        &:hover {
+                            transform: scale(1.08);
+
+                            @include mediaQ(phone) {
+                                transform: scale(1.04);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__security {
+            min-height: 360px;
+            min-width: 600px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            // width: 200px;
+            // border: 2px solid red;
+            &::after {
+                top: 133px;
+
+                @include mediaQ(phone) {
+                    top: 153px;
+                }
+            }
+
+            .deactivate_btn {
+                position: absolute;
+                right: 30px;
+                bottom: 30px;
+            }
+
+            .break {
+                margin: 10px 0px;
+            }
+
+            .current_pw {
+                display: flex;
+
+                a {
+                    @include buttonType(
+                        rgb(0, 0, 0),
+                        v.$HeaderFont,
+                        2px solid black,
+                        rgb(255, 255, 255),
+                        220px,
+                        14px
+                    );
+                    padding: 10px 12px;
+                    align-self: flex-start;
+
+                    &:hover {
+                        background-color: red;
+                        border: 2px solid red;
+                        color: white;
+                    }
+                }
+
+                .old_pw {
+                    width: 120px;
+                    margin-left: 30px;
+                }
+
+                .new_pw {
+                    width: 200px;
+                }
+
+                .input[type="submit"] {
+                    width: 100px;
+                }
+
+                input[type="button"] {
+                    text-align: center;
+                }
+
+                input {
+                    outline: 0;
+                    background: rgb(62, 62, 62);
+                    width: 48%;
+                    border: 0;
+                    color: white;
+                    font-size: 16px;
+                    // border-radius: 5px;
+                    padding: 10px;
+                    margin: 7px 0px;
+
+                    @include mediaQ(phone) {
+                        width: 100%;
+                    }
+
+                    &::placeholder {
+                        color: white;
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .sub_new_pw {
+                // width: 50%;
+                justify-content: center;
+            }
+
+            .disabled_pw {
+                display: flex;
+                justify-content: space-between;
+                input {
+                    width: 48%;
+                    cursor: not-allowed;
+                    pointer-events: all !important;
+                }
+
+                input:nth-child(2) {
+                    // margin-left: 10px;
+                }
             }
         }
     }

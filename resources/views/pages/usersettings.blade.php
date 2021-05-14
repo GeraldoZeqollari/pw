@@ -375,13 +375,86 @@
         </div>
     </div>
     <div class="settings_display">
-        <div class="settings_display__accountDetails">
-            Favorited
+        <div class="settings_display__favorited">
+            <div class="no_fav" style="display: none">
+                <h1>Start adding to your collection by clicking the heart button of the art pieces you like!</h1>
+            </div>
+            <div class="fav_flexbox" >
+                <div class="fav_flexbox__img">
+                  <a href="">
+                    <img src="../images/cat_screaming.jpg" alt="">
+                  </a>  
+                </div>
+                <div class="fav_flexbox__img">
+                  <a href="">
+                    <img src="../images/cat_screaming.jpg" alt="">
+                  </a>  
+                </div>
+                <div class="fav_flexbox__img">
+                  <a href="">
+                    <img src="../images/cat_screaming.jpg" alt="">
+                  </a>  
+                </div>
+                <div class="fav_flexbox__img">
+                  <a href="">
+                    <img src="../images/cat_screaming.jpg" alt="">
+                  </a>  
+                </div>
+                <div class="fav_flexbox__img">
+                  <a href="">
+                    <img src="../images/cat_screaming.jpg" alt="">
+                  </a>  
+                </div>
+                <div class="fav_flexbox__img">
+                  <a href="">
+                    <img src="../images/cat_screaming.jpg" alt="">
+                  </a>  
+                </div>
+                <div class="fav_flexbox__img">
+                  <a href="">
+                    <img src="../images/cat_screaming.jpg" alt="">
+                  </a>  
+                </div>
+                <div class="fav_flexbox__img">
+                  <a href="">
+                    <img src="../images/cat_screaming.jpg" alt="">
+                  </a>  
+                </div>
+                <div class="fav_flexbox__img">
+                  <a href="">
+                    <img src="../images/cat_screaming.jpg" alt="">
+                  </a>  
+                </div>
+                <div class="fav_flexbox__img">
+                  <a href="">
+                    <img src="../images/cat_screaming.jpg" alt="">
+                  </a>  
+                </div>
+                
+            </div>
         </div>
     </div>
     <div class="settings_display">
-        <div class="settings_display__accountDetails">
-            Security
+        <div class="settings_display__security">
+           <div class="current_pw">
+               <input type="password" placeholder="Enter your old password">
+
+               <input type="submit" class="old_pw" value="Submit">
+           </div>
+
+           <hr class="break">
+
+           <div class="current_pw disabled_pw">
+                <input type="password" placeholder="Enter your new password">
+                <input type="password" placeholder="Confirm password">
+            </div>
+
+            <div class="current_pw sub_new_pw">
+                <input type="submit" class="new_pw" value="Submit">
+            </div>
+            <div class="current_pw deactivate_btn">
+                <a href="">Deactivate Account</a>
+            </div>
         </div>
     </div>
     <div class="settings_display">

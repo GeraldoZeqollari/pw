@@ -97,6 +97,6 @@ function tabs(currentDisplay) {
     allDisplay[currentDisplay].style.display = "block";
 }
 
-tabs(1);
+tabs(3);
 
 settingChange();
