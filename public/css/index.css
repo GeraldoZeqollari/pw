@@ -1916,14 +1916,16 @@ NEWS
   text-decoration: none;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: black;
+  color: #3c5f37;
   font-size: 16px;
   line-height: 1;
   font-family: "Poppins", "sans-serif";
   font-weight: 600;
-  border: 2px solid black;
+  border: 2px solid #93b2b9;
   background-color: white;
   cursor: pointer;
+  border-top: 1px solid #93b2b9;
+  border-bottom: 1px solid #93b2b9;
   padding: 10px 10px;
 }
 @media (max-width: 768px) {
@@ -1956,7 +1958,7 @@ NEWS
   margin-left: 10px;
   width: 80%;
 }
-.settings_container .settings_display__accountDetails, .settings_container .settings_display__paymentDetails, .settings_container .settings_display__favorited, .settings_container .settings_display__security {
+.settings_container .settings_display__accountDetails, .settings_container .settings_display__paymentDetails, .settings_container .settings_display__favorited, .settings_container .settings_display__security, .settings_container .settings_display__users, .settings_container .settings_display__issues, .settings_container .settings_display__upload {
   border: 1px solid black;
   padding: 30px;
   display: flex;
@@ -1966,18 +1968,28 @@ NEWS
   /* Chrome, Safari, Edge, Opera */
   /* Firefox */
 }
+.settings_container .settings_display__accountDetails input[type=submit i], .settings_container .settings_display__paymentDetails input[type=submit i], .settings_container .settings_display__favorited input[type=submit i], .settings_container .settings_display__security input[type=submit i], .settings_container .settings_display__users input[type=submit i], .settings_container .settings_display__issues input[type=submit i], .settings_container .settings_display__upload input[type=submit i] {
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.settings_container .settings_display__accountDetails input[type=submit i]:hover, .settings_container .settings_display__paymentDetails input[type=submit i]:hover, .settings_container .settings_display__favorited input[type=submit i]:hover, .settings_container .settings_display__security input[type=submit i]:hover, .settings_container .settings_display__users input[type=submit i]:hover, .settings_container .settings_display__issues input[type=submit i]:hover, .settings_container .settings_display__upload input[type=submit i]:hover {
+  background-color: #5a838c;
+}
 .settings_container .settings_display__accountDetails input::-webkit-outer-spin-button,
 .settings_container .settings_display__accountDetails input::-webkit-inner-spin-button, .settings_container .settings_display__paymentDetails input::-webkit-outer-spin-button,
 .settings_container .settings_display__paymentDetails input::-webkit-inner-spin-button, .settings_container .settings_display__favorited input::-webkit-outer-spin-button,
 .settings_container .settings_display__favorited input::-webkit-inner-spin-button, .settings_container .settings_display__security input::-webkit-outer-spin-button,
-.settings_container .settings_display__security input::-webkit-inner-spin-button {
+.settings_container .settings_display__security input::-webkit-inner-spin-button, .settings_container .settings_display__users input::-webkit-outer-spin-button,
+.settings_container .settings_display__users input::-webkit-inner-spin-button, .settings_container .settings_display__issues input::-webkit-outer-spin-button,
+.settings_container .settings_display__issues input::-webkit-inner-spin-button, .settings_container .settings_display__upload input::-webkit-outer-spin-button,
+.settings_container .settings_display__upload input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.settings_container .settings_display__accountDetails input[type=number], .settings_container .settings_display__paymentDetails input[type=number], .settings_container .settings_display__favorited input[type=number], .settings_container .settings_display__security input[type=number] {
+.settings_container .settings_display__accountDetails input[type=number], .settings_container .settings_display__paymentDetails input[type=number], .settings_container .settings_display__favorited input[type=number], .settings_container .settings_display__security input[type=number], .settings_container .settings_display__users input[type=number], .settings_container .settings_display__issues input[type=number], .settings_container .settings_display__upload input[type=number] {
   -moz-appearance: textfield;
 }
-.settings_container .settings_display__accountDetails::after, .settings_container .settings_display__paymentDetails::after, .settings_container .settings_display__favorited::after, .settings_container .settings_display__security::after {
+.settings_container .settings_display__accountDetails::after, .settings_container .settings_display__paymentDetails::after, .settings_container .settings_display__favorited::after, .settings_container .settings_display__security::after, .settings_container .settings_display__users::after, .settings_container .settings_display__issues::after, .settings_container .settings_display__upload::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -1990,16 +2002,16 @@ NEWS
   background-color: white;
 }
 @media (max-width: 768px) {
-  .settings_container .settings_display__accountDetails::after, .settings_container .settings_display__paymentDetails::after, .settings_container .settings_display__favorited::after, .settings_container .settings_display__security::after {
+  .settings_container .settings_display__accountDetails::after, .settings_container .settings_display__paymentDetails::after, .settings_container .settings_display__favorited::after, .settings_container .settings_display__security::after, .settings_container .settings_display__users::after, .settings_container .settings_display__issues::after, .settings_container .settings_display__upload::after {
     top: 25px;
   }
 }
-.settings_container .settings_display__accountDetails .accData, .settings_container .settings_display__paymentDetails .accData, .settings_container .settings_display__favorited .accData, .settings_container .settings_display__security .accData {
+.settings_container .settings_display__accountDetails .accData, .settings_container .settings_display__paymentDetails .accData, .settings_container .settings_display__favorited .accData, .settings_container .settings_display__security .accData, .settings_container .settings_display__users .accData, .settings_container .settings_display__issues .accData, .settings_container .settings_display__upload .accData {
   display: flex;
   font-family: "Poppins", "sans-serif";
 }
 @media (max-width: 768px) {
-  .settings_container .settings_display__accountDetails .accData, .settings_container .settings_display__paymentDetails .accData, .settings_container .settings_display__favorited .accData, .settings_container .settings_display__security .accData {
+  .settings_container .settings_display__accountDetails .accData, .settings_container .settings_display__paymentDetails .accData, .settings_container .settings_display__favorited .accData, .settings_container .settings_display__security .accData, .settings_container .settings_display__users .accData, .settings_container .settings_display__issues .accData, .settings_container .settings_display__upload .accData {
     flex-direction: column;
   }
 }
@@ -2007,7 +2019,10 @@ NEWS
 .settings_container .settings_display__accountDetails .accData .two_select, .settings_container .settings_display__paymentDetails .accData input:nth-child(2),
 .settings_container .settings_display__paymentDetails .accData .two_select, .settings_container .settings_display__favorited .accData input:nth-child(2),
 .settings_container .settings_display__favorited .accData .two_select, .settings_container .settings_display__security .accData input:nth-child(2),
-.settings_container .settings_display__security .accData .two_select {
+.settings_container .settings_display__security .accData .two_select, .settings_container .settings_display__users .accData input:nth-child(2),
+.settings_container .settings_display__users .accData .two_select, .settings_container .settings_display__issues .accData input:nth-child(2),
+.settings_container .settings_display__issues .accData .two_select, .settings_container .settings_display__upload .accData input:nth-child(2),
+.settings_container .settings_display__upload .accData .two_select {
   margin-left: 50px;
 }
 @media (max-width: 768px) {
@@ -2015,7 +2030,10 @@ NEWS
 .settings_container .settings_display__accountDetails .accData .two_select, .settings_container .settings_display__paymentDetails .accData input:nth-child(2),
 .settings_container .settings_display__paymentDetails .accData .two_select, .settings_container .settings_display__favorited .accData input:nth-child(2),
 .settings_container .settings_display__favorited .accData .two_select, .settings_container .settings_display__security .accData input:nth-child(2),
-.settings_container .settings_display__security .accData .two_select {
+.settings_container .settings_display__security .accData .two_select, .settings_container .settings_display__users .accData input:nth-child(2),
+.settings_container .settings_display__users .accData .two_select, .settings_container .settings_display__issues .accData input:nth-child(2),
+.settings_container .settings_display__issues .accData .two_select, .settings_container .settings_display__upload .accData input:nth-child(2),
+.settings_container .settings_display__upload .accData .two_select {
     margin-left: 0;
   }
 }
@@ -2023,23 +2041,32 @@ NEWS
 .settings_container .settings_display__accountDetails .accData .one_select, .settings_container .settings_display__paymentDetails .accData .two_select,
 .settings_container .settings_display__paymentDetails .accData .one_select, .settings_container .settings_display__favorited .accData .two_select,
 .settings_container .settings_display__favorited .accData .one_select, .settings_container .settings_display__security .accData .two_select,
-.settings_container .settings_display__security .accData .one_select {
+.settings_container .settings_display__security .accData .one_select, .settings_container .settings_display__users .accData .two_select,
+.settings_container .settings_display__users .accData .one_select, .settings_container .settings_display__issues .accData .two_select,
+.settings_container .settings_display__issues .accData .one_select, .settings_container .settings_display__upload .accData .two_select,
+.settings_container .settings_display__upload .accData .one_select {
   text-align: center;
 }
 .settings_container .settings_display__accountDetails .accData .two_select h1,
 .settings_container .settings_display__accountDetails .accData .one_select h1, .settings_container .settings_display__paymentDetails .accData .two_select h1,
 .settings_container .settings_display__paymentDetails .accData .one_select h1, .settings_container .settings_display__favorited .accData .two_select h1,
 .settings_container .settings_display__favorited .accData .one_select h1, .settings_container .settings_display__security .accData .two_select h1,
-.settings_container .settings_display__security .accData .one_select h1 {
+.settings_container .settings_display__security .accData .one_select h1, .settings_container .settings_display__users .accData .two_select h1,
+.settings_container .settings_display__users .accData .one_select h1, .settings_container .settings_display__issues .accData .two_select h1,
+.settings_container .settings_display__issues .accData .one_select h1, .settings_container .settings_display__upload .accData .two_select h1,
+.settings_container .settings_display__upload .accData .one_select h1 {
   font-size: 18px;
 }
 .settings_container .settings_display__accountDetails .accData .two_select select,
 .settings_container .settings_display__accountDetails .accData .one_select select, .settings_container .settings_display__paymentDetails .accData .two_select select,
 .settings_container .settings_display__paymentDetails .accData .one_select select, .settings_container .settings_display__favorited .accData .two_select select,
 .settings_container .settings_display__favorited .accData .one_select select, .settings_container .settings_display__security .accData .two_select select,
-.settings_container .settings_display__security .accData .one_select select {
+.settings_container .settings_display__security .accData .one_select select, .settings_container .settings_display__users .accData .two_select select,
+.settings_container .settings_display__users .accData .one_select select, .settings_container .settings_display__issues .accData .two_select select,
+.settings_container .settings_display__issues .accData .one_select select, .settings_container .settings_display__upload .accData .two_select select,
+.settings_container .settings_display__upload .accData .one_select select {
   padding: 7px 12px;
-  border: 2px solid black;
+  border: 2px solid #93b2b9;
   background-color: transparent;
   width: 200px;
   font-size: 14px;
@@ -2050,7 +2077,10 @@ NEWS
 .settings_container .settings_display__accountDetails .accData .one_select select, .settings_container .settings_display__paymentDetails .accData .two_select select,
 .settings_container .settings_display__paymentDetails .accData .one_select select, .settings_container .settings_display__favorited .accData .two_select select,
 .settings_container .settings_display__favorited .accData .one_select select, .settings_container .settings_display__security .accData .two_select select,
-.settings_container .settings_display__security .accData .one_select select {
+.settings_container .settings_display__security .accData .one_select select, .settings_container .settings_display__users .accData .two_select select,
+.settings_container .settings_display__users .accData .one_select select, .settings_container .settings_display__issues .accData .two_select select,
+.settings_container .settings_display__issues .accData .one_select select, .settings_container .settings_display__upload .accData .two_select select,
+.settings_container .settings_display__upload .accData .one_select select {
     width: 100%;
   }
 }
@@ -2058,14 +2088,20 @@ NEWS
 .settings_container .settings_display__accountDetails .accData .one_select select:focus, .settings_container .settings_display__paymentDetails .accData .two_select select:focus,
 .settings_container .settings_display__paymentDetails .accData .one_select select:focus, .settings_container .settings_display__favorited .accData .two_select select:focus,
 .settings_container .settings_display__favorited .accData .one_select select:focus, .settings_container .settings_display__security .accData .two_select select:focus,
-.settings_container .settings_display__security .accData .one_select select:focus {
+.settings_container .settings_display__security .accData .one_select select:focus, .settings_container .settings_display__users .accData .two_select select:focus,
+.settings_container .settings_display__users .accData .one_select select:focus, .settings_container .settings_display__issues .accData .two_select select:focus,
+.settings_container .settings_display__issues .accData .one_select select:focus, .settings_container .settings_display__upload .accData .two_select select:focus,
+.settings_container .settings_display__upload .accData .one_select select:focus {
   outline: none;
 }
 .settings_container .settings_display__accountDetails .accData .two_select,
 .settings_container .settings_display__accountDetails .accData .one_select, .settings_container .settings_display__paymentDetails .accData .two_select,
 .settings_container .settings_display__paymentDetails .accData .one_select, .settings_container .settings_display__favorited .accData .two_select,
 .settings_container .settings_display__favorited .accData .one_select, .settings_container .settings_display__security .accData .two_select,
-.settings_container .settings_display__security .accData .one_select {
+.settings_container .settings_display__security .accData .one_select, .settings_container .settings_display__users .accData .two_select,
+.settings_container .settings_display__users .accData .one_select, .settings_container .settings_display__issues .accData .two_select,
+.settings_container .settings_display__issues .accData .one_select, .settings_container .settings_display__upload .accData .two_select,
+.settings_container .settings_display__upload .accData .one_select {
   width: 50%;
 }
 @media (max-width: 768px) {
@@ -2073,13 +2109,16 @@ NEWS
 .settings_container .settings_display__accountDetails .accData .one_select, .settings_container .settings_display__paymentDetails .accData .two_select,
 .settings_container .settings_display__paymentDetails .accData .one_select, .settings_container .settings_display__favorited .accData .two_select,
 .settings_container .settings_display__favorited .accData .one_select, .settings_container .settings_display__security .accData .two_select,
-.settings_container .settings_display__security .accData .one_select {
+.settings_container .settings_display__security .accData .one_select, .settings_container .settings_display__users .accData .two_select,
+.settings_container .settings_display__users .accData .one_select, .settings_container .settings_display__issues .accData .two_select,
+.settings_container .settings_display__issues .accData .one_select, .settings_container .settings_display__upload .accData .two_select,
+.settings_container .settings_display__upload .accData .one_select {
     width: 100%;
   }
 }
-.settings_container .settings_display__accountDetails .accData input, .settings_container .settings_display__paymentDetails .accData input, .settings_container .settings_display__favorited .accData input, .settings_container .settings_display__security .accData input {
+.settings_container .settings_display__accountDetails .accData input, .settings_container .settings_display__paymentDetails .accData input, .settings_container .settings_display__favorited .accData input, .settings_container .settings_display__security .accData input, .settings_container .settings_display__users .accData input, .settings_container .settings_display__issues .accData input, .settings_container .settings_display__upload .accData input {
   outline: 0;
-  background: #3e3e3e;
+  background: #93b2b9;
   width: 50%;
   border: 0;
   color: white;
@@ -2088,30 +2127,29 @@ NEWS
   margin: 7px 0px;
 }
 @media (max-width: 768px) {
-  .settings_container .settings_display__accountDetails .accData input, .settings_container .settings_display__paymentDetails .accData input, .settings_container .settings_display__favorited .accData input, .settings_container .settings_display__security .accData input {
+  .settings_container .settings_display__accountDetails .accData input, .settings_container .settings_display__paymentDetails .accData input, .settings_container .settings_display__favorited .accData input, .settings_container .settings_display__security .accData input, .settings_container .settings_display__users .accData input, .settings_container .settings_display__issues .accData input, .settings_container .settings_display__upload .accData input {
     width: 100%;
   }
 }
-.settings_container .settings_display__accountDetails .accData input::placeholder, .settings_container .settings_display__paymentDetails .accData input::placeholder, .settings_container .settings_display__favorited .accData input::placeholder, .settings_container .settings_display__security .accData input::placeholder {
+.settings_container .settings_display__accountDetails .accData input::placeholder, .settings_container .settings_display__paymentDetails .accData input::placeholder, .settings_container .settings_display__favorited .accData input::placeholder, .settings_container .settings_display__security .accData input::placeholder, .settings_container .settings_display__users .accData input::placeholder, .settings_container .settings_display__issues .accData input::placeholder, .settings_container .settings_display__upload .accData input::placeholder {
   color: white;
   opacity: 0.8;
 }
-.settings_container .settings_display__accountDetails .accData_btn, .settings_container .settings_display__paymentDetails .accData_btn, .settings_container .settings_display__favorited .accData_btn, .settings_container .settings_display__security .accData_btn {
+.settings_container .settings_display__accountDetails .accData_btn, .settings_container .settings_display__paymentDetails .accData_btn, .settings_container .settings_display__favorited .accData_btn, .settings_container .settings_display__security .accData_btn, .settings_container .settings_display__users .accData_btn, .settings_container .settings_display__issues .accData_btn, .settings_container .settings_display__upload .accData_btn {
   justify-content: center;
   margin-top: 30px;
   width: 100%;
-  cursor: pointer;
 }
-.settings_container .settings_display__accountDetails .accData_btn input, .settings_container .settings_display__paymentDetails .accData_btn input, .settings_container .settings_display__favorited .accData_btn input, .settings_container .settings_display__security .accData_btn input {
+.settings_container .settings_display__accountDetails .accData_btn input, .settings_container .settings_display__paymentDetails .accData_btn input, .settings_container .settings_display__favorited .accData_btn input, .settings_container .settings_display__security .accData_btn input, .settings_container .settings_display__users .accData_btn input, .settings_container .settings_display__issues .accData_btn input, .settings_container .settings_display__upload .accData_btn input {
   width: 200px;
 }
 @media (max-width: 420px) {
-  .settings_container .settings_display__accountDetails .accData_btn input, .settings_container .settings_display__paymentDetails .accData_btn input, .settings_container .settings_display__favorited .accData_btn input, .settings_container .settings_display__security .accData_btn input {
+  .settings_container .settings_display__accountDetails .accData_btn input, .settings_container .settings_display__paymentDetails .accData_btn input, .settings_container .settings_display__favorited .accData_btn input, .settings_container .settings_display__security .accData_btn input, .settings_container .settings_display__users .accData_btn input, .settings_container .settings_display__issues .accData_btn input, .settings_container .settings_display__upload .accData_btn input {
     width: 60%;
   }
 }
 @media (max-width: 768px) {
-  .settings_container .settings_display__accountDetails .accData_btn, .settings_container .settings_display__paymentDetails .accData_btn, .settings_container .settings_display__favorited .accData_btn, .settings_container .settings_display__security .accData_btn {
+  .settings_container .settings_display__accountDetails .accData_btn, .settings_container .settings_display__paymentDetails .accData_btn, .settings_container .settings_display__favorited .accData_btn, .settings_container .settings_display__security .accData_btn, .settings_container .settings_display__users .accData_btn, .settings_container .settings_display__issues .accData_btn, .settings_container .settings_display__upload .accData_btn {
     flex-direction: row;
   }
 }
@@ -2201,7 +2239,7 @@ NEWS
 .settings_container .settings_display__paymentDetails .accData_select .one_select select,
 .settings_container .settings_display__paymentDetails .accData_select .two_select select {
   padding: 7px 12px;
-  border: 2px solid black;
+  border: 2px solid #93b2b9;
   background-color: transparent;
   width: 90%;
   font-size: 14px;
@@ -2304,12 +2342,18 @@ NEWS
   flex-direction: column;
   position: relative;
 }
+@media (max-width: 900px) {
+  .settings_container .settings_display__security {
+    min-width: auto;
+    min-height: 420px;
+  }
+}
 .settings_container .settings_display__security::after {
   top: 133px;
 }
 @media (max-width: 768px) {
   .settings_container .settings_display__security::after {
-    top: 153px;
+    top: 218px;
   }
 }
 .settings_container .settings_display__security .deactivate_btn {
@@ -2317,11 +2361,24 @@ NEWS
   right: 30px;
   bottom: 30px;
 }
+@media (max-width: 900px) {
+  .settings_container .settings_display__security .deactivate_btn {
+    right: 15px;
+    bottom: 15px;
+  }
+}
 .settings_container .settings_display__security .break {
   margin: 10px 0px;
 }
 .settings_container .settings_display__security .current_pw {
   display: flex;
+}
+@media (max-width: 900px) {
+  .settings_container .settings_display__security .current_pw {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .settings_container .settings_display__security .current_pw a {
   width: 220px;
@@ -2340,7 +2397,13 @@ NEWS
   background-color: white;
   cursor: pointer;
   padding: 10px 12px;
-  align-self: flex-start;
+}
+@media (max-width: 900px) {
+  .settings_container .settings_display__security .current_pw a {
+    width: 160px;
+    font-size: 12px;
+    padding: 5px 7px;
+  }
 }
 .settings_container .settings_display__security .current_pw a:hover {
   background-color: red;
@@ -2351,18 +2414,21 @@ NEWS
   width: 120px;
   margin-left: 30px;
 }
+@media (max-width: 900px) {
+  .settings_container .settings_display__security .current_pw .old_pw {
+    width: 200px;
+    margin-left: 0;
+  }
+}
 .settings_container .settings_display__security .current_pw .new_pw {
   width: 200px;
 }
 .settings_container .settings_display__security .current_pw .input[type=submit] {
   width: 100px;
 }
-.settings_container .settings_display__security .current_pw input[type=button] {
-  text-align: center;
-}
 .settings_container .settings_display__security .current_pw input {
   outline: 0;
-  background: #3e3e3e;
+  background: #93b2b9;
   width: 48%;
   border: 0;
   color: white;
@@ -2371,6 +2437,11 @@ NEWS
   margin: 7px 0px;
 }
 @media (max-width: 768px) {
+  .settings_container .settings_display__security .current_pw input {
+    width: 80%;
+  }
+}
+@media (max-width: 420px) {
   .settings_container .settings_display__security .current_pw input {
     width: 100%;
   }
@@ -2386,13 +2457,106 @@ NEWS
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 900px) {
+  .settings_container .settings_display__security .disabled_pw {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .settings_container .settings_display__security .disabled_pw input {
   width: 48%;
   cursor: not-allowed;
-  pointer-events: all !important;
 }
+@media (max-width: 768px) {
+  .settings_container .settings_display__security .disabled_pw input {
+    width: 80%;
+  }
+}
+@media (max-width: 420px) {
+  .settings_container .settings_display__security .disabled_pw input {
+    width: 100%;
+  }
+}
+.settings_container .settings_display__users {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.settings_container .settings_display__users::after {
+  top: 163px;
+}
+@media (max-width: 768px) {
+  .settings_container .settings_display__users::after {
+    top: 218px;
+  }
+}
+.settings_container .settings_display__users .user_row {
+  display: flex;
+  justify-content: space-between;
+}
+.settings_container .settings_display__users .user_row h1 {
+  font-family: "Poppins", "sans-serif";
+  font-size: 18px;
+  align-self: flex-start;
+}
+.settings_container .settings_display__users .user_row input[type=submit] {
+  background-color: transparent;
+  border: 0;
+  color: red;
+  font-family: "Poppins", "sans-serif";
+}
+.settings_container .settings_display__issues {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.settings_container .settings_display__issues::after {
+  top: 239px;
+}
+@media (max-width: 768px) {
+  .settings_container .settings_display__issues::after {
+    top: 218px;
+  }
+}
+.settings_container .settings_display__issues .issue_row .issue_details {
+  display: flex;
+}
+.settings_container .settings_display__issues .issue_row .issue_details :nth-child(2) {
+  margin-left: 10px;
+  color: gray;
+}
+.settings_container .settings_display__issues .issue_row h1 {
+  font-size: 16px;
+  font-family: "Poppins", "sans-serif";
+}
+.settings_container .settings_display__issues .issue_row p {
+  font-size: 14px;
+  border: 1px solid #93b2b9;
+  padding: 10px;
+}
+.settings_container .settings_display__upload {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.settings_container .settings_display__upload::after {
+  top: 199px;
+}
+@media (max-width: 768px) {
+  .settings_container .settings_display__upload::after {
+    top: 218px;
+  }
+}
+
 .ActiveSetting {
-  background-color: black !important;
+  background-color: #93b2b9 !important;
   color: white !important;
 }
 

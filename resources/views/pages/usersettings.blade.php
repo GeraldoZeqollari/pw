@@ -305,11 +305,11 @@
                 
                 <div class="card_selection">
                     <input type="radio" id="visa" name="credit_card" value="new">
-                    <label for="visa" class="label_exp"><i class="fab fa-cc-visa"></i></label>
+                    <label for="visa" class="label_exp"><i class="fab fa-cc-visa" style="color: rgb(24,30,108)"></i></label>
                     <input type="radio" id="mastercard" name="credit_card" value="medium">
-                    <label for="mastercard" class="label_exp"><i class="fab fa-cc-mastercard"></i></label>
+                    <label for="mastercard" class="label_exp"><i class="fab fa-cc-mastercard" style="color: rgb(229,1,26)"></i></label>
                     <input type="radio" id="paypal" name="credit_card" value="high">
-                    <label for="paypal" class="label_exp"><i class="fab fa-cc-paypal"></i></label>
+                    <label for="paypal" class="label_exp"><i class="fab fa-cc-paypal" style="color: rgb(1,46,130)"></i></label>
                 </div>
                    
             </div>
@@ -438,7 +438,6 @@
         <div class="settings_display__security">
            <div class="current_pw">
                <input type="password" placeholder="Enter your old password">
-
                <input type="submit" class="old_pw" value="Submit">
            </div>
 
@@ -458,18 +457,132 @@
         </div>
     </div>
     <div class="settings_display">
-        <div class="settings_display__accountDetails">
-            Users
+        <div class="settings_display__users">
+            <div class="user_row">
+                <h1>user@email.com</h1>
+                <h1>username</h1>
+
+                <input type="submit" value="Delete Account">
+            </div>
+            <div class="user_row">
+                <h1>user@email.com</h1>
+                <h1>username</h1>
+
+                <input type="submit" value="Delete Account">
+            </div>
+            <div class="user_row">
+                <h1>user@email.com</h1>
+                <h1>username</h1>
+
+                <input type="submit" value="Delete Account">
+            </div>
+            <div class="user_row">
+                <h1>user@email.com</h1>
+                <h1>username</h1>
+
+                <input type="submit" value="Delete Account">
+            </div>
+            <div class="user_row">
+                <h1>user@email.com</h1>
+                <h1>username</h1>
+
+                <input type="submit" value="Delete Account">
+            </div>
+            <div class="user_row">
+                <h1>user@email.com</h1>
+                <h1>username</h1>
+
+                <input type="submit" value="Delete Account">
+            </div>
+
+            {{-- for pagination of users
+                {{ $feedbacks->links('pagination.pagination') }} --}}
         </div>
     </div>
     <div class="settings_display">
-        <div class="settings_display__accountDetails">
-            Upload
+        <div class="settings_display__upload">
+            <div class="upload_row">
+                <label for="myfile">Select a file:</label>
+                <input type="file" id="myfile" name="myfile" value="yo">
+            </div>
+            
+            <div class="upload_row">
+                <select name="" id="">
+                    <option selected="true" disabled="disabled">Choose the category</option>   
+                    <option value="1">Modern</option>    
+                    <option value="2">Realism</option>    
+                    <option value="3">Medieval</option>    
+                    <option value="4">Baroque</option>    
+                </select>
+            </div>
+            
+            <div class="upload_row">
+                <input type="text" placeholder="Title">
+                <input type="text" placeholder="Author">
+            </div>
+            <div class="upload_row">
+                <input type="number" name="" id="" placeholder="Year">
+                <input type="number" name="" id="" placeholder="Resolution">
+            </div>
+            <div class="upload_row">
+                <input type="number" name="" id="" placeholder="Stock">
+                <input type="number" name="" id="" placeholder="Price">
+            </div>
+            <div class="upload_row">
+                <textarea name="" placeholder="Description" id="" cols="30" rows="10"></textarea>
+            </div>
+           
         </div>
     </div>
     <div class="settings_display">
-        <div class="settings_display__accountDetails">
-            Issues
+        <div class="settings_display__issues">
+            <div class="issue_row">
+                <div class="issue_details">
+                    <h1>user@email.com</h1>
+                    <h1>Time sent</h1>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore, corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
+                </p>
+            </div>
+            <div class="issue_row">
+                <div class="issue_details">
+                    <h1>user@email.com</h1>
+                    <h1>Time sent</h1>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore, corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
+                </p>
+            </div>
+            <div class="issue_row">
+                <div class="issue_details">
+                    <h1>user@email.com</h1>
+                    <h1>Time sent</h1>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore, corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
+                </p>
+            </div>
+            <div class="issue_row">
+                <div class="issue_details">
+                    <h1>user@email.com</h1>
+                    <h1>Time sent</h1>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore, corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
+                </p>
+            </div>
+            <div class="issue_row">
+                <div class="issue_details">
+                    <h1>user@email.com</h1>
+                    <h1>Time sent</h1>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore, corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
+                </p>
+            </div>
+
+            {{-- paginate as well here --}}
         </div>
     </div>
 </div>

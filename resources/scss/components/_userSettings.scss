@@ -25,13 +25,15 @@
     .switch_tab {
         .setting {
             @include buttonType(
-                rgb(0, 0, 0),
+                rgb(60, 95, 55),
                 v.$HeaderFont,
-                2px solid black,
+                2px solid v.$teel,
                 rgb(255, 255, 255),
                 160px,
                 16px
             );
+            border-top: 1px solid v.$teel;
+            border-bottom: 1px solid v.$teel;
             padding: 10px 10px;
 
             @include mediaQ(phone) {
@@ -65,17 +67,30 @@
 
     .settings_display {
         margin-left: 10px;
+        // background-color: rgb(74, 233, 241);
         width: 80%;
         &__accountDetails,
         &__paymentDetails,
         &__favorited,
-        &__security {
+        &__security,
+        &__users,
+        &__issues,
+        &__upload {
             border: 1px solid black;
             padding: 30px;
             display: flex;
             flex-direction: column;
             min-width: 100%;
             position: relative;
+
+            input[type="submit" i] {
+                cursor: pointer;
+                transition: 0.2s all ease;
+
+                &:hover {
+                    background-color: darken(v.$teel, 20%);
+                }
+            }
 
             /* Chrome, Safari, Edge, Opera */
             input::-webkit-outer-spin-button,
@@ -136,7 +151,7 @@
 
                     select {
                         padding: 7px 12px;
-                        border: 2px solid black;
+                        border: 2px solid v.$teel;
                         background-color: transparent;
                         width: 200px;
                         font-size: 14px;
@@ -162,7 +177,7 @@
 
                 input {
                     outline: 0;
-                    background: rgb(62, 62, 62);
+                    background: v.$teel;
                     width: 50%;
                     border: 0;
                     color: white;
@@ -186,7 +201,7 @@
                 justify-content: center;
                 margin-top: 30px;
                 width: 100%;
-                cursor: pointer;
+                // cursor: pointer;
 
                 input {
                     width: 200px;
@@ -302,7 +317,7 @@
                     // width: 40%;
                     select {
                         padding: 7px 12px;
-                        border: 2px solid black;
+                        border: 2px solid v.$teel;
                         background-color: transparent;
                         width: 90%;
                         font-size: 14px;
@@ -418,13 +433,18 @@
             display: flex;
             flex-direction: column;
             position: relative;
+
+            @include mediaQ(tablet) {
+                min-width: auto;
+                min-height: 420px;
+            }
             // width: 200px;
             // border: 2px solid red;
             &::after {
                 top: 133px;
 
                 @include mediaQ(phone) {
-                    top: 153px;
+                    top: 218px;
                 }
             }
 
@@ -432,6 +452,11 @@
                 position: absolute;
                 right: 30px;
                 bottom: 30px;
+
+                @include mediaQ(tablet) {
+                    right: 15px;
+                    bottom: 15px;
+                }
             }
 
             .break {
@@ -440,6 +465,12 @@
 
             .current_pw {
                 display: flex;
+
+                @include mediaQ(tablet) {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
 
                 a {
                     @include buttonType(
@@ -451,7 +482,12 @@
                         14px
                     );
                     padding: 10px 12px;
-                    align-self: flex-start;
+
+                    @include mediaQ(tablet) {
+                        width: 160px;
+                        font-size: 12px;
+                        padding: 5px 7px;
+                    }
 
                     &:hover {
                         background-color: red;
@@ -463,6 +499,11 @@
                 .old_pw {
                     width: 120px;
                     margin-left: 30px;
+
+                    @include mediaQ(tablet) {
+                        width: 200px;
+                        margin-left: 0;
+                    }
                 }
 
                 .new_pw {
@@ -473,13 +514,9 @@
                     width: 100px;
                 }
 
-                input[type="button"] {
-                    text-align: center;
-                }
-
                 input {
                     outline: 0;
-                    background: rgb(62, 62, 62);
+                    background: v.$teel;
                     width: 48%;
                     border: 0;
                     color: white;
@@ -489,6 +526,9 @@
                     margin: 7px 0px;
 
                     @include mediaQ(phone) {
+                        width: 80%;
+                    }
+                    @include mediaQ(s-phone) {
                         width: 100%;
                     }
 
@@ -507,10 +547,24 @@
             .disabled_pw {
                 display: flex;
                 justify-content: space-between;
+
+                @include mediaQ(tablet) {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
                 input {
                     width: 48%;
                     cursor: not-allowed;
-                    pointer-events: all !important;
+                    // pointer-events: all !important;
+
+                    @include mediaQ(phone) {
+                        width: 80%;
+                    }
+                    @include mediaQ(s-phone) {
+                        width: 100%;
+                    }
                 }
 
                 input:nth-child(2) {
@@ -518,10 +572,104 @@
                 }
             }
         }
+
+        &__users {
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+
+            &::after {
+                top: 163px;
+
+                @include mediaQ(phone) {
+                    top: 218px;
+                }
+            }
+
+            .user_row {
+                // border: 2px solid red;
+                display: flex;
+                justify-content: space-between;
+
+                h1 {
+                    font-family: v.$HeaderFont;
+                    font-size: 18px;
+                    align-self: flex-start;
+                }
+
+                input[type="submit"] {
+                    background-color: transparent;
+                    border: 0;
+                    color: red;
+                    font-family: v.$HeaderFont;
+                }
+            }
+        }
+
+        &__issues{
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+
+            &::after {
+                top: 239px;
+
+                @include mediaQ(phone) {
+                    top: 218px;
+                }
+            }
+
+            .issue_row{
+
+
+                .issue_details{
+                    display: flex;
+
+                    :nth-child(2){
+                        margin-left: 10px;
+                        color: gray;
+                    }
+                }
+
+                h1{
+                    font-size: 16px;
+                    font-family: v.$HeaderFont;
+
+                }
+
+                p{
+                    font-size: 14px;
+                    border: 1px solid v.$teel;
+                    padding: 10px;
+                    // font-family: v.$NormalFont;
+                }
+            }
+        }
+
+        &__upload{
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+
+            &::after {
+                top: 199px;
+
+                @include mediaQ(phone) {
+                    top: 218px;
+                }
+            }
+
+        }
     }
 }
 
 .ActiveSetting {
-    background-color: black !important;
+    background-color: v.$teel !important;
     color: white !important;
 }
