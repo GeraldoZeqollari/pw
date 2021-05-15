@@ -1,0 +1,675 @@
+@use '../variables/' as v;
+@use '../variables/mediaQueries' as *;
+@use '../variables/button' as *;
+
+.settings_container {
+    width: min(70%, 100rem);
+    margin-inline: auto;
+    padding-top: 105px;
+    padding-bottom: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @include mediaQ(laptop) {
+        width: min(80%, 100rem);
+    }
+
+    @include mediaQ(tablet) {
+        width: min(90%, 100rem);
+    }
+
+    @include mediaQ(phone) {
+        width: min(100%, 100rem);
+    }
+    .switch_tab {
+        .setting {
+            @include buttonType(
+                rgb(60, 95, 55),
+                v.$HeaderFont,
+                2px solid v.$teel,
+                rgb(255, 255, 255),
+                160px,
+                16px
+            );
+            border-top: 1px solid v.$teel;
+            border-bottom: 1px solid v.$teel;
+            padding: 10px 10px;
+
+            @include mediaQ(phone) {
+                width: auto;
+            }
+        }
+
+        a {
+            display: flex;
+            line-height: 2.5;
+
+            .desktop_view {
+                @include mediaQ(phone) {
+                    display: none;
+                }
+            }
+        }
+
+        i {
+            width: 40px;
+            align-self: center;
+            text-align: center;
+
+            @include mediaQ(phone) {
+                width: 60px;
+                font-size: 30px;
+                padding: 5px 10px;
+            }
+        }
+    }
+
+    .settings_display {
+        margin-left: 10px;
+        // background-color: rgb(74, 233, 241);
+        width: 80%;
+        &__accountDetails,
+        &__paymentDetails,
+        &__favorited,
+        &__security,
+        &__users,
+        &__issues,
+        &__upload {
+            border: 1px solid black;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            min-width: 100%;
+            position: relative;
+
+            input[type="submit" i] {
+                cursor: pointer;
+                transition: 0.2s all ease;
+
+                &:hover {
+                    background-color: darken(v.$teel, 20%);
+                }
+            }
+
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            /* Firefox */
+            input[type="number"] {
+                -moz-appearance: textfield;
+            }
+
+            &::after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 14px;
+                left: -6px;
+                transform: rotate(45deg);
+                // border: 2px solid red;
+                border-left: 1px solid black;
+                border-bottom: 1px solid black;
+                background-color: white;
+
+                @include mediaQ(phone) {
+                    top: 25px;
+                }
+            }
+
+            .accData {
+                display: flex;
+                // margin-top: 10px;
+                font-family: v.$HeaderFont;
+
+                @include mediaQ(phone) {
+                    flex-direction: column;
+                }
+
+                input:nth-child(2),
+                .two_select {
+                    margin-left: 50px;
+
+                    @include mediaQ(phone) {
+                        margin-left: 0;
+                    }
+                    //    border: 2px solid green;
+                }
+
+                .two_select,
+                .one_select {
+                    text-align: center;
+
+                    h1 {
+                        font-size: 18px;
+                    }
+
+                    select {
+                        padding: 7px 12px;
+                        border: 2px solid v.$teel;
+                        background-color: transparent;
+                        width: 200px;
+                        font-size: 14px;
+                        font-family: v.$HeaderFont;
+
+                        @include mediaQ(s-phone) {
+                            width: 100%;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+
+                .two_select,
+                .one_select {
+                    width: 50%;
+                    @include mediaQ(phone) {
+                        width: 100%;
+                    }
+                }
+
+                input {
+                    outline: 0;
+                    background: v.$teel;
+                    width: 50%;
+                    border: 0;
+                    color: white;
+                    font-size: 16px;
+                    // border-radius: 5px;
+                    padding: 10px;
+                    margin: 7px 0px;
+
+                    @include mediaQ(phone) {
+                        width: 100%;
+                    }
+
+                    &::placeholder {
+                        color: white;
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .accData_btn {
+                justify-content: center;
+                margin-top: 30px;
+                width: 100%;
+                // cursor: pointer;
+
+                input {
+                    width: 200px;
+
+                    @include mediaQ(s-phone) {
+                        width: 60%;
+                    }
+                }
+
+                @include mediaQ(phone) {
+                    flex-direction: row;
+                }
+            }
+        }
+
+        &__paymentDetails {
+            // border: 2px solid red;
+
+            .accData {
+                margin-top: 10px;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                // border: 2px solid red;
+
+                input:nth-child(2),
+                .two_select {
+                    margin-left: 0px;
+                }
+
+                .cc_n {
+                    display: flex;
+                    flex-direction: row;
+
+                    @include mediaQ(s-phone) {
+                        flex-direction: column;
+                    }
+                }
+
+                .single_double {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    // margin-top: 20px;
+                    // border: 2px solid red;
+                    input {
+                        width: 80%;
+
+                        @include mediaQ(s-phone) {
+                            width: 100%;
+                        }
+                    }
+
+                    @include mediaQ(s-phone) {
+                        margin-top: 5px;
+                    }
+                }
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                .card_selection {
+                    display: flex;
+                    margin-top: 20px;
+                    justify-content: space-between;
+
+                    @include mediaQ(s-phone) {
+                        flex-wrap: wrap;
+                    }
+                    // border: 2px solid red;
+                    i {
+                        padding: 0px 20px;
+                        font-size: 40px;
+                        cursor: pointer;
+                        background-color: white;
+                        transition: all 0.3s ease;
+
+                        @include mediaQ(phone) {
+                            padding: 0px 10px;
+                        }
+                    }
+
+                    input[type="radio"] {
+                        display: none;
+                    }
+
+                    input[type="radio"]:checked + label i {
+                        // background-color: rgb(58, 58, 58);
+                        // outline: 2px solid red;
+                        // font-size: 40px;
+                        transform: scale(1.3);
+                        // color: white;
+                    }
+                }
+            }
+
+            .accData_select {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 50%;
+
+                @include mediaQ(phone) {
+                    width: 100%;
+                }
+
+                @include mediaQ(s-phone) {
+                    flex-direction: column;
+                }
+
+                .one_select,
+                .two_select {
+                    // width: 40%;
+                    select {
+                        padding: 7px 12px;
+                        border: 2px solid v.$teel;
+                        background-color: transparent;
+                        width: 90%;
+                        font-size: 14px;
+                        font-family: v.$HeaderFont;
+
+                        @include mediaQ(s-phone) {
+                            width: 100%;
+                        }
+
+                        @include mediaQ(phone) {
+                            width: 120px;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+
+                .two_select {
+                    // margin-left: 10px;
+                    @include mediaQ(s-phone) {
+                        margin-top: 7px;
+                    }
+                }
+            }
+
+            &::after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 53px;
+                left: -6px;
+                transform: rotate(45deg);
+                // border: 2px solid red;
+                border-left: 1px solid black;
+                border-bottom: 1px solid black;
+                background-color: white;
+
+                @include mediaQ(phone) {
+                    top: 89px;
+                }
+            }
+
+            .mt {
+                margin-top: 15px;
+            }
+        }
+
+        &__favorited {
+            min-height: 280px;
+            &::after {
+                top: 93px;
+
+                @include mediaQ(phone) {
+                    top: 153px;
+                }
+            }
+
+            .no_fav {
+                // display: none;
+                h1 {
+                    font-family: v.$HeaderFont;
+                    font-size: 22px;
+                    text-align: center;
+                }
+            }
+
+            .fav_flexbox {
+                // border: 2px solid red;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                gap: 5px 10px;
+                // grid-template-areas: ". . .";
+
+                @include mediaQ(laptop) {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+
+                @include mediaQ(phone) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @include mediaQ(s-phone) {
+                    grid-template-columns: 1fr;
+                }
+                &__img {
+                    // width: 200px;
+                    // display: flex;
+                    // height: 200px;
+                    // border: 2px solid red;
+
+                    img {
+                        width: 100%;
+                        transition: all 0.5s ease;
+                        &:hover {
+                            transform: scale(1.08);
+
+                            @include mediaQ(phone) {
+                                transform: scale(1.04);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__security {
+            min-height: 360px;
+            min-width: 600px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            @include mediaQ(tablet) {
+                min-width: auto;
+                min-height: 420px;
+            }
+            // width: 200px;
+            // border: 2px solid red;
+            &::after {
+                top: 133px;
+
+                @include mediaQ(phone) {
+                    top: 218px;
+                }
+            }
+
+            .deactivate_btn {
+                position: absolute;
+                right: 30px;
+                bottom: 30px;
+
+                @include mediaQ(tablet) {
+                    right: 15px;
+                    bottom: 15px;
+                }
+            }
+
+            .break {
+                margin: 10px 0px;
+            }
+
+            .current_pw {
+                display: flex;
+
+                @include mediaQ(tablet) {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                a {
+                    @include buttonType(
+                        rgb(0, 0, 0),
+                        v.$HeaderFont,
+                        2px solid black,
+                        rgb(255, 255, 255),
+                        220px,
+                        14px
+                    );
+                    padding: 10px 12px;
+
+                    @include mediaQ(tablet) {
+                        width: 160px;
+                        font-size: 12px;
+                        padding: 5px 7px;
+                    }
+
+                    &:hover {
+                        background-color: red;
+                        border: 2px solid red;
+                        color: white;
+                    }
+                }
+
+                .old_pw {
+                    width: 120px;
+                    margin-left: 30px;
+
+                    @include mediaQ(tablet) {
+                        width: 200px;
+                        margin-left: 0;
+                    }
+                }
+
+                .new_pw {
+                    width: 200px;
+                }
+
+                .input[type="submit"] {
+                    width: 100px;
+                }
+
+                input {
+                    outline: 0;
+                    background: v.$teel;
+                    width: 48%;
+                    border: 0;
+                    color: white;
+                    font-size: 16px;
+                    // border-radius: 5px;
+                    padding: 10px;
+                    margin: 7px 0px;
+
+                    @include mediaQ(phone) {
+                        width: 80%;
+                    }
+                    @include mediaQ(s-phone) {
+                        width: 100%;
+                    }
+
+                    &::placeholder {
+                        color: white;
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .sub_new_pw {
+                // width: 50%;
+                justify-content: center;
+            }
+
+            .disabled_pw {
+                display: flex;
+                justify-content: space-between;
+
+                @include mediaQ(tablet) {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                input {
+                    width: 48%;
+                    cursor: not-allowed;
+                    // pointer-events: all !important;
+
+                    @include mediaQ(phone) {
+                        width: 80%;
+                    }
+                    @include mediaQ(s-phone) {
+                        width: 100%;
+                    }
+                }
+
+                input:nth-child(2) {
+                    // margin-left: 10px;
+                }
+            }
+        }
+
+        &__users {
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+
+            &::after {
+                top: 163px;
+
+                @include mediaQ(phone) {
+                    top: 218px;
+                }
+            }
+
+            .user_row {
+                // border: 2px solid red;
+                display: flex;
+                justify-content: space-between;
+
+                h1 {
+                    font-family: v.$HeaderFont;
+                    font-size: 18px;
+                    align-self: flex-start;
+                }
+
+                input[type="submit"] {
+                    background-color: transparent;
+                    border: 0;
+                    color: red;
+                    font-family: v.$HeaderFont;
+                }
+            }
+        }
+
+        &__issues{
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+
+            &::after {
+                top: 239px;
+
+                @include mediaQ(phone) {
+                    top: 218px;
+                }
+            }
+
+            .issue_row{
+
+
+                .issue_details{
+                    display: flex;
+
+                    :nth-child(2){
+                        margin-left: 10px;
+                        color: gray;
+                    }
+                }
+
+                h1{
+                    font-size: 16px;
+                    font-family: v.$HeaderFont;
+
+                }
+
+                p{
+                    font-size: 14px;
+                    border: 1px solid v.$teel;
+                    padding: 10px;
+                    // font-family: v.$NormalFont;
+                }
+            }
+        }
+
+        &__upload{
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+
+            &::after {
+                top: 199px;
+
+                @include mediaQ(phone) {
+                    top: 218px;
+                }
+            }
+
+        }
+    }
+}
+
+.ActiveSetting {
+    background-color: v.$teel !important;
+    color: white !important;
+}
