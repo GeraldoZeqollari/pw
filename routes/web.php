@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\FeedbackController;
-
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -42,8 +43,6 @@ Route::get('/password reset', function () {
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
 
-
-
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
@@ -54,6 +53,16 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
 Route::post('/feedback', [FeedbackController::class, 'store']);
+
+
+Route::get('/search', [SearchController::class, 'index'])->name('search');
+Route::post('/search', [SearchController::class, 'store']);
+
+
+
+// Route::post('/search', function () {
+//     return view('/search');
+// })->name('search');
 
 // Route::get('/users/{user:username}/feedbacks', [UserPostController::class, 'index'])->name('users.posts');
 

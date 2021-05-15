@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Like;
+use App\Models\Role;
 use App\Models\Feedback;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -26,7 +27,7 @@ class User extends Authenticatable
         'email',
         'password',
         'username',
-        
+        'role_id',
     ];
 
     /**
@@ -52,6 +53,16 @@ class User extends Authenticatable
     {
         return $this->hasMany(Feedback::class);
     }
+
+    // public function roles()
+    // {
+    //     return $this->belongsToMany(Role::class, 'user_role');
+    // }
+
+    // public function isAdministrator()
+    // {
+    //     return $this->roles()->where('name', 'Administrator')->exists();
+    // }
 
     // public function likes()
     // {

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Feedback;
 use App\Mail\PostLiked;
+use App\Models\Feedback;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
@@ -16,7 +17,6 @@ class HomeController extends Controller
 
     public function index()
     {
-        //dd(auth()->user()->feedbacks);
         return view('home');
     }
 }
