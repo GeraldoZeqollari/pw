@@ -1905,7 +1905,12 @@ NEWS
 }
 @media (max-width: 768px) {
   .settings_container {
-    width: min(100%, 100rem);
+    width: min(95%, 100rem);
+  }
+}
+@media (max-width: 420px) {
+  .settings_container {
+    width: min(95%, 100rem);
   }
 }
 .settings_container .switch_tab .setting {
@@ -1957,6 +1962,7 @@ NEWS
 .settings_container .settings_display {
   margin-left: 10px;
   width: 80%;
+  font-family: "Poppins", "sans-serif";
 }
 .settings_container .settings_display__accountDetails, .settings_container .settings_display__paymentDetails, .settings_container .settings_display__favorited, .settings_container .settings_display__security, .settings_container .settings_display__users, .settings_container .settings_display__issues, .settings_container .settings_display__upload {
   border: 1px solid black;
@@ -2545,6 +2551,7 @@ NEWS
   flex-direction: column;
   gap: 20px;
   position: relative;
+  padding-bottom: 20px;
 }
 .settings_container .settings_display__upload::after {
   top: 199px;
@@ -2553,6 +2560,90 @@ NEWS
   .settings_container .settings_display__upload::after {
     top: 218px;
   }
+}
+.settings_container .settings_display__upload .upload_row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .settings_container .settings_display__upload .upload_row {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+}
+.settings_container .settings_display__upload .upload_row input[type=file] {
+  display: none;
+}
+.settings_container .settings_display__upload .upload_row input {
+  outline: 0;
+  background: #93b2b9;
+  width: 50%;
+  border: 0;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  margin: 7px 0px;
+}
+@media (max-width: 768px) {
+  .settings_container .settings_display__upload .upload_row input {
+    width: 100%;
+  }
+}
+.settings_container .settings_display__upload .upload_row input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+.settings_container .settings_display__upload .upload_row textarea {
+  margin: 10px 0px;
+  margin-bottom: 0;
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  border: 2px solid #93b2b9;
+  background-color: transparent;
+  resize: none;
+  outline: 0;
+}
+.settings_container .settings_display__upload .upload_row .custom-file-upload {
+  border: 1px solid #93b2b9;
+  padding: 6px 12px;
+  font-size: 14px;
+  text-align: center;
+  width: 200px;
+  cursor: pointer;
+}
+.settings_container .settings_display__upload .upload_row .custom-file-upload i {
+  color: #93b2b9;
+}
+@media (max-width: 420px) {
+  .settings_container .settings_display__upload .upload_row .custom-file-upload {
+    width: 100%;
+  }
+}
+.settings_container .settings_display__upload .upload_row select {
+  padding: 5.5px 12px;
+  border: 1px solid #93b2b9;
+  background-color: transparent;
+  width: 200px;
+  font-size: 14px;
+  font-family: "Poppins", "sans-serif";
+}
+@media (max-width: 420px) {
+  .settings_container .settings_display__upload .upload_row select {
+    width: 100%;
+  }
+}
+.settings_container .settings_display__upload .upload_row select:focus {
+  outline: none;
+}
+.settings_container .settings_display__upload .upload_post {
+  width: 100%;
+  justify-content: flex-end;
+}
+.settings_container .settings_display__upload .upload_post input[type=submit] {
+  width: 150px;
 }
 
 .ActiveSetting {

@@ -444,8 +444,8 @@
            <hr class="break">
 
            <div class="current_pw disabled_pw">
-                <input type="password" placeholder="Enter your new password">
-                <input type="password" placeholder="Confirm password">
+                <input type="password" placeholder="Enter your new password" disabled>
+                <input type="password" placeholder="Confirm password" disabled>
             </div>
 
             <div class="current_pw sub_new_pw">
@@ -502,11 +502,11 @@
     <div class="settings_display">
         <div class="settings_display__upload">
             <div class="upload_row">
-                <label for="myfile">Select a file:</label>
-                <input type="file" id="myfile" name="myfile" value="yo">
-            </div>
-            
-            <div class="upload_row">
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fas fa-cloud-upload-alt"></i> Choose Art
+                </label>
+                <input id="file-upload" type="file"/>
+
                 <select name="" id="">
                     <option selected="true" disabled="disabled">Choose the category</option>   
                     <option value="1">Modern</option>    
@@ -515,6 +515,7 @@
                     <option value="4">Baroque</option>    
                 </select>
             </div>
+            
             
             <div class="upload_row">
                 <input type="text" placeholder="Title">
@@ -530,6 +531,10 @@
             </div>
             <div class="upload_row">
                 <textarea name="" placeholder="Description" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="upload_row upload_post">
+                <input type="submit" class="upload_post" value="Post">
             </div>
            
         </div>
