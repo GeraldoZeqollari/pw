@@ -90,7 +90,7 @@
 {{--  onclick='user_submenu()' --}}
       <div class="user_dropdown">
         <ul>
-          <a href=""><li><i class="fas fa-user-circle"></i> My Profile</li></a>
+          <a href={{ route('user_profile') }}><li><i class="fas fa-user-circle"></i> My Profile</li></a>
           <a href={{ route('user_settings') }}><li><i class="fas fa-user-cog"></i> Edit Profile</li></a>
           <a href={{ route('reportBug')}}><li><i class="fas fa-question-circle"></i>Report bug</li></a>
           {{-- <li><i class="fas fa-sign-out-alt"></i>
@@ -140,6 +140,8 @@
   @yield('artDetail')
   @yield('reportBug')
   @yield('userSettings')
+  @yield('userProfile')
+  @yield('search')
 
 
   <footer class="footer">
@@ -174,9 +176,9 @@
           <div class="socialMedia-footer">
             <a href="#"><i class="fab fa-facebook-f" style="color: rgb(64,100,172)"></i></a>
             <a href="#"><i class="fab fa-youtube" style="color: rgb(246,1,1)"></i></a>
-            <a href="#"><i class="fab fa-instagram" style="color:rgb(155,52,174)"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="color:rgb(167,49,150)"></i></a>
             <a href="#"><i class="fab fa-twitter" style="color: rgb(28,157,235)"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in" style="color: rgb(10,98,189)"></i></a>
+            <a href="#"><i class="fab fa-linkedin" style="color: rgb(10,98,189)"></i></a>
           </div>
         </div>
       </div>

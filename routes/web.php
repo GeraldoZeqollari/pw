@@ -22,6 +22,10 @@ Route::get('/account settings', function () {
     return view('pages.usersettings');
 })->name('user_settings');
 
+Route::get('/user/profile', function () {
+    return view('pages.userprofile');
+})->name('user_profile');
+
 Route::get('/report bug', function () {
     return view('pages.reportbug');
 })->name('reportBug');
@@ -38,6 +42,10 @@ Route::get('/gallery/medieval art', function () {
 Route::get('/gallery/baroque', function () {
     return view('pages.gallery.baroque');
 })->name('baroque');
+
+Route::get('/search', function () {
+    return view('pages.search');
+})->name('search');
 
 Route::get('/#ourGoal', function () {
     return view('home');
