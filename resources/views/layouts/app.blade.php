@@ -22,7 +22,7 @@
 
       <div class="header-submenu">
         <div class="header-submenu-row">
-          <a class="header-fade-down" href={{ route('ourGoal') }}>
+          <a class="header-fade-down" href="{{URL::to ('/#ourGoal') }}">
             <div class="header-submenu-pic">
               <img src="../images/our-goal.jpg" width="100%" alt="" />
             </div>

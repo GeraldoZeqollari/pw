@@ -41,7 +41,7 @@ Route::get('/gallery/baroque', function () {
 })->name('baroque');
 
 Route::get('/#ourGoal', function () {
-    return view('home');
+    return view('home', ['name' => 'ourGoal']);
 })->name('ourGoal');
 
 Route::get('/join us', function () {
