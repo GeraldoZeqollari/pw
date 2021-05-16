@@ -10,6 +10,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    // border: 2px solid red;
 
     @include mediaQ(laptop) {
         width: min(80%, 100rem);
@@ -20,7 +21,11 @@
     }
 
     @include mediaQ(phone) {
-        width: min(100%, 100rem);
+        width: min(95%, 100rem);
+    }
+
+    @include mediaQ(s-phone) {
+        width: min(95%, 100rem);
     }
     .switch_tab {
         .setting {
@@ -69,6 +74,8 @@
         margin-left: 10px;
         // background-color: rgb(74, 233, 241);
         width: 80%;
+        font-family: v.$HeaderFont;
+
         &__accountDetails,
         &__paymentDetails,
         &__favorited,
@@ -608,7 +615,7 @@
             }
         }
 
-        &__issues{
+        &__issues {
             min-height: 360px;
             display: flex;
             flex-direction: column;
@@ -623,25 +630,22 @@
                 }
             }
 
-            .issue_row{
-
-
-                .issue_details{
+            .issue_row {
+                .issue_details {
                     display: flex;
 
-                    :nth-child(2){
+                    :nth-child(2) {
                         margin-left: 10px;
                         color: gray;
                     }
                 }
 
-                h1{
+                h1 {
                     font-size: 16px;
                     font-family: v.$HeaderFont;
-
                 }
 
-                p{
+                p {
                     font-size: 14px;
                     border: 1px solid v.$teel;
                     padding: 10px;
@@ -650,12 +654,13 @@
             }
         }
 
-        &__upload{
+        &__upload {
             min-height: 360px;
             display: flex;
             flex-direction: column;
             gap: 20px;
             position: relative;
+            padding-bottom: 20px;
 
             &::after {
                 top: 199px;
@@ -665,6 +670,99 @@
                 }
             }
 
+            .upload_row {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+
+                @include mediaQ(phone) {
+                    flex-direction: column;
+                    gap: 5px;
+                    align-items: center;
+                }
+
+                input[type="file"] {
+                    display: none;
+                }
+
+                input {
+                    outline: 0;
+                    background: v.$teel;
+                    width: 50%;
+                    border: 0;
+                    color: white;
+                    font-size: 16px;
+                    // border-radius: 5px;
+                    padding: 10px;
+                    margin: 7px 0px;
+
+                    @include mediaQ(phone) {
+                        width: 100%;
+                    }
+
+                    &::placeholder {
+                        color: white;
+                        opacity: 0.8;
+                    }
+                }
+
+                textarea {
+                    margin: 10px 0px;
+                    margin-bottom: 0;
+                    width: 100%;
+                    height: 150px;
+                    padding: 12px 20px;
+                    border: 2px solid v.$teel;
+                    background-color: transparent;
+                    resize: none;
+                    outline: 0;
+                }
+
+                .custom-file-upload {
+                    border: 1px solid v.$teel;
+                    // display: inline-block;
+                    padding: 6px 12px;
+                    font-size: 14px;
+                    text-align: center;
+                    width: 200px;
+
+                    cursor: pointer;
+
+                    i {
+                        color: v.$teel;
+                    }
+
+                    @include mediaQ(s-phone) {
+                        width: 100%;
+                    }
+                }
+
+                select {
+                    padding: 5.5px 12px;
+                    // margin-left: 2px;
+                    border: 1px solid v.$teel;
+                    background-color: transparent;
+                    width: 200px;
+                    font-size: 14px;
+                    font-family: v.$HeaderFont;
+
+                    @include mediaQ(s-phone) {
+                        width: 100%;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .upload_post {
+                width: 100%;
+                justify-content: flex-end;
+
+                input[type="submit"] {
+                    width: 150px;                }
+            }
         }
     }
 }
