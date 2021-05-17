@@ -9,7 +9,8 @@
               <div class="login_title">
             <h1 class="login-header login-header-fp">Forgot Password</h1>
           </div>
-            <form class="login-form">
+            <form class="login-form" action="{{ route('login') }}" method="POST">
+              @csrf
               <input type="email" name="email" class="username" placeholder="Email" autocomplete="off">
               <a class="forgot_password back_toLogIn" href={{ route('login') }} >Back to log in</a>
               <input type="submit" value="Submit"  class="login_button">

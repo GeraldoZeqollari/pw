@@ -94,21 +94,9 @@
       {{--  onclick='user_submenu()' --}}
       <div class="user_dropdown">
         <ul>
-<<<<<<< HEAD
-          <a href="">
-            <li><i class="fas fa-user-circle"></i> My Profile</li>
-          </a>
-          <a href={{ route('user_settings') }}>
-            <li><i class="fas fa-user-cog"></i> Edit Profile</li>
-          </a>
-          <a href={{ route('reportBug')}}>
-            <li><i class="fas fa-question-circle"></i>Report bug</li>
-          </a>
-=======
           <a href={{ route('user_profile') }}><li><i class="fas fa-user-circle"></i> My Profile</li></a>
           <a href={{ route('user_settings') }}><li><i class="fas fa-user-cog"></i> Edit Profile</li></a>
           <a href={{ route('reportBug')}}><li><i class="fas fa-question-circle"></i>Report bug</li></a>
->>>>>>> c85e117c27d72fe03f3953e76a96c97fe2f0dafb
           {{-- <li><i class="fas fa-sign-out-alt"></i>
           
           </li> --}}
