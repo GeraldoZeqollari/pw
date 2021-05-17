@@ -30,12 +30,56 @@ nav {
     }
 
     .logo {
-        color: v.$black;
-        font-size: 34px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-weight: bolder;
+        padding-top: 5px;
         cursor: pointer;
+
+ 
+
+        svg {
+            // cursor: pointer;
+            // transition: all 1s ease-in;
+            margin-left: 0;
+            padding-left: 0;
+            @include mediaQ(phone){
+                display: none;
+            }
+
+            #paintbrush {
+                transition: all 1s ease-in;
+                transform: translateX(100%);
+            }
+
+            #letter_e {
+                transform: translateX(33px);
+                transition: all 0.3s ease-in;
+                transition-delay: 0.7s;
+            }
+
+            #letter_c {
+                transform: translateX(24px);
+                transition: all 0.3s ease-in;
+                transition-delay: 0.7s;
+            }
+
+            &:hover #paintbrush {
+                transform: translateX(0%);
+            }
+
+            &:hover #letter_c {
+                transform: translateX(0px);
+            }
+
+            &:hover #letter_e {
+                transform: translateX(0px);
+            }
+        }
+
+        .svg_logo_mobile{
+            display: none;
+            @include mediaQ(phone){
+                display: block;
+            }
+        }
     }
 
     .nav-links {
