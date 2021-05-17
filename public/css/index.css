@@ -2651,6 +2651,206 @@ NEWS
   color: white !important;
 }
 
+.profile_container {
+  padding-top: 70px;
+  min-height: 150vh;
+}
+.profile_container .profile_cover {
+  min-height: 175px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.profile_container .profile_cover__gradient {
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  min-height: 175px;
+  filter: blur(10px);
+  bottom: -15px;
+}
+.profile_container .profile_pic {
+  border: 4px solid white;
+  display: flex;
+  width: 100px;
+  border-radius: 50%;
+  margin-top: -50px;
+  position: relative;
+  margin-inline: auto;
+}
+.profile_container .profile_pic img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+}
+.profile_container .profile_pic .profile_names {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: -58px;
+}
+.profile_container .profile_pic .profile_names h1 {
+  font-family: "Poppins", "sans-serif";
+  font-size: 18px;
+}
+.profile_container .profile_pic .profile_names p {
+  font-family: "Open Sans", "sans-serif";
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+.profile_container .profile_dash {
+  margin-top: 100px;
+  display: flex;
+  width: min(80%, 100rem);
+  margin-inline: auto;
+  font-family: "Poppins", "sans-serif";
+}
+@media (max-width: 1400px) {
+  .profile_container .profile_dash {
+    width: min(90%, 100rem);
+  }
+}
+@media (max-width: 768px) {
+  .profile_container .profile_dash {
+    width: min(99%, 100rem);
+  }
+}
+.profile_container .profile_dash__left {
+  min-height: 478px;
+  padding: 15px 30px;
+  max-width: 317px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .profile_container .profile_dash__left {
+    max-width: 210px;
+  }
+}
+.profile_container .profile_dash__left h1 {
+  font-size: 24px;
+}
+.profile_container .profile_dash__left p {
+  font-family: "Open Sans", "sans-serif";
+  font-size: 15px;
+  color: gray;
+}
+.profile_container .profile_dash__left h2 {
+  font-size: 18px;
+}
+.profile_container .profile_dash__right {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 30px;
+}
+.profile_container .profile_dash__right h1 {
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .profile_container .profile_dash__right h1 {
+    text-align: center;
+  }
+}
+.profile_container .profile_dash__right .fav_user_imgs {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .profile_container .profile_dash__right .fav_user_imgs {
+    justify-content: center;
+  }
+}
+.profile_container .profile_dash__right .fav_user_imgs .profile_favs {
+  width: 200px;
+}
+.profile_container .profile_dash__right .fav_user_imgs .profile_favs img {
+  width: 100%;
+}
+
+.search_container {
+  min-height: 100vh;
+  width: min(70%, 100rem);
+  margin-inline: auto;
+  padding: 25px;
+  padding-top: 65px;
+  font-family: "Poppins", "sans-serif";
+}
+@media (max-width: 1400px) {
+  .search_container {
+    width: min(80%, 100rem);
+  }
+}
+@media (max-width: 900px) {
+  .search_container {
+    width: min(90%, 100rem);
+  }
+}
+@media (max-width: 768px) {
+  .search_container {
+    width: min(95%, 100rem);
+  }
+}
+.search_container h1 {
+  font-size: 22px;
+}
+.search_container .searched_results {
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media (max-width: 900px) {
+  .search_container .searched_results {
+    justify-content: center;
+  }
+}
+.search_container .searched_results .image {
+  position: relative;
+  width: 200px;
+  z-index: 3;
+}
+.search_container .searched_results .image a {
+  text-decoration: none;
+  color: black;
+}
+.search_container .searched_results .image a:hover .img-title::after {
+  padding-left: 25px;
+}
+.search_container .searched_results .image .img-title {
+  font-size: 20px;
+  position: relative;
+  z-index: -1;
+}
+.search_container .searched_results .image .img-title::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  font-size: 17px;
+  padding-left: 10px;
+  transition: all ease-in-out 0.5s;
+}
+.search_container .searched_results .image .img-size {
+  margin-top: -5px;
+  color: #838383;
+}
+.search_container .searched_results .image .artist-name {
+  padding-top: 20px;
+  text-decoration: underline;
+}
+.search_container .searched_results .image .img-price {
+  font-size: 16px;
+}
+.search_container .searched_results .image .favorite-img {
+  position: absolute;
+  bottom: 90px;
+  right: 0;
+  z-index: 9912;
+  font-size: 26px;
+  cursor: pointer;
+}
+
 *,
 *::before,
 *::after {
