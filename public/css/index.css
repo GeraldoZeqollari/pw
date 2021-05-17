@@ -32,12 +32,48 @@ nav a {
   color: #202020;
 }
 nav .logo {
-  color: #202020;
-  font-size: 34px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: bolder;
+  padding-top: 5px;
   cursor: pointer;
+}
+nav .logo svg {
+  margin-left: 0;
+  padding-left: 0;
+}
+@media (max-width: 768px) {
+  nav .logo svg {
+    display: none;
+  }
+}
+nav .logo svg #paintbrush {
+  transition: all 1s ease-in;
+  transform: translateX(100%);
+}
+nav .logo svg #letter_e {
+  transform: translateX(33px);
+  transition: all 0.3s ease-in;
+  transition-delay: 0.7s;
+}
+nav .logo svg #letter_c {
+  transform: translateX(24px);
+  transition: all 0.3s ease-in;
+  transition-delay: 0.7s;
+}
+nav .logo svg:hover #paintbrush {
+  transform: translateX(0%);
+}
+nav .logo svg:hover #letter_c {
+  transform: translateX(0px);
+}
+nav .logo svg:hover #letter_e {
+  transform: translateX(0px);
+}
+nav .logo .svg_logo_mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  nav .logo .svg_logo_mobile {
+    display: block;
+  }
 }
 nav .nav-links {
   display: flex;
