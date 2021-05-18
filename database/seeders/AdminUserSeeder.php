@@ -19,7 +19,6 @@ class AdminUserSeeder extends Seeder
             'email' => 'ok2@gmail.com',
             'username' => 'ok2',
             'password' => bcrypt('pass'),
-
         ]);
     }
 }

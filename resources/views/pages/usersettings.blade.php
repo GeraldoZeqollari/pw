@@ -6,12 +6,17 @@
 <div class="settings_container">
     <div class="switch_tab">
         <ul>
-            <a onclick="tabs(0)" class="setting ActiveSetting"><i class="fas fa-portrait"></i><span class="desktop_view">Details</span> </a>
-            <a onclick="tabs(1)"  class="setting"><i class="far fa-credit-card"></i><span class="desktop_view">Payment</span> </a>
-            <a onclick="tabs(2)" class="setting"><i class="fas fa-bookmark"></i><span class="desktop_view">Favorited</span> </a>
-            <a onclick="tabs(3)" class="setting"><i class="fas fa-lock"></i><span class="desktop_view">Security</span> </a>
+            <a onclick="tabs(0)" class="setting ActiveSetting"><i class="fas fa-portrait"></i><span
+                    class="desktop_view">Details</span> </a>
+            <a onclick="tabs(1)" class="setting"><i class="far fa-credit-card"></i><span
+                    class="desktop_view">Payment</span> </a>
+            <a onclick="tabs(2)" class="setting"><i class="fas fa-bookmark"></i><span
+                    class="desktop_view">Favorited</span> </a>
+            <a onclick="tabs(3)" class="setting"><i class="fas fa-lock"></i><span class="desktop_view">Security</span>
+            </a>
             <a onclick="tabs(4)" class="setting"><i class="fas fa-users"></i><span class="desktop_view">Users</span></a>
-            <a onclick="tabs(5)" class="setting"><i class="fas fa-upload"></i><span class="desktop_view">Upload</span></a>
+            <a onclick="tabs(5)" class="setting"><i class="fas fa-upload"></i><span
+                    class="desktop_view">Upload</span></a>
             <a onclick="tabs(6)" class="setting"><i class="far fa-flag"></i><span class="desktop_view">Issues</span></a>
         </ul>
     </div>
@@ -23,7 +28,7 @@
                 <input type="text" placeholder="Last Name">
             </div>
 
-                  
+
             <div class="accData">
                 <input type="number" placeholder="Age">
                 <input type="number" placeholder="Enter your phone number">
@@ -33,10 +38,10 @@
                 <div class="one_select">
                     <h1>Gender</h1>
                     <select name="" id="">
-                        <option selected="true" disabled="disabled">Choose your gender</option>   
-                        <option value="M">Male</option>    
-                        <option value="F">Female</option>    
-                        <option value="O">Other</option>    
+                        <option selected="true" disabled="disabled">Choose your gender</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="O">Other</option>
                     </select>
                 </div>
 
@@ -93,7 +98,7 @@
                         <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
                         <option value="Colombia">Colombia</option>
                         <option value="Comoros">Comoros</option>
-                        <option value="Congo">Congo</option> 
+                        <option value="Congo">Congo</option>
                         <option value="Cook Islands">Cook Islands</option>
                         <option value="Costa Rica">Costa Rica</option>
                         <option value="Cote D'ivoire">Cote D'ivoire</option>
@@ -158,7 +163,8 @@
                         <option value="Kazakhstan">Kazakhstan</option>
                         <option value="Kenya">Kenya</option>
                         <option value="Kiribati">Kiribati</option>
-                        <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                        <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of
+                        </option>
                         <option value="Korea, Republic of">Korea, Republic of</option>
                         <option value="Kuwait">Kuwait</option>
                         <option value="Kyrgyzstan">Kyrgyzstan</option>
@@ -271,7 +277,8 @@
                         <option value="United Arab Emirates">United Arab Emirates</option>
                         <option value="United Kingdom">United Kingdom</option>
                         <option value="United States">United States</option>
-                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands
+                        </option>
                         <option value="Uruguay">Uruguay</option>
                         <option value="Uzbekistan">Uzbekistan</option>
                         <option value="Vanuatu">Vanuatu</option>
@@ -291,27 +298,30 @@
             <div class="accData accData_btn">
                 <input type="submit" value="Change">
             </div>
-      
-           
-         
+
+
+
         </div>
     </div>
 
     <div class="settings_display">
         <div class="settings_display__paymentDetails">
             <div class="accData">
-                
+
                 <h1>Choose your card</h1>
-                
+
                 <div class="card_selection">
                     <input type="radio" id="visa" name="credit_card" value="new">
-                    <label for="visa" class="label_exp"><i class="fab fa-cc-visa" style="color: rgb(24,30,108)"></i></label>
+                    <label for="visa" class="label_exp"><i class="fab fa-cc-visa"
+                            style="color: rgb(24,30,108)"></i></label>
                     <input type="radio" id="mastercard" name="credit_card" value="medium">
-                    <label for="mastercard" class="label_exp"><i class="fab fa-cc-mastercard" style="color: rgb(229,1,26)"></i></label>
+                    <label for="mastercard" class="label_exp"><i class="fab fa-cc-mastercard"
+                            style="color: rgb(229,1,26)"></i></label>
                     <input type="radio" id="paypal" name="credit_card" value="high">
-                    <label for="paypal" class="label_exp"><i class="fab fa-cc-paypal" style="color: rgb(1,46,130)"></i></label>
+                    <label for="paypal" class="label_exp"><i class="fab fa-cc-paypal"
+                            style="color: rgb(1,46,130)"></i></label>
                 </div>
-                   
+
             </div>
 
             <div class="accData mt">
@@ -320,26 +330,26 @@
 
                 <label class="mt" for="address1">Enter your address</label>
                 <input type="text" name="address1" placeholder="">
-               
+
                 <label class="mt" for="">Enter your expiration date</label>
 
                 <div class="accData accData_select">
                     <div class="one_select">
-                    <select name='expireMM' id='expireMM'>
-                        <option value=''>Month</option>
-                        <option value='01'>January</option>
-                        <option value='02'>February</option>
-                        <option value='03'>March</option>
-                        <option value='04'>April</option>
-                        <option value='05'>May</option>
-                        <option value='06'>June</option>
-                        <option value='07'>July</option>
-                        <option value='08'>August</option>
-                        <option value='09'>September</option>
-                        <option value='10'>October</option>
-                        <option value='11'>November</option>
-                        <option value='12'>December</option>
-                    </select> </div>
+                        <select name='expireMM' id='expireMM'>
+                            <option value=''>Month</option>
+                            <option value='01'>January</option>
+                            <option value='02'>February</option>
+                            <option value='03'>March</option>
+                            <option value='04'>April</option>
+                            <option value='05'>May</option>
+                            <option value='06'>June</option>
+                            <option value='07'>July</option>
+                            <option value='08'>August</option>
+                            <option value='09'>September</option>
+                            <option value='10'>October</option>
+                            <option value='11'>November</option>
+                            <option value='12'>December</option>
+                        </select> </div>
                     <div class="two_select">
                         <select name='expireYY' id='expireYY'>
                             <option value=''>Year</option>
@@ -350,7 +360,7 @@
                             <option value='25'>2025</option>
                             <option value='26'>2026</option>
                             <option value='27'>2027</option>
-                        </select> 
+                        </select>
                     </div>
                 </div>
 
@@ -364,14 +374,14 @@
                         <label for="csc">Zip</label>
                         <input type="number" name="csc" placeholder="1000">
                     </div>
-                   
+
                 </div>
             </div>
 
             <div class="accData mt accData_btn">
                 <input type="submit" value="Submit">
             </div>
-      
+
         </div>
     </div>
     <div class="settings_display">
@@ -379,71 +389,71 @@
             <div class="no_fav" style="display: none">
                 <h1>Start adding to your collection by clicking the heart button of the art pieces you like!</h1>
             </div>
-            <div class="fav_flexbox" >
+            <div class="fav_flexbox">
                 <div class="fav_flexbox__img">
-                  <a href="">
-                    <img src="../images/cat_screaming.jpg" alt="">
-                  </a>  
+                    <a href="">
+                        <img src="../images/cat_screaming.jpg" alt="">
+                    </a>
                 </div>
                 <div class="fav_flexbox__img">
-                  <a href="">
-                    <img src="../images/cat_screaming.jpg" alt="">
-                  </a>  
+                    <a href="">
+                        <img src="../images/cat_screaming.jpg" alt="">
+                    </a>
                 </div>
                 <div class="fav_flexbox__img">
-                  <a href="">
-                    <img src="../images/cat_screaming.jpg" alt="">
-                  </a>  
+                    <a href="">
+                        <img src="../images/cat_screaming.jpg" alt="">
+                    </a>
                 </div>
                 <div class="fav_flexbox__img">
-                  <a href="">
-                    <img src="../images/cat_screaming.jpg" alt="">
-                  </a>  
+                    <a href="">
+                        <img src="../images/cat_screaming.jpg" alt="">
+                    </a>
                 </div>
                 <div class="fav_flexbox__img">
-                  <a href="">
-                    <img src="../images/cat_screaming.jpg" alt="">
-                  </a>  
+                    <a href="">
+                        <img src="../images/cat_screaming.jpg" alt="">
+                    </a>
                 </div>
                 <div class="fav_flexbox__img">
-                  <a href="">
-                    <img src="../images/cat_screaming.jpg" alt="">
-                  </a>  
+                    <a href="">
+                        <img src="../images/cat_screaming.jpg" alt="">
+                    </a>
                 </div>
                 <div class="fav_flexbox__img">
-                  <a href="">
-                    <img src="../images/cat_screaming.jpg" alt="">
-                  </a>  
+                    <a href="">
+                        <img src="../images/cat_screaming.jpg" alt="">
+                    </a>
                 </div>
                 <div class="fav_flexbox__img">
-                  <a href="">
-                    <img src="../images/cat_screaming.jpg" alt="">
-                  </a>  
+                    <a href="">
+                        <img src="../images/cat_screaming.jpg" alt="">
+                    </a>
                 </div>
                 <div class="fav_flexbox__img">
-                  <a href="">
-                    <img src="../images/cat_screaming.jpg" alt="">
-                  </a>  
+                    <a href="">
+                        <img src="../images/cat_screaming.jpg" alt="">
+                    </a>
                 </div>
                 <div class="fav_flexbox__img">
-                  <a href="">
-                    <img src="../images/cat_screaming.jpg" alt="">
-                  </a>  
+                    <a href="">
+                        <img src="../images/cat_screaming.jpg" alt="">
+                    </a>
                 </div>
-                
+
             </div>
         </div>
     </div>
     <div class="settings_display">
         <div class="settings_display__security">
-           <div class="current_pw">
-               <input type="password" placeholder="Enter your old password">
-               <input type="submit" class="old_pw" value="Submit">
-           </div>
+            <div class="current_pw">
+                <input type="password" placeholder="Enter your old password">
+                <input type="submit" class="old_pw" value="Submit">
+            </div>
 
-           <hr class="break">
+            <hr class="break">
 
-           <div class="current_pw disabled_pw">
+            <div class="current_pw disabled_pw">
                 <input type="password" placeholder="Enter your new password" disabled>
                 <input type="password" placeholder="Confirm password" disabled>
             </div>
@@ -499,24 +509,26 @@
                 {{ $feedbacks->links('pagination.pagination') }} --}}
         </div>
     </div>
+   
+
     <div class="settings_display">
         <div class="settings_display__upload">
             <div class="upload_row">
                 <label for="file-upload" class="custom-file-upload">
                     <i class="fas fa-cloud-upload-alt"></i> Choose Art
                 </label>
-                <input id="file-upload" type="file"/>
+                <input id="file-upload" type="file" />
 
                 <select name="" id="">
-                    <option selected="true" disabled="disabled">Choose the category</option>   
-                    <option value="1">Modern</option>    
-                    <option value="2">Realism</option>    
-                    <option value="3">Medieval</option>    
-                    <option value="4">Baroque</option>    
+                    <option selected="true" disabled="disabled">Choose the category</option>
+                    <option value="1">Modern</option>
+                    <option value="2">Realism</option>
+                    <option value="3">Medieval</option>
+                    <option value="4">Baroque</option>
                 </select>
             </div>
-            
-            
+
+
             <div class="upload_row">
                 <input type="text" placeholder="Title">
                 <input type="text" placeholder="Author">
@@ -536,9 +548,10 @@
             <div class="upload_row upload_post">
                 <input type="submit" class="upload_post" value="Post">
             </div>
-           
+
         </div>
     </div>
+
     <div class="settings_display">
         <div class="settings_display__issues">
             <div class="issue_row">
@@ -547,7 +560,10 @@
                     <h1>Time sent</h1>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore, corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi
+                    laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore,
+                    corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero
+                    quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
                 </p>
             </div>
             <div class="issue_row">
@@ -556,7 +572,10 @@
                     <h1>Time sent</h1>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore, corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi
+                    laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore,
+                    corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero
+                    quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
                 </p>
             </div>
             <div class="issue_row">
@@ -565,7 +584,10 @@
                     <h1>Time sent</h1>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore, corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi
+                    laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore,
+                    corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero
+                    quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
                 </p>
             </div>
             <div class="issue_row">
@@ -574,7 +596,10 @@
                     <h1>Time sent</h1>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore, corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi
+                    laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore,
+                    corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero
+                    quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
                 </p>
             </div>
             <div class="issue_row">
@@ -583,7 +608,10 @@
                     <h1>Time sent</h1>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore, corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quidem consectetur excepturi
+                    laboriosam maiores debitis, ad tempore iste nesciunt suscipit iusto totam vitae quae inventore,
+                    corporis deleniti accusantium impedit? Quaerat possimus debitis aspernatur, error dolores libero
+                    quas quae ipsa ad repellendus dolorum eos, reprehenderit laboriosam ratione odit facere aliquam?
                 </p>
             </div>
 
