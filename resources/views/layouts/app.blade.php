@@ -52,25 +52,41 @@
 
       <div class="header-submenu">
         <div class="header-submenu-row">
+<<<<<<< HEAD
           <a class="header-fade-down" href="">
+=======
+          <a class="header-fade-down" onclick="changeUrlGoal()">
+>>>>>>> fc2c4e38571b7f386b7e2534a279284e7cbc860b
             <div class="header-submenu-pic">
               <img src="../images/our-goal.jpg" width="100%" alt="" />
             </div>
             <span class="header-nav-title">Our Goal</span>
           </a>
+<<<<<<< HEAD
           <a class="header-fade-down">
+=======
+          <a class="header-fade-down" onclick="changeUrlNews()">
+>>>>>>> fc2c4e38571b7f386b7e2534a279284e7cbc860b
             <div class="header-submenu-pic">
               <img src="../images/news.jpg" width="100%" alt="" />
             </div>
             <span class="header-nav-title">News</span>
           </a>
+<<<<<<< HEAD
           <a class="header-fade-down">
+=======
+          <a class="header-fade-down" onclick="changeUrlJoin()">
+>>>>>>> fc2c4e38571b7f386b7e2534a279284e7cbc860b
             <div class="header-submenu-pic">
               <img src="../images/wanna-join.jpg" width="100%" alt="" />
             </div>
             <span class="header-nav-title">Join Us</span>
           </a>
+<<<<<<< HEAD
           <a class="header-fade-down">
+=======
+          <a class="header-fade-down" onclick="changeUrlTeam()">
+>>>>>>> fc2c4e38571b7f386b7e2534a279284e7cbc860b
             <div class="header-submenu-pic">
               <img src="../images/our-team.jpg" width="100%" alt="" />
             </div>

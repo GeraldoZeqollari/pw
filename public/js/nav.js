@@ -84,3 +84,16 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 });
+
+const changeUrlTeam = () => {
+    window.location.replace('http://127.0.0.1:8000/#ourTeam');
+}
+const changeUrlGoal = () => {
+    window.location.replace('http://127.0.0.1:8000/#ourGoal');
+}
+const changeUrlJoin = () => {
+    window.location.replace('http://127.0.0.1:8000/#joinUs');
+}
+const changeUrlNews = () => {
+    window.location.replace('http://127.0.0.1:8000/#news');
+}
