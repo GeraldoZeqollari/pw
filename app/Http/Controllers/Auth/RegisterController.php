@@ -25,7 +25,16 @@ class RegisterController extends Controller
             
             'username' => 'required|max:255',
             'email' => 'required|email|max:255',
-            'password' => 'required|confirmed',
+            'password' => [
+                'required',
+                'string'
+            ],
+
+            // 'min:8',
+            //     'regex:/[a-z]/',
+            //     'regex:/[A-Z]/',
+            //     'regex:/[0-9]/',
+            //     'confirmed'
         ]);
 
         User::create([

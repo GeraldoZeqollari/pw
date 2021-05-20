@@ -93,25 +93,25 @@
 
       <div class="header-submenu">
         <div class="header-submenu-row">
-          <a class="header-fade-down" href={{ route('ourGoal') }}>
+          <a class="header-fade-down" onclick="changeUrlGoal()">
             <div class="header-submenu-pic">
               <img src="../images/our-goal.jpg" width="100%" alt="" />
             </div>
             <span class="header-nav-title">Our Goal</span>
           </a>
-          <a class="header-fade-down" href="#news">
+          <a class="header-fade-down" onclick="changeUrlNews()">
             <div class="header-submenu-pic">
               <img src="../images/news.jpg" width="100%" alt="" />
             </div>
             <span class="header-nav-title">News</span>
           </a>
-          <a class="header-fade-down" href="#joinUs">
+          <a class="header-fade-down" onclick="changeUrlJoin()">
             <div class="header-submenu-pic">
               <img src="../images/wanna-join.jpg" width="100%" alt="" />
             </div>
             <span class="header-nav-title">Join Us</span>
           </a>
-          <a class="header-fade-down" href="#ourTeam">
+          <a class="header-fade-down" onclick="changeUrlTeam()">
             <div class="header-submenu-pic">
               <img src="../images/our-team.jpg" width="100%" alt="" />
             </div>
