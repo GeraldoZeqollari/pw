@@ -2,91 +2,86 @@
 
 @section('content')
 <section class="container-first">
-    <div class="container-first-text">
-      <h1 class="container1-title">
-       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, in.
-      </h1>
+  <div class="container-first-text">
+    <h1 class="container1-title">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, in.
+    </h1>
 
-      <p class="container1-txt">Wanna find out more stuff about cats?</p>
+    <p class="container1-txt">Wanna find out more stuff about cats?</p>
 
-      {{-- <a href="#" class="button-type button-type-white"> Learn More </a> --}}
-    </div>
-  </section>
+    {{-- <a href="#" class="button-type button-type-white"> Learn More </a> --}}
+  </div>
+</section>
 
-  <section class="container-category">
-    <h1 class="">Categories</h1>
+<section class="container-category">
+  <h1 class="">Categories</h1>
 
-    <div class="category-row">
-      <div class="category-title">
-        <h1>Modern Art</h1>
-        <a href={{route('modernart')}}>Read More <i class="fas fa-angle-double-right"></i></a>
-      </div>
-      <div class="category-img">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-      </div>
-      <div class="category-img">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-      </div>
-      <div class="category-img">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-      </div>
+  <div class="category-row">
+    <div class="category-title">
+      <h1>Modern Art</h1>
+      <a href={{route('modernart')}}>Read More <i class="fas fa-angle-double-right"></i></a>
     </div>
-    <div class="category-row">
-      <div class="category-title">
-        <h1>Realism</h1>
-        <a href={{route('realism')}}>Read More <i class="fas fa-angle-double-right"></i></a>
-      </div>
-      <div class="category-img">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-      </div>
-      <div class="category-img">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-      </div>
-      <div class="category-img">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-      </div>
+    <div class="category-img">
+      <img src="../images/big-cat.jpg" width="100%" alt="" />
     </div>
-    <div class="category-row loadMore">
-      <div class="category-title">
-        <h1>Medieval Art</h1>
-        <a href={{route('medievalart')}}>Read More <i class="fas fa-angle-double-right"></i></a>
-      </div>
-      <div class="category-img">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-      </div>
-      <div class="category-img">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-      </div>
-      <div class="category-img">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-      </div>
+    <div class="category-img">
+      <img src="../images/big-cat.jpg" width="100%" alt="" />
     </div>
-    <div class="category-row loadMore">
-      <div class="category-title">
-        <h1>Baroque</h1>
-        <a href={{route('baroque')}}>Read More <i class="fas fa-angle-double-right"></i></a>
-      </div>
-      <div class="category-img">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-      </div>
-      <div class="category-img">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-      </div>
-      <div class="category-img">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-      </div>
+    <div class="category-img">
+      <img src="../images/big-cat.jpg" width="100%" alt="" />
     </div>
-    <div id="loadMore" style="text-align: right" class="loadMoreBtn">
-      <a
-        href="#"
-        class="button-type-categories"
-        id="loadMore-button"
-        >Load More</a
-      >
+  </div>
+  <div class="category-row">
+    <div class="category-title">
+      <h1>Realism</h1>
+      <a href={{route('realism')}}>Read More <i class="fas fa-angle-double-right"></i></a>
     </div>
-  </section>
+    <div class="category-img">
+      <img src="../images/big-cat.jpg" width="100%" alt="" />
+    </div>
+    <div class="category-img">
+      <img src="../images/big-cat.jpg" width="100%" alt="" />
+    </div>
+    <div class="category-img">
+      <img src="../images/big-cat.jpg" width="100%" alt="" />
+    </div>
+  </div>
+  <div class="category-row loadMore">
+    <div class="category-title">
+      <h1>Medieval Art</h1>
+      <a href={{route('medievalart')}}>Read More <i class="fas fa-angle-double-right"></i></a>
+    </div>
+    <div class="category-img">
+      <img src="../images/big-cat.jpg" width="100%" alt="" />
+    </div>
+    <div class="category-img">
+      <img src="../images/big-cat.jpg" width="100%" alt="" />
+    </div>
+    <div class="category-img">
+      <img src="../images/big-cat.jpg" width="100%" alt="" />
+    </div>
+  </div>
+  <div class="category-row loadMore">
+    <div class="category-title">
+      <h1>Baroque</h1>
+      <a href={{route('baroque')}}>Read More <i class="fas fa-angle-double-right"></i></a>
+    </div>
+    <div class="category-img">
+      <img src="../images/big-cat.jpg" width="100%" alt="" />
+    </div>
+    <div class="category-img">
+      <img src="../images/big-cat.jpg" width="100%" alt="" />
+    </div>
+    <div class="category-img">
+      <img src="../images/big-cat.jpg" width="100%" alt="" />
+    </div>
+  </div>
+  <div id="loadMore" style="text-align: right" class="loadMoreBtn">
+    <a href="#" class="button-type-categories" id="loadMore-button">Load More</a>
+  </div>
+</section>
 
-  <section class="join-us" id="joinUs">
+<section class="join-us" id="joinUs">
     <div class="join-us-div">
       <h1>Join our creative community!</h1>
       <p>
@@ -103,10 +98,10 @@
       </p>
 
       <a href={{ route('joinus')}} class="button-type button-type-border">Join us</a>
-    </div>
-  </section>
+</div>
+</section>
 
-  <section class="our-goal" id="ourGoal">
+<section class="our-goal" id="ourGoal">
     <div class="out-goal-img">
       <img src="../images/our-goal-img.jpeg" width="100%" alt="Error" />
     </div>
@@ -134,7 +129,7 @@
     </div>
   </section>
 
-  <section class="our-goal our-team" id="ourTeam">
+<section class="our-goal our-team" id="ourTeam">
     <div class="our-goal-text">
       <h1 class="our-team-h1">With more than 200 years of experience</h1>
       <p>
@@ -161,7 +156,7 @@
     </div>
   </section>
 
-  <section class="news" id="news">
+<section class="news" id="news">
     <div class="news-div">
       <h1 class="latest-news">Latest News</h1>
 
@@ -219,5 +214,5 @@
     </div>
   </section>
 
-  <script type="text/javascript" src="{{ asset('js/mainPage.js') }}" ></script>
+<script type="text/javascript" src="{{ asset('js/mainPage.js') }}"></script>
 @endsection

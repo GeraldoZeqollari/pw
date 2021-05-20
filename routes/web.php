@@ -9,7 +9,7 @@ use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
-
+use App\Http\Controllers\ForgotPasswordController;
 
 Route::get('/gallery/modern art', function () {
     return view('pages.gallery.modernart');
@@ -48,17 +48,13 @@ Route::get('/search', function () {
     return view('pages.search');
 })->name('search');
 
-Route::get('/#ourGoal', function () {
-    return view('home', ['name' => 'ourGoal']);
-})->name('ourGoal');
 
 Route::get('/join us', function () {
     return view('pages.joinus');
 })->name('joinus');
 
-Route::get('/password reset', function () {
-    return view('auth.pwreset');
-})->name('pwreset');
+Route::get('/password reset', [ForgotPasswordController::class, 'forgot'])->name('pwreset');
+Route::post('/password reset', [ForgotPasswordController::class, 'password']);
 
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');

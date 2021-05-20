@@ -35,8 +35,9 @@ return [
 
     'mailers' => [
         'smtp' => [
+            'driver' => env('MAIL_DRIVER', 'smtp'),
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'host' => env('MAIL_HOST', 'smtp.gmail.com'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),
@@ -52,6 +53,7 @@ return [
         'mailgun' => [
             'transport' => 'mailgun',
         ],
+        'pretend' => false,
 
         'postmark' => [
             'transport' => 'postmark',
@@ -84,8 +86,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'laravelproject2@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'admin'),
     ],
 
     /*

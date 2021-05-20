@@ -54,26 +54,15 @@ class User extends Authenticatable
         return $this->hasMany(Feedback::class);
     }
 
-    public function roles()
-    {
-        return $this->belongsToMany(Role::class);
-    }
-
-    public function isAdmin()
+    public function isAdministrator()
     {
         return $this->roles()->where('role', 'Administrator')->exists();
     }
 
-    
-    // public function roles()
-    // {
-    //     return $this->belongsToMany(Role::class, 'user_role');
-    // }
-
-    // public function isAdministrator()
-    // {
-    //     return $this->roles()->where('name', 'Administrator')->exists();
-    // }
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'user_role');
+    }
 
     // public function likes()
     // {

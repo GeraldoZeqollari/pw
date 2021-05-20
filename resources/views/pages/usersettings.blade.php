@@ -14,10 +14,15 @@
                     class="desktop_view">Favorited</span> </a>
             <a onclick="tabs(3)" class="setting"><i class="fas fa-lock"></i><span class="desktop_view">Security</span>
             </a>
+            @if(Auth::user()->isAdministrator())
+
             <a onclick="tabs(4)" class="setting"><i class="fas fa-users"></i><span class="desktop_view">Users</span></a>
             <a onclick="tabs(5)" class="setting"><i class="fas fa-upload"></i><span
                     class="desktop_view">Upload</span></a>
             <a onclick="tabs(6)" class="setting"><i class="far fa-flag"></i><span class="desktop_view">Issues</span></a>
+            @else
+
+            @endif
         </ul>
     </div>
 
@@ -466,6 +471,9 @@
             </div>
         </div>
     </div>
+
+
+
     <div class="settings_display">
         <div class="settings_display__users">
             <div class="user_row">
@@ -508,8 +516,8 @@
             {{-- for pagination of users
                 {{ $feedbacks->links('pagination.pagination') }} --}}
         </div>
+
     </div>
-   
 
     <div class="settings_display">
         <div class="settings_display__upload">
