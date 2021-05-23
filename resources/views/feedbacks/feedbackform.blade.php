@@ -84,7 +84,7 @@
         @if ($feedbacks->count())
         @foreach ($feedbacks as $feedback)
         <div class="reviews">
-            <a href=""> {{ $feedback->user->username }} </a>
+            <a href=""> {{ $feedback->user->username}} </a>
             <span>{{ $feedback->feedback_type}}</span>
             <span>{{ $feedback->feedback_icon}}</span>
             <span>{{ $feedback->created_at->diffForHumans() }}</span>

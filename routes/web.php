@@ -1,15 +1,22 @@
 <?php
 
 use App\Models\User;
+use App\Models\Details;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\DetailsController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\ReportBugController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\card_detailsController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\payment_methodController;
 
 Route::get('/gallery/modern art', function () {
     return view('pages.gallery.modernart');
@@ -18,10 +25,6 @@ Route::get('/gallery/modern art', function () {
 Route::get('/art details', function () {
     return view('pages.artdetail');
 })->name('art_detail');
-
-Route::get('/account settings', function () {
-    return view('pages.usersettings');
-})->name('user_settings');
 
 Route::get('/user/profile', function () {
     return view('pages.userprofile');
@@ -71,10 +74,18 @@ Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
 Route::post('/feedback', [FeedbackController::class, 'store']);
 
 
-Route::get('/search', [SearchController::class, 'index'])->name('search');
-Route::post('/search', [SearchController::class, 'store']);
+Route::post('/usersettings_details', [UserController::class, 'userdetails'])->name('usersettings_details');
+Route::post('/usersettings_carddetails', [UserController::class, 'carddetails'])->name('usersettings_carddetails');
+
+Route::get('/account settings', [UserController::class, 'usersettings'])->name('user_settings');
+
+Route::get('/reportbug', [ReportBugController::class, 'index'])->name('reportbug');
+Route::post('/reportbug', [ReportBugController::class, 'store']);
 
 
+
+// Route::get('/search', [SearchController::class, 'index'])->name('search');
+// Route::post('/search', [SearchController::class, 'store']);
 
 // Route::post('/search', function () {
 //     return view('/search');

@@ -14,15 +14,14 @@ class CreateCardDetailsTable extends Migration
     public function up()
     {
         Schema::create('card_details', function (Blueprint $table) {
-            $table->integer('card_id')->primary();
+            $table->integer('card_id');
             $table->integer('card_number')->unique();
             $table->integer('payment_id');
             $table->integer('csc');
-            $table->timestamp('expiration_date');
-            $table->string('addres1', 50);
-            $table->string('addres2', 50);
+            $table->string('expiration_dateM');
+            $table->string('expiration_dateY');
+            $table->string('address1', 50);
             $table->integer('zip_code');
-         
         });
     }
 

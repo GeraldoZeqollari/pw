@@ -5,19 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Feedback extends Model
+class ReportBug extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'body',
-        'feedback_icon',
-        'feedback_type',
-        'user_id',
-    ];
+    public $timestamps = false;
 
-    public function user()
-    {
-        return $this->belongsTo(User::class, 'user_id');
-    }
+    protected $fillable = [
+        'bug_desc',
+        'user_id',
+        'report_id'
+    ];
 }

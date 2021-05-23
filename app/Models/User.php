@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Like;
 use App\Models\Role;
+use App\Models\Details;
 use App\Models\Feedback;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -28,8 +29,26 @@ class User extends Authenticatable
         'password',
         'username',
         'role_id',
+        'gender',
+        'first_name',
+        'last_name',
+        'phone',
+        'age',
+        'country_name',
+        'card_number',
+        'address1',
+        'expiration_dateM',
+        'expiration_dateY',
+        'csc',
+        'zip_code',
+        'payment_id',
+        'card_id',
+        'reportBug',
+        'user_id',
     ];
 
+
+    
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -62,6 +81,10 @@ class User extends Authenticatable
     public function roles()
     {
         return $this->belongsToMany(Role::class, 'user_role');
+    }
+    public function user()
+    {
+        return $this->belongsToMany(User::class, 'id');
     }
 
     // public function likes()
