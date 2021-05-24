@@ -6,8 +6,10 @@ use App\Models\User;
 use App\Models\ReportBug;
 use App\Models\card_details;
 use Illuminate\Http\Request;
+use App\Rules\MatchOldPassword;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -69,4 +71,35 @@ class UserController extends Controller
 
         return view('users.usersettings')->with('users', $users)->with('bugs', $bugs);
     }
+
+
+    public function changePassword(Request $request)
+    {
+
+        $request->validate([
+            'current_password' => ['required', new MatchOldPassword],
+            'new_password' => ['required'],
+            'new_confirm_password' => ['same:new_password'],
+        ]);
+
+        User::find(auth()->user()->id)->update(['password' => Hash::make($request->new_password)]);
+    }
+
+
+    public function delete()
+    {
+        User::find(auth()->user()->id)->delete();
+
+        auth()->logout();
+
+        return redirect()->route('home');
+    }
+
+    public function deleteByAdmin()
+    {
+       dd( User::find());
+
+        
+    }
+
 }
