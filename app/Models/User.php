@@ -42,13 +42,12 @@ class User extends Authenticatable
         'csc',
         'zip_code',
         'payment_id',
-        'card_id',
         'reportBug',
-        'user_id',
+        
     ];
 
 
-    
+
     /**
      * The attributes that should be hidden for arrays.
      *

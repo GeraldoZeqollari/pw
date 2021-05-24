@@ -14,7 +14,8 @@ class CreateCardDetailsTable extends Migration
     public function up()
     {
         Schema::create('card_details', function (Blueprint $table) {
-            $table->integer('card_id');
+            $table->id();
+            $table->integer('user_id');
             $table->integer('card_number')->unique();
             $table->integer('payment_id');
             $table->integer('csc');

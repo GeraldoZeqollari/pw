@@ -22,7 +22,7 @@ class card_details extends Model
         'zip_code',
         'payment_type',
         'payment_id',
-        'card_id',
+        'user_id',
 
     ];
 

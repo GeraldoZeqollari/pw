@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\card_details;
 use App\Models\ReportBug;
+use App\Models\card_details;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -28,7 +30,7 @@ class UserController extends Controller
 
         card_details::where('id', auth()->user()->id)->create([
 
-            'card_id' => auth()->user()->id,
+            'user_id' => auth()->user()->id,
             'card_number' => $request->card_number,
             'address1' => $request->address1,
             'expiration_dateM' => $request->expiration_dateM,
@@ -36,7 +38,6 @@ class UserController extends Controller
             'csc' => $request->csc,
             'zip_code' => $request->zip_code,
             'payment_id' => $request->payment_id,
-
 
         ]);
 
@@ -68,13 +69,4 @@ class UserController extends Controller
 
         return view('users.usersettings')->with('users', $users)->with('bugs', $bugs);
     }
-    // public function users()
-    // {
-
-    // }
-
-    // public function bugs()
-    // {
-
-    // }
 }

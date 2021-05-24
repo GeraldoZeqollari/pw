@@ -394,6 +394,9 @@
             </form>
         </div>
     </div>
+
+
+    
     <div class="settings_display">
         <div class="settings_display__favorited">
             <div class="no_fav" style="display: none">
@@ -550,10 +553,10 @@
 
                 @if ((isset($bugs)))
                 @foreach ($bugs as $bug)
-
                 <div class="issue_details">
-                    <h1>{{$bug->bug_desc}}</h1>
-                    {{-- <h1>{{$bug->created_at->diffForHumans()}}</h1> --}}
+                    <h1>{{ $bug->user->email}}</h1>
+                    <h1>{{ \Carbon\Carbon::parse($bug->created_at)->diffForHumans() }}</h1>
+
                 </div>
                 <p>
                     {{$bug->bug_desc}}
@@ -563,15 +566,14 @@
                 {{ $bugs->links('pagination.pagination') }}
                 @else
 
-                <div class="reviews">
+                <div>
                     <h1>There are no bugs</h1>
                 </div>
                 @endif
-
             </div>
-
         </div>
     </div>
+
 </div>
 <script type="text/javascript" src="{{ asset('js/settings.js') }}"></script>
 @endsection

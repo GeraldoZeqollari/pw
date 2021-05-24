@@ -17,6 +17,7 @@ class CreateReportBugsTable extends Migration
             $table->id();
             $table->text('bug_desc');
             $table->integer('user_id');
+            $table->timestamps();
         });
     }
 
