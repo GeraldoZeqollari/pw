@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a692d83de827b020d4b73ec91ad973f2",
+    "content-hash": "0e329f212452a33fef98f7c184f628df",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -120,22 +120,22 @@
         },
         {
             "name": "cartalyst/sentinel",
-            "version": "v5.0.0",
+            "version": "v5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cartalyst/sentinel.git",
-                "reference": "9f7a8c6c27e00a5601c3f78e381cd4dcfee84321"
+                "reference": "6f641c0c6fda3627a6aee9d1cd3c409e73e4fd0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cartalyst/sentinel/zipball/9f7a8c6c27e00a5601c3f78e381cd4dcfee84321",
-                "reference": "9f7a8c6c27e00a5601c3f78e381cd4dcfee84321",
+                "url": "https://api.github.com/repos/cartalyst/sentinel/zipball/6f641c0c6fda3627a6aee9d1cd3c409e73e4fd0d",
+                "reference": "6f641c0c6fda3627a6aee9d1cd3c409e73e4fd0d",
                 "shasum": ""
             },
             "require": {
                 "cartalyst/support": "^5.0",
                 "illuminate/support": "^8.0",
-                "php": "^7.3"
+                "php": "^7.3 || ^8.0"
             },
             "require-dev": {
                 "cartalyst/php-cs-fixer-config": "^1.0",
@@ -195,9 +195,9 @@
             ],
             "support": {
                 "issues": "https://github.com/cartalyst/sentinel/issues",
-                "source": "https://github.com/cartalyst/sentinel/tree/v5.0.0"
+                "source": "https://github.com/cartalyst/sentinel/tree/v5.1.0"
             },
-            "time": "2020-09-12T19:42:21+00:00"
+            "time": "2020-12-22T19:31:31+00:00"
         },
         {
             "name": "cartalyst/support",
