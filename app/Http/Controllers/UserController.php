@@ -95,11 +95,16 @@ class UserController extends Controller
         return redirect()->route('home');
     }
 
-    public function deleteByAdmin()
+    public function deleteByAdmin(Request $request)
     {
-       dd( User::find());
+        User::find($request->only('currentID'))->first()->delete();
 
-        
+        return redirect()->route('user_settings');
     }
 
+    public function userprofile()
+    {
+       $userprofile = User::get();
+      return view('pages.userprofile')->with('userprofile', $userprofile);
+    }
 }

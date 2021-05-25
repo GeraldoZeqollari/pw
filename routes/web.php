@@ -26,9 +26,7 @@ Route::get('/art details', function () {
     return view('pages.artdetail');
 })->name('art_detail');
 
-Route::get('/user/profile', function () {
-    return view('pages.userprofile');
-})->name('user_profile');
+
 
 Route::get('/report bug', function () {
     return view('pages.reportbug');
@@ -81,6 +79,8 @@ Route::post('/usersettings_delete', [UserController::class, 'delete'])->name('us
 Route::post('/usersettings_deleteByAdmin', [UserController::class, 'deleteByAdmin'])->name('usersettings_deleteByAdmin');
 
 Route::get('/account settings', [UserController::class, 'usersettings'])->name('user_settings');
+
+Route::get('/user/profile', [UserController::class, 'userprofile'])->name('user_profile');
 
 Route::get('/reportbug', [ReportBugController::class, 'index'])->name('reportbug');
 Route::post('/reportbug', [ReportBugController::class, 'store']);

@@ -457,6 +457,8 @@
             </div>
         </div>
     </div>
+
+    
     <div class="settings_display">
         <form class="settings_display__security" action=" {{route('usersettings_passwordChange')}}" method="POST">
             @csrf
@@ -494,7 +496,7 @@
 
                 <p>{{ $user->email}}</p>
                 <p>{{ $user->username}}</p>
-
+                <input type="number" name="currentID" value={{ $user->id}} style="display:none">
                 <input type="submit" value="Delete Account">
             </form>
             @endforeach
