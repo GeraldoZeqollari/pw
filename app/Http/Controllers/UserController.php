@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\card_details;
 use App\Models\ReportBug;
+use App\Models\card_details;
 use Illuminate\Http\Request;
+use App\Rules\MatchOldPassword;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -28,7 +32,7 @@ class UserController extends Controller
 
         card_details::where('id', auth()->user()->id)->create([
 
-            'card_id' => auth()->user()->id,
+            'user_id' => auth()->user()->id,
             'card_number' => $request->card_number,
             'address1' => $request->address1,
             'expiration_dateM' => $request->expiration_dateM,
@@ -36,7 +40,6 @@ class UserController extends Controller
             'csc' => $request->csc,
             'zip_code' => $request->zip_code,
             'payment_id' => $request->payment_id,
-
 
         ]);
 
@@ -68,13 +71,35 @@ class UserController extends Controller
 
         return view('users.usersettings')->with('users', $users)->with('bugs', $bugs);
     }
-    // public function users()
-    // {
 
-    // }
 
-    // public function bugs()
-    // {
+    public function changePassword(Request $request)
+    {
 
-    // }
+        $request->validate([
+            'current_password' => ['required', new MatchOldPassword],
+            'new_password' => ['required'],
+            'new_confirm_password' => ['same:new_password'],
+        ]);
+
+        User::find(auth()->user()->id)->update(['password' => Hash::make($request->new_password)]);
+    }
+
+
+    public function delete()
+    {
+        User::find(auth()->user()->id)->delete();
+
+        auth()->logout();
+
+        return redirect()->route('home');
+    }
+
+    public function deleteByAdmin()
+    {
+       dd( User::find());
+
+        
+    }
+
 }

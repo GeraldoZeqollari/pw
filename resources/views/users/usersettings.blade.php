@@ -394,6 +394,9 @@
             </form>
         </div>
     </div>
+
+
+
     <div class="settings_display">
         <div class="settings_display__favorited">
             <div class="no_fav" style="display: none">
@@ -455,27 +458,30 @@
         </div>
     </div>
     <div class="settings_display">
-        <div class="settings_display__security">
+        <form class="settings_display__security" action=" {{route('usersettings_passwordChange')}}" method="POST">
+            @csrf
             <div class="current_pw">
-                <input type="password" placeholder="Enter your old password">
-                <input type="submit" class="old_pw" value="Submit">
+                <input type="password" placeholder="Enter your old password" name="current_password">
             </div>
 
             <hr class="break">
 
             <div class="current_pw disabled_pw">
-                <input type="password" placeholder="Enter your new password" disabled>
-                <input type="password" placeholder="Confirm password" disabled>
+                <input type="password" placeholder="Enter your new password" name="new_password">
+                <input type="password" placeholder="Confirm password" name="new_confirm_password">
             </div>
 
             <div class="current_pw sub_new_pw">
                 <input type="submit" class="new_pw" value="Submit">
             </div>
-            <div class="current_pw deactivate_btn">
-                <a href="">Deactivate Account</a>
-            </div>
-        </div>
+        </form>
+        <form class="current_pw deactivate_btn" action="{{route('usersettings_delete')}}" method="POST">
+            @csrf
+            <input type="submit" value="Deactivate account">
+        </form>
+
     </div>
+
 
     <div class="settings_display">
         <div class="settings_display__users">
@@ -483,12 +489,14 @@
 
             @if ((isset($users)))
             @foreach ($users as $user)
-            <div class="user_row">
+            <form class="user_row" action="{{route('usersettings_deleteByAdmin')}}" method="POST">
+                @csrf
 
                 <p>{{ $user->email}}</p>
                 <p>{{ $user->username}}</p>
+
                 <input type="submit" value="Delete Account">
-            </div>
+            </form>
             @endforeach
             {{ $users->links('pagination.pagination') }}
             @else
@@ -550,10 +558,10 @@
 
                 @if ((isset($bugs)))
                 @foreach ($bugs as $bug)
-
                 <div class="issue_details">
-                    <h1>{{$bug->bug_desc}}</h1>
-                    {{-- <h1>{{$bug->created_at->diffForHumans()}}</h1> --}}
+                    <h1>{{ $bug->user->email}}</h1>
+                    <h1>{{ \Carbon\Carbon::parse($bug->created_at)->diffForHumans() }}</h1>
+
                 </div>
                 <p>
                     {{$bug->bug_desc}}
@@ -563,15 +571,14 @@
                 {{ $bugs->links('pagination.pagination') }}
                 @else
 
-                <div class="reviews">
+                <div>
                     <h1>There are no bugs</h1>
                 </div>
                 @endif
-
             </div>
-
         </div>
     </div>
+
 </div>
 <script type="text/javascript" src="{{ asset('js/settings.js') }}"></script>
 @endsection

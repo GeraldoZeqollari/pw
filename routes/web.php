@@ -76,6 +76,9 @@ Route::post('/feedback', [FeedbackController::class, 'store']);
 
 Route::post('/usersettings_details', [UserController::class, 'userdetails'])->name('usersettings_details');
 Route::post('/usersettings_carddetails', [UserController::class, 'carddetails'])->name('usersettings_carddetails');
+Route::post('/usersettings_passwordChange', [UserController::class, 'changePassword'])->name('usersettings_passwordChange');
+Route::post('/usersettings_delete', [UserController::class, 'delete'])->name('usersettings_delete');
+Route::post('/usersettings_deleteByAdmin', [UserController::class, 'deleteByAdmin'])->name('usersettings_deleteByAdmin');
 
 Route::get('/account settings', [UserController::class, 'usersettings'])->name('user_settings');
 
