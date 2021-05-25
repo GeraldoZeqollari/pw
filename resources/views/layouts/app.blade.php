@@ -86,24 +86,31 @@
       <li><a href={{ route('modernart') }}>Gallery</a></li>
       <li><a href={{ route('feedback') }}>Community</a></li>
 
-      <li class="mobile-socialMedia mobileLogIn">
+      {{-- 
+         <a href="#"><i class="fab fa-facebook-f" style="color: rgb(64,100,172)"></i></a>
+            <a href="#"><i class="fab fa-youtube" style="color: rgb(246,1,1)"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="color:rgb(167,49,150)"></i></a>
+            <a href="#"><i class="fab fa-twitter" style="color: rgb(28,157,235)"></i></a>
+            <a href="#"><i class="fab fa-linkedin" style="color: rgb(10,98,189)"></i></a>
+        --}}
 
+      <li class="mobile-socialMedia mobileLogIn">
         <a href={{ route('login') }}>Log in</a>
       </li>
       <li class="mobile-socialMedia">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-facebook-f" style="color: rgb(64,100,172)"></i></a>
       </li>
       <li class="mobile-socialMedia">
-        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-youtube" style="color: rgb(246,1,1)"></i></a>
       </li>
       <li class="mobile-socialMedia">
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-instagram" style="color:rgb(167,49,150)"></i></a>
       </li>
       <li class="mobile-socialMedia">
-        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-twitter" style="color: rgb(28,157,235)"></i></a>
       </li>
       <li class="mobile-socialMedia">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-linkedin" style="color: rgb(10,98,189)"></i></a>
       </li>
     </ul>
     <div class="search-nest">
@@ -158,12 +165,13 @@
     </div>
   </nav>
 
+
   <section class="social-media">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-youtube"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-facebook-f" style="color: rgb(64,100,172)"></i></a>
+            <a href="#"><i class="fab fa-youtube" style="color: rgb(246,1,1)"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="color:rgb(167,49,150)"></i></a>
+            <a href="#"><i class="fab fa-twitter" style="color: rgb(28,157,235)"></i></a>
+            <a href="#"><i class="fab fa-linkedin" style="color: rgb(10,98,189)"></i></a>
   </section>
 
   <script type="text/javascript" src="{{ asset('js/nav.js') }}"></script>

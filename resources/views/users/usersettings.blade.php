@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('userSettings')
 
-
+<div class="settings_background">
 <div class="settings_container">
     <div class="switch_tab">
         <ul>
@@ -322,8 +322,9 @@
 
                     <div class="card_selection">
                         <input type="radio" id="visa" name="payment_id" value="0">
-                        <label for="visa" class="label_exp"><i class="fab fa-cc-visa"
-                                style="color: rgb(24,30,108)"></i></label>
+                        <label for="visa" class="label_exp">
+                            <i class="fab fa-cc-visa" style="color: rgb(24,30,108)"></i>
+                        </label>
                         <input type="radio" id="mastercard" name="payment_id" value="1">
                         <label for="mastercard" class="label_exp"><i class="fab fa-cc-mastercard"
                                 style="color: rgb(229,1,26)"></i></label>
@@ -458,27 +459,27 @@
         </div>
     </div>
     <div class="settings_display">
-        <form class="settings_display__security" action=" {{route('usersettings_passwordChange')}}" method="POST">
+        <div class="settings_display__security">
+            <form action=" {{route('usersettings_passwordChange')}}" method="POST">
             @csrf
             <div class="current_pw">
-                <input type="password" placeholder="Enter your old password" name="current_password">
             </div>
-
-            <hr class="break">
-
+                        
             <div class="current_pw disabled_pw">
+                <input type="password" placeholder="Enter your old password" name="current_password">
                 <input type="password" placeholder="Enter your new password" name="new_password">
                 <input type="password" placeholder="Confirm password" name="new_confirm_password">
             </div>
 
             <div class="current_pw sub_new_pw">
-                <input type="submit" class="new_pw" value="Submit">
+                <input type="submit" class="new_pw" value="Submit" style="border: 2px solid black">
             </div>
         </form>
         <form class="current_pw deactivate_btn" action="{{route('usersettings_delete')}}" method="POST">
             @csrf
             <input type="submit" value="Deactivate account">
         </form>
+        </div>
 
     </div>
 
@@ -492,10 +493,19 @@
             <form class="user_row" action="{{route('usersettings_deleteByAdmin')}}" method="POST">
                 @csrf
 
-                <p>{{ $user->email}}</p>
+                <table>
+                    <tr>
+                        <td><h1>{{ $user->email}}</h1></td>
+                        <td><h1>{{ $user->username}}</h1></td>
+                        <td style="display: none"><input type="number" name="currentID" value={{ $user->id}}></td>
+                        <td><input type="submit" value="Delete Account"></td>
+                    </tr>
+                </table>
+                {{-- <p>{{ $user->email}}</p>
                 <p>{{ $user->username}}</p>
+                <input type="number" name="currentID" value={{ $user->id}} style="display: none">
 
-                <input type="submit" value="Delete Account">
+                <input type="submit" value="Delete Account"> --}}
             </form>
             @endforeach
             {{ $users->links('pagination.pagination') }}
@@ -579,6 +589,7 @@
         </div>
     </div>
 
+</div>
 </div>
 <script type="text/javascript" src="{{ asset('js/settings.js') }}"></script>
 @endsection

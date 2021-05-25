@@ -34,43 +34,62 @@ nav {
         cursor: pointer;
 
         svg {
-            // cursor: pointer;
-            // transition: all 1s ease-in;
-            margin-left: 0;
-            padding-left: 0;
-            @include mediaQ(phone) {
-                display: none;
-            }
-
-            #paintbrush {
-                transition: all 1s ease-in;
-                transform: translateX(100%);
-            }
-
-            #letter_e {
-                transform: translateX(33px);
-                transition: all 0.3s ease-in;
-                transition-delay: 0.7s;
-            }
-
-            #letter_c {
-                transform: translateX(24px);
-                transition: all 0.3s ease-in;
-                transition-delay: 0.7s;
-            }
-
-            &:hover #paintbrush {
-                transform: translateX(0%);
-            }
-
-            &:hover #letter_c {
-                transform: translateX(0px);
-            }
-
-            &:hover #letter_e {
-                transform: translateX(0px);
-            }
-        }
+            /* border: 2px solid red; */
+            cursor: pointer;
+            transition: all 1s ease-in;
+            position: relative;
+          }
+    
+          #paintbrush {
+            transition: all 1s ease-in;
+            transform: translateX(100%);
+          }
+    
+          #letter_e {
+            transform: translateX(27px) translateY(-1.4px);
+            transition: all 0.3s ease-in;
+            transition-delay: 0.7s;
+          }
+    
+          #Rectangle_2 {
+            transform: translateX(-1px);
+            transition-delay: 0.7s;
+          }
+    
+          #letter_a {
+            transform: translateX(-24px) translateY(-1.4px);
+            transition: all 0.3s ease-in;
+            transition-delay: 0.7s;
+          }
+    
+          #letter_c {
+            transform: scale(1.86) translateX(-41.3px) translateY(-11.4px);
+            position: absolute;
+            transition: all 0.3s ease-in;
+            transition-delay: 0.7s;
+            stroke-width: 1;
+          }
+    
+          svg:hover #paintbrush {
+            transform: translateX(0%);
+          }
+    
+          svg:hover #letter_c {
+            transform: translateX(0px);
+            stroke-width: 3;
+          }
+    
+          svg:hover #Rectangle_2 {
+            transform: translateX(0px);
+          }
+    
+          svg:hover #letter_a {
+            transform: translateX(0px);
+          }
+    
+          svg:hover #letter_e {
+            transform: translateX(0px);
+          }
 
         .svg_logo_mobile {
             display: none;

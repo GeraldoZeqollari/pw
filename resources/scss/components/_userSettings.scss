@@ -2,8 +2,13 @@
 @use '../variables/mediaQueries' as *;
 @use '../variables/button' as *;
 
+.settings_background {
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
 .settings_container {
     width: min(70%, 100rem);
+    // background-color: red;
     margin-inline: auto;
     padding-top: 105px;
     padding-bottom: 100px;
@@ -30,16 +35,17 @@
     .switch_tab {
         .setting {
             @include buttonType(
-                rgb(60, 95, 55),
+                rgb(0, 0, 0),
                 v.$HeaderFont,
-                2px solid v.$teel,
+                1px solid black,
                 rgb(255, 255, 255),
                 160px,
-                16px
+                15px
             );
-            border-top: 1px solid v.$teel;
-            border-bottom: 1px solid v.$teel;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
             padding: 10px 10px;
+            font-weight: 100;
 
             @include mediaQ(phone) {
                 width: auto;
@@ -95,7 +101,7 @@
                 transition: 0.2s all ease;
 
                 &:hover {
-                    background-color: darken(v.$teel, 20%);
+                    background-color: rgb(254, 241, 235);
                 }
             }
 
@@ -115,14 +121,14 @@
                 content: "";
                 width: 10px;
                 height: 10px;
+                background-color: inherit;
                 position: absolute;
-                top: 14px;
+                top: 12px;
                 left: -6px;
                 transform: rotate(45deg);
-                // border: 2px solid red;
                 border-left: 1px solid black;
                 border-bottom: 1px solid black;
-                background-color: white;
+                background-color: rgb(192, 229, 246);
 
                 @include mediaQ(phone) {
                     top: 25px;
@@ -147,7 +153,6 @@
                     }
                     //    border: 2px solid green;
                 }
-                
 
                 .two_select,
                 .one_select {
@@ -159,8 +164,8 @@
 
                     select {
                         padding: 7px 12px;
-                        border: 2px solid v.$teel;
-                        background-color: transparent;
+                        border: 0px solid v.$teel;
+                        background-color: white;
                         width: 200px;
                         font-size: 14px;
                         font-family: v.$HeaderFont;
@@ -185,10 +190,10 @@
 
                 input {
                     outline: 0;
-                    background: v.$teel;
+                    background: white;
+                    border: 0px solid black;
                     width: 50%;
-                    border: 0;
-                    color: white;
+                    color: black;
                     font-size: 16px;
                     // border-radius: 5px;
                     padding: 10px;
@@ -199,7 +204,7 @@
                     }
 
                     &::placeholder {
-                        color: white;
+                        color: black;
                         opacity: 0.8;
                     }
                 }
@@ -213,6 +218,7 @@
 
                 input {
                     width: 200px;
+                    border: 2px solid black;
 
                     @include mediaQ(s-phone) {
                         width: 60%;
@@ -276,16 +282,19 @@
                     display: flex;
                     margin-top: 20px;
                     justify-content: space-between;
+                    // background-color: red;
 
                     @include mediaQ(s-phone) {
                         flex-wrap: wrap;
                     }
                     // border: 2px solid red;
                     i {
+                        // background-color: red;
+
                         padding: 0px 20px;
                         font-size: 40px;
                         cursor: pointer;
-                        background-color: white;
+                        // background-color: white;
                         transition: all 0.3s ease;
 
                         @include mediaQ(phone) {
@@ -325,8 +334,7 @@
                     // width: 40%;
                     select {
                         padding: 7px 12px;
-                        border: 2px solid v.$teel;
-                        background-color: transparent;
+                        background-color: white;
                         width: 90%;
                         font-size: 14px;
                         font-family: v.$HeaderFont;
@@ -358,13 +366,12 @@
                 width: 10px;
                 height: 10px;
                 position: absolute;
-                top: 53px;
+                top: 49px;
                 left: -6px;
                 transform: rotate(45deg);
                 // border: 2px solid red;
                 border-left: 1px solid black;
                 border-bottom: 1px solid black;
-                background-color: white;
 
                 @include mediaQ(phone) {
                     top: 89px;
@@ -379,7 +386,7 @@
         &__favorited {
             min-height: 280px;
             &::after {
-                top: 93px;
+                top: 84px;
 
                 @include mediaQ(phone) {
                     top: 153px;
@@ -448,22 +455,13 @@
             }
             // width: 200px;
             // border: 2px solid red;
+
             &::after {
-                top: 133px;
+                top: 119px;
+                background-color: rgb(206, 231, 243);
 
                 @include mediaQ(phone) {
                     top: 218px;
-                }
-            }
-
-            .deactivate_btn {
-                position: absolute;
-                right: 30px;
-                bottom: 30px;
-
-                @include mediaQ(tablet) {
-                    right: 15px;
-                    bottom: 15px;
                 }
             }
 
@@ -473,6 +471,10 @@
 
             .current_pw {
                 display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                // margin: 0 auto;
 
                 @include mediaQ(tablet) {
                     flex-direction: column;
@@ -518,16 +520,12 @@
                     width: 200px;
                 }
 
-                .input[type="submit"] {
-                    width: 100px;
-                }
-
                 input {
                     outline: 0;
-                    background: v.$teel;
+                    background: white;
                     width: 48%;
                     border: 0;
-                    color: white;
+                    color: black;
                     font-size: 16px;
                     // border-radius: 5px;
                     padding: 10px;
@@ -541,7 +539,7 @@
                     }
 
                     &::placeholder {
-                        color: white;
+                        color: black;
                         opacity: 0.8;
                     }
                 }
@@ -549,7 +547,13 @@
 
             .sub_new_pw {
                 // width: 50%;
+                margin-top: 20px;
                 justify-content: center;
+
+                .input[type="submit"] {
+                    border: 2px solid black;
+                    width: 100px;
+                }
             }
 
             .disabled_pw {
@@ -564,7 +568,6 @@
 
                 input {
                     width: 48%;
-                    cursor: not-allowed;
                     // pointer-events: all !important;
 
                     @include mediaQ(phone) {
@@ -574,7 +577,33 @@
                         width: 100%;
                     }
                 }
+            }
 
+            .deactivate_btn {
+                position: absolute;
+                right: 30px;
+                bottom: 30px;
+
+                input {
+                    @include buttonType(
+                        white,
+                        v.$HeaderFont,
+                        0px solid black,
+                        rgb(255, 0, 0),
+                        100%,
+                        12px
+                    );
+                    padding: 10px 20px;
+
+                    &:hover {
+                        background-color: darken($color: #ff0000, $amount: 20%);
+                    }
+                }
+
+                @include mediaQ(tablet) {
+                    right: 15px;
+                    bottom: 15px;
+                }
             }
         }
 
@@ -586,7 +615,8 @@
             position: relative;
 
             &::after {
-                top: 163px;
+                top: 157px;
+                background-color: rgb(206, 231, 243);
 
                 @include mediaQ(phone) {
                     top: 218px;
@@ -598,10 +628,28 @@
                 display: flex;
                 justify-content: space-between;
 
+                table,
+                tr,
+                td {
+                    border-collapse: collapse;
+                    // border: 1px solid red;
+                }
+
+                table {
+                    width: 100%;
+                    background-color: white;
+                }
+
+                td {
+                    width: 33%;
+                }
+
                 h1 {
                     font-family: v.$HeaderFont;
-                    font-size: 18px;
-                    align-self: flex-start;
+                    font-size: 15px;
+                    margin-left: 20px;
+                    font-weight: 100;
+                    padding: 3px 0px;
                 }
 
                 input[type="submit"] {
@@ -609,6 +657,9 @@
                     border: 0;
                     color: red;
                     font-family: v.$HeaderFont;
+                    justify-self: flex-end;
+                    float: right;
+                    margin-right: 20px;
                 }
             }
         }
@@ -621,7 +672,8 @@
             position: relative;
 
             &::after {
-                top: 239px;
+                top: 229px;
+                background-color: rgb(224, 235, 240);
 
                 @include mediaQ(phone) {
                     top: 218px;
@@ -645,8 +697,9 @@
 
                 p {
                     font-size: 14px;
-                    border: 1px solid v.$teel;
+                    border: 0px solid v.$teel;
                     padding: 10px;
+                    background-color: white;
                     // font-family: v.$NormalFont;
                 }
             }
@@ -661,7 +714,8 @@
             padding-bottom: 20px;
 
             &::after {
-                top: 199px;
+                top: 193px;
+                background-color: rgb(206, 231, 244);
 
                 @include mediaQ(phone) {
                     top: 218px;
@@ -685,10 +739,10 @@
 
                 input {
                     outline: 0;
-                    background: v.$teel;
+                    background: white;
                     width: 50%;
                     border: 0;
-                    color: white;
+                    color: black;
                     font-size: 16px;
                     // border-radius: 5px;
                     padding: 10px;
@@ -699,7 +753,7 @@
                     }
 
                     &::placeholder {
-                        color: white;
+                        color: black;
                         opacity: 0.8;
                     }
                 }
@@ -710,24 +764,29 @@
                     width: 100%;
                     height: 150px;
                     padding: 12px 20px;
-                    border: 2px solid v.$teel;
-                    background-color: transparent;
+                    border: 0px solid v.$teel;
+                    background-color: white;
                     resize: none;
                     outline: 0;
+
+                    &::placeholder {
+                        color: black;
+                    }
                 }
 
                 .custom-file-upload {
-                    border: 1px solid v.$teel;
+                    border: 0px solid v.$teel;
                     // display: inline-block;
                     padding: 6px 12px;
                     font-size: 14px;
+                    background-color: white;
                     text-align: center;
                     width: 200px;
 
                     cursor: pointer;
 
                     i {
-                        color: v.$teel;
+                        color: black;
                     }
 
                     @include mediaQ(s-phone) {
@@ -738,8 +797,8 @@
                 select {
                     padding: 5.5px 12px;
                     // margin-left: 2px;
-                    border: 1px solid v.$teel;
-                    background-color: transparent;
+                    border: 0px solid v.$teel;
+                    background-color: white;
                     width: 200px;
                     font-size: 14px;
                     font-family: v.$HeaderFont;
@@ -759,13 +818,15 @@
                 justify-content: flex-end;
 
                 input[type="submit"] {
-                    width: 150px;                }
+                    border: 2px solid black;
+                    width: 150px;
+                }
             }
         }
     }
 }
 
 .ActiveSetting {
-    background-color: v.$teel !important;
+    background-color: rgb(91, 91, 91) !important;
     color: white !important;
 }
