@@ -281,6 +281,13 @@ nav .logIn {
     display: none;
   }
 }
+nav .logIn img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 nav .logIn .user_icon {
   font-size: 22px;
   cursor: pointer;
@@ -290,8 +297,8 @@ nav .logIn .user_dropdown {
   background-color: #fff;
   padding-top: 10px;
   width: 200px;
-  right: 30px;
-  top: 40px;
+  right: 15px;
+  top: 70px;
   transition: 0.3s all ease;
   -webkit-box-shadow: 0px 0px 32px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 32px -5px rgba(0, 0, 0, 0.75);
@@ -1297,9 +1304,10 @@ NEWS
   }
 }
 .login_container .main_holder .login_title .auth-link .auth-underline {
-  font-size: 20px;
+  font-size: 16px;
   padding-top: 15px;
   padding-left: 5px;
+  font-family: "Poppins", "sans-serif";
   text-decoration: none;
   color: black;
 }
@@ -1400,6 +1408,7 @@ NEWS
 }
 .login_container .main_holder .login-form .forgot_password {
   text-decoration: none;
+  font-family: "Poppins", "sans-serif";
   color: black;
   align-self: flex-end;
   padding-right: 20px;
@@ -1444,9 +1453,14 @@ NEWS
   width: 100%;
   height: 150px;
   padding: 12px 20px;
+  border-radius: 0px;
   border: 2px solid black;
   background-color: transparent;
   resize: none;
+  font-family: "Poppins", "sans-serif";
+}
+.login_container .main_holder_bug textarea::placeholder {
+  font-family: "Poppins", "sans-serif";
 }
 
 .error-form {
@@ -2099,6 +2113,22 @@ NEWS
     margin-left: 0;
   }
 }
+.settings_container .settings_display__accountDetails .accData textarea, .settings_container .settings_display__paymentDetails .accData textarea, .settings_container .settings_display__favorited .accData textarea, .settings_container .settings_display__security .accData textarea, .settings_container .settings_display__users .accData textarea, .settings_container .settings_display__issues .accData textarea, .settings_container .settings_display__upload .accData textarea {
+  margin: 15px 0px;
+  margin-bottom: 0;
+  width: 100%;
+  height: 150px;
+  padding: 12px 10px;
+  border: 0px solid #93b2b9;
+  font-family: "Poppins", "sans-serif";
+  background-color: white;
+  resize: none;
+  outline: 0;
+}
+.settings_container .settings_display__accountDetails .accData textarea::placeholder, .settings_container .settings_display__paymentDetails .accData textarea::placeholder, .settings_container .settings_display__favorited .accData textarea::placeholder, .settings_container .settings_display__security .accData textarea::placeholder, .settings_container .settings_display__users .accData textarea::placeholder, .settings_container .settings_display__issues .accData textarea::placeholder, .settings_container .settings_display__upload .accData textarea::placeholder {
+  color: gray;
+  font-family: "Poppins", "sans-serif";
+}
 .settings_container .settings_display__accountDetails .accData .two_select,
 .settings_container .settings_display__accountDetails .accData .one_select, .settings_container .settings_display__paymentDetails .accData .two_select,
 .settings_container .settings_display__paymentDetails .accData .one_select, .settings_container .settings_display__favorited .accData .two_select,
@@ -2701,14 +2731,16 @@ NEWS
   margin-bottom: 0;
   width: 100%;
   height: 150px;
-  padding: 12px 20px;
+  padding: 12px 10px;
   border: 0px solid #93b2b9;
+  font-family: "Poppins", "sans-serif";
   background-color: white;
   resize: none;
   outline: 0;
 }
 .settings_container .settings_display__upload .upload_row textarea::placeholder {
-  color: black;
+  color: gray;
+  font-family: "Poppins", "sans-serif";
 }
 .settings_container .settings_display__upload .upload_row .custom-file-upload {
   border: 0px solid #93b2b9;
@@ -2786,6 +2818,30 @@ NEWS
   object-fit: cover;
   border-radius: 50%;
   width: 100%;
+}
+.profile_container .profile_pic .change_pPic {
+  position: relative;
+}
+.profile_container .profile_pic .change_pPic input[type=file] {
+  display: none;
+}
+.profile_container .profile_pic .change_pPic .custom-file-upload {
+  padding: 6px;
+  font-size: 18px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  right: -10px;
+  cursor: pointer;
+}
+.profile_container .profile_pic .change_pPic .custom-file-upload i {
+  color: black;
+}
+@media (max-width: 420px) {
+  .profile_container .profile_pic .change_pPic .custom-file-upload {
+    width: 100%;
+  }
 }
 .profile_container .profile_pic .profile_names {
   position: absolute;

@@ -303,6 +303,10 @@
                     </div>
                 </div>
 
+                <div class="accData">
+                   <textarea name="" id="" cols="30" rows="10" placeholder="Enter a new bio"></textarea>
+                </div>
+
                 <div class="accData accData_btn">
                     <input type="submit" value="Change">
                 </div>

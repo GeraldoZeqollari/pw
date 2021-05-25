@@ -128,7 +128,9 @@
 
     <div class="logIn">
       @auth
-      <i class="fas fa-user user_icon"></i>
+      {{-- <i class="fas fa-user user_icon"></i> --}}
+      <img src="../images/john_doe.jpg" class="user_icon" alt="error">
+
       {{--  onclick='user_submenu()' --}}
       <div class="user_dropdown">
         <ul>
