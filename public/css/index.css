@@ -36,47 +36,32 @@ nav .logo {
   cursor: pointer;
 }
 nav .logo svg {
-  /* border: 2px solid red; */
-  cursor: pointer;
-  transition: all 1s ease-in;
-  position: relative;
+  margin-left: 0;
+  padding-left: 0;
 }
-nav .logo #paintbrush {
+@media (max-width: 768px) {
+  nav .logo svg {
+    display: none;
+  }
+}
+nav .logo svg #paintbrush {
   transition: all 1s ease-in;
   transform: translateX(100%);
 }
-nav .logo #letter_e {
-  transform: translateX(27px) translateY(-1.4px);
+nav .logo svg #letter_e {
+  transform: translateX(33px);
   transition: all 0.3s ease-in;
   transition-delay: 0.7s;
 }
-nav .logo #Rectangle_2 {
-  transform: translateX(-1px);
-  transition-delay: 0.7s;
-}
-nav .logo #letter_a {
-  transform: translateX(-24px) translateY(-1.4px);
+nav .logo svg #letter_c {
+  transform: translateX(24px);
   transition: all 0.3s ease-in;
   transition-delay: 0.7s;
-}
-nav .logo #letter_c {
-  transform: scale(1.86) translateX(-41.3px) translateY(-11.4px);
-  position: absolute;
-  transition: all 0.3s ease-in;
-  transition-delay: 0.7s;
-  stroke-width: 1;
 }
 nav .logo svg:hover #paintbrush {
   transform: translateX(0%);
 }
 nav .logo svg:hover #letter_c {
-  transform: translateX(0px);
-  stroke-width: 3;
-}
-nav .logo svg:hover #Rectangle_2 {
-  transform: translateX(0px);
-}
-nav .logo svg:hover #letter_a {
   transform: translateX(0px);
 }
 nav .logo svg:hover #letter_e {
