@@ -1642,6 +1642,7 @@ NEWS
 .feedback_container .feedback_form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 .feedback_container .feedback_form .feedback_intro {
   padding: 10px;
@@ -1676,6 +1677,21 @@ NEWS
   font-size: 32px;
   padding: 2px;
   margin-bottom: 0;
+}
+.feedback_container .feedback_form .fb_emotions .label_exp:nth-child(2) {
+  color: red;
+}
+.feedback_container .feedback_form .fb_emotions .label_exp:nth-child(4) {
+  color: orange;
+}
+.feedback_container .feedback_form .fb_emotions .label_exp:nth-child(6) {
+  color: yellow;
+}
+.feedback_container .feedback_form .fb_emotions .label_exp:nth-child(8) {
+  color: lightgreen;
+}
+.feedback_container .feedback_form .fb_emotions .label_exp:nth-child(10) {
+  color: green;
 }
 .feedback_container .feedback_form .fb_emotions input[type=radio] {
   display: none;
@@ -1751,8 +1767,38 @@ NEWS
 }
 .feedback_container .reviews {
   padding: 10px;
+  border: 1px solid #93b2b9;
+  margin-bottom: 15px;
 }
-.feedback_container .reviews a {
+.feedback_container .reviews__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+.feedback_container .reviews__header div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.feedback_container .reviews__header div .timer {
+  color: gray;
+}
+.feedback_container .reviews__header div .star_rating {
+  display: flex;
+  gap: 0px;
+  flex-direction: row;
+}
+.feedback_container .reviews__header div .star_rating i {
+  color: yellow;
+}
+.feedback_container .reviews__header img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.feedback_container .reviews__header a {
   text-decoration: none;
   font-family: "Open Sans", "sans-serif";
   color: #93b2b9;
@@ -1760,6 +1806,7 @@ NEWS
 .feedback_container .reviews p {
   font-family: "Open Sans", "sans-serif";
   max-width: 483px;
+  margin-left: 48px;
 }
 .feedback_container .reviews h1 {
   font-family: "Poppins", "sans-serif";
