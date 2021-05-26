@@ -44,7 +44,36 @@
             border-radius: 50%;
             width: 100%;
         }
-        
+
+        .change_pPic{
+
+            position: relative;
+
+            input[type="file"] {
+                display: none;
+            }
+
+            .custom-file-upload {
+                padding: 6px;
+                font-size: 18px;
+                position: absolute;
+                border-radius: 50%;
+                background-color: white;
+                text-align: center;
+                // width: 200px;
+                right: -10px;
+
+                cursor: pointer;
+
+                i {
+                    color: black;
+                }
+
+                @include mediaQ(s-phone) {
+                    width: 100%;
+                }
+            }
+        }
 
         .profile_names {
             // border: 2px solid red;
@@ -91,7 +120,8 @@
             // border: 2px solid green;
 
             @include mediaQ(phone) {
-max-width: 210px;            }
+                max-width: 210px;
+            }
 
             h1 {
                 font-size: 24px;

@@ -16,20 +16,20 @@
 
         <div class="fb_emotions">
 
-            <input type="radio" id="extraAngry" name="feedback_icon" value="extraAngry">
+            <input type="radio" id="extraAngry" name="feedback_icon" value="1">
             <label for="extraAngry" class="label_exp"> <i class="far fa-angry"></i> </label>
 
-            <input type="radio" id="angry" name="feedback_icon" value="angry">
+            <input type="radio" id="angry" name="feedback_icon" value="2">
             <label for="angry" class="label_exp"><i class="far fa-frown"></i></label>
 
-            <input type="radio" id="neutral" name="feedback_icon" value="neutral">
+            <input type="radio" id="neutral" name="feedback_icon" value="3">
             <label for="neutral" class="label_exp"><i class="far fa-meh"></i></label>
 
-            <input type="radio" id="happy" name="feedback_icon" value="happy">
+            <input type="radio" id="happy" name="feedback_icon" value="4">
             <label for="happy" class="label_exp"><i class="far fa-grin"></i></label>
 
-            <input type="radio" id="extraHappy" name="feedback_icon" value="extraHappy">
-            <label for="extraHappy" class="label_exp"><i class="far fa-grin-beam"></i></i></label>
+            <input type="radio" id="extraHappy" name="feedback_icon" value="5">
+            <label for="extraHappy" class="label_exp"><i class="far fa-grin-beam"></i></label>
             @error('feedback_icon')
             <div>
                 {{ 'Please select on of the feedback categorys' }}
@@ -43,13 +43,13 @@
         <h1 class="feedback_q">Feedback category</h1>
 
         <div class="feedback_issue">
-            <input type="radio" id="suggestion" name="feedback_type" value="suggestion">
+            <input type="radio" id="suggestion" name="feedback_type" value="Suggestion">
             <label for="suggestion" class="label_exp"> Suggestion </label>
 
-            <input type="radio" id="bug" name="feedback_type" value="bug">
+            <input type="radio" id="bug" name="feedback_type" value="Bug">
             <label for="bug" class="label_exp">Bug</label>
 
-            <input type="radio" id="other" name="feedback_type" value="other">
+            <input type="radio" id="other" name="feedback_type" value="Other">
             <label for="other" class="label_exp">Other</label>
             @error('feedback_type')
             <div>
@@ -84,10 +84,60 @@
         @if ($feedbacks->count())
         @foreach ($feedbacks as $feedback)
         <div class="reviews">
-            <a href=""> {{ $feedback->user->username}} </a>
-            <span>{{ $feedback->feedback_type}}</span>
-            <span>{{ $feedback->feedback_icon}}</span>
-            <span>{{ $feedback->created_at->diffForHumans() }}</span>
+
+            <div class="reviews__header">
+                <img src="../images/john_doe.jpg" alt="">
+                <div>
+                    <a href=""> {{ $feedback->user->username}} </a>
+                    <span>{{ $feedback->feedback_type}}</span>
+                </div>
+                <div>
+                    <span class="timer">{{ $feedback->created_at->diffForHumans() }}</span>
+                    {{-- <span>{{ $feedback->feedback_icon}}/5</span> --}}
+                    
+                    @switch($feedback->feedback_icon)
+                        @case("1")
+                            <div class="star_rating">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            @break
+                        @case("2")
+                        <div class="star_rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                            @break
+                        @case("3")
+                        <div class="star_rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                            @break
+                        @case("4")
+                        <div class="star_rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                            @break
+                        @case("5")
+                        <div class="star_rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                            @break
+                        @default
+                            
+                    @endswitch
+                </div>
+               
+            </div>
+            
             <p>{{ $feedback->body }}</p>
         </div>
         @endforeach
