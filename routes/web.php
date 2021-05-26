@@ -16,34 +16,26 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\card_detailsController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\payment_methodController;
 
-Route::get('/gallery/modern art', function () {
-    return view('pages.gallery.modernart');
-})->name('modernart');
+
 
 Route::get('/art details', function () {
     return view('pages.artdetail');
 })->name('art_detail');
 
 
+Route::get('/gallery/modern art', [GalleryController::class, 'images_1'])->name('modernart');
+Route::get('/gallery/realism', [GalleryController::class, 'images_2'])->name('realism');
+Route::get('/gallery/medieval art', [GalleryController::class, 'images_3'])->name('medievalart');
+Route::get('/gallery/baroque', [GalleryController::class, 'images_4'])->name('baroque');
 
 Route::get('/report bug', function () {
     return view('pages.reportbug');
 })->name('reportBug');
 
-Route::get('/gallery/realism', function () {
-    return view('pages.gallery.realism');
-})->name('realism');
 
-Route::get('/gallery/medieval art', function () {
-    return view('pages.gallery.medievalart');
-})->name('medievalart');
-
-
-Route::get('/gallery/baroque', function () {
-    return view('pages.gallery.baroque');
-})->name('baroque');
 
 Route::get('/search', function () {
     return view('pages.search');
@@ -79,7 +71,14 @@ Route::post('/usersettings_delete', [UserController::class, 'delete'])->name('us
 Route::post('/usersettings_deleteByAdmin', [UserController::class, 'deleteByAdmin'])->name('usersettings_deleteByAdmin');
 Route::post('/usersettings_upload', [UserController::class, 'upload'])->name('usersettings_upload');
 
-Route::resource('usersettings', 'App\Http\Controllers\UploadController');
+
+
+
+// Route::post('usersettings_upload', function (Request $request) {
+//     $request->path_name->store('images', 'public');
+// })->name('usersettings_upload');
+
+// Route::resource('usersettings', 'App\Http\Controllers\UploadController');
 
 Route::get('/account settings', [UserController::class, 'usersettings'])->name('user_settings');
 

@@ -44,6 +44,7 @@ class User extends Authenticatable
         'zip_code',
         'payment_id',
         'reportBug',
+        'bio',
 
     ];
 

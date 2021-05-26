@@ -58,6 +58,7 @@ class UserController extends Controller
             'gender' => $request->gender,
             'age' => $request->age,
             'country_name' => $request->country_name,
+            'bio'=>$request->bio,
         ]);
 
         return back();
@@ -137,6 +138,7 @@ class UserController extends Controller
             'category_id' => $request->category_id,
 
         ]);
+        $request->path_name->store('images', 'public');
         return back();
     }
 }

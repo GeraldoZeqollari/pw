@@ -17,18 +17,18 @@
             <input id="file-upload-profile" type="file" />
         </form>
         <div class="profile_names">
-
-            <h1>{{ Auth::user()->username}}</h1>
+            <h1>{{ Auth::user()->first_name}} {{ Auth::user()->last_name}}</h1>
+            <p>@ {{ Auth::user()->username}}</p>
 
         </div>
     </div>
 
     <div class="profile_dash">
         <div class="profile_dash__left">
-            <h1>John Doe</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae, vitae repellat nam repudiandae, deserunt doloribus alias ex veniam voluptate corporis accusamus, voluptatum repellendus ipsa rerum officiis suscipit animi culpa.</p>
-            <h2>Gender: Male</h2>
-            <h2>Location: Russia</h2>
+            <h1>{{ Auth::user()->first_name}} {{ Auth::user()->last_name}}</h1>
+            <p>{{ Auth::user()->bio}}</p>
+            <h2>Gender: {{ Auth::user()->gender}}</h2>
+            <h2>Location: {{ Auth::user()->country_name}}</h2>
         </div>
         <div class="profile_dash__right">
             <h1>What this user liked</h1>

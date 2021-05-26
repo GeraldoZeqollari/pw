@@ -43,14 +43,15 @@ class UploadController extends Controller
             ]);
 
 
-            $request->file->store('image', 'public');
+            $request->file->store('');
 
 
             $image = new Image([
-                
+
                 "path_name" => $request->file->hashName()
             ]);
             $image->save();
+            dd($image);
         }
 
         return view('pages.usersettings');
