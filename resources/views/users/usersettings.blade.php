@@ -393,7 +393,7 @@
                     </div>
                     <div class="upload_row">
                         <input type="number" name="year" id="" placeholder="Year">
-                        <input type="number" name="resolution" id="" placeholder="Resolution">
+                        <input type="text" name="resolution" id="" placeholder="Resolution">
                     </div>
                     <div class="upload_row">
                         <input type="number" name="stock" id="" placeholder="Stock">

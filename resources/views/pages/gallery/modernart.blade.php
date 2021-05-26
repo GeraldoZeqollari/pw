@@ -19,8 +19,12 @@
         @if($image->category_id==1)
         <div class="image">
             <a href="index.html">
-                <img src="../images/cGr5ti9eljsMCfSK5ZzfXJ7dhiZtdgrbAZ0LkS91.jpg" width="100%" alt="" />
+                {{-- <img src="../../../../../storage/app/public/images/DJ5jxb8RBAKDA9H9fAv64j5DGuWGq7TegYCTnwhw.jpg" width="100%" alt="" /> --}}
+                <img src="{{ storage_path('../app/public/images/DJ5jxb8RBAKDA9H9fAv64j5DGuWGq7TegYCTnwhw.jpg')  }}" width="100%" alt="" />
+                {{-- <img src="/images/big-cat.jpg" width="100%" alt="" /> --}}
+                {{-- storage\app\public\images --}}
                 <h3 class="img-title">{{$image->image_title}}</h3>
+                <h3 class="img-title">{{dirname(__DIR__)}}</h3>
         <h3 class="img-size">Digital, {{$image->resolution}}</h3>
         <h3 class="artist-name">Artist: {{$image->author}}</h3>
         <h3 class="img-price">Price: ${{$image->price}}</h3>

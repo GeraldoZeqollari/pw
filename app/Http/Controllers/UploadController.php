@@ -51,7 +51,7 @@ class UploadController extends Controller
                 "path_name" => $request->file->hashName()
             ]);
             $image->save();
-            dd($image);
+            // dd($image);
         }
 
         return view('pages.usersettings');
