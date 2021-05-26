@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Image;
 use App\Models\ReportBug;
 use App\Models\card_details;
 use Illuminate\Http\Request;
@@ -104,7 +105,38 @@ class UserController extends Controller
 
     public function userprofile()
     {
-       $userprofile = User::get();
-      return view('pages.userprofile')->with('userprofile', $userprofile);
+        $userprofile = User::get();
+        return view('pages.userprofile')->with('userprofile', $userprofile);
+    }
+
+
+    public function upload(Request $request)
+    {
+        $this->validate($request, [
+
+            'image_title' => 'required',
+            'year' => 'required',
+            'resolution' => 'required',
+            'stock' => 'required',
+            'price' => 'required',
+            'image_description' => 'required',
+            'author' => 'required',
+            'category_id' => 'required',
+        ]);
+
+        Image::where('id', auth()->user()->id)->create([
+
+            "path_name" => $request->path_name->hashName(),
+            'image_title' => $request->image_title,
+            'year' => $request->year,
+            'resolution' => $request->resolution,
+            'stock' => $request->stock,
+            'price' => $request->price,
+            'image_description' => $request->image_description,
+            'author' => $request->author,
+            'category_id' => $request->category_id,
+
+        ]);
+        return back();
     }
 }

@@ -77,6 +77,9 @@ Route::post('/usersettings_carddetails', [UserController::class, 'carddetails'])
 Route::post('/usersettings_passwordChange', [UserController::class, 'changePassword'])->name('usersettings_passwordChange');
 Route::post('/usersettings_delete', [UserController::class, 'delete'])->name('usersettings_delete');
 Route::post('/usersettings_deleteByAdmin', [UserController::class, 'deleteByAdmin'])->name('usersettings_deleteByAdmin');
+Route::post('/usersettings_upload', [UserController::class, 'upload'])->name('usersettings_upload');
+
+Route::resource('usersettings', 'App\Http\Controllers\UploadController');
 
 Route::get('/account settings', [UserController::class, 'usersettings'])->name('user_settings');
 
