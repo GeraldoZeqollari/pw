@@ -18,7 +18,7 @@
         </form>
         <div class="profile_names">
             <h1>{{ Auth::user()->first_name}} {{ Auth::user()->last_name}}</h1>
-            <p>@ {{ Auth::user()->username}}</p>
+            <p>{{'@'}}{{ Auth::user()->username}}</p>
 
         </div>
     </div>
@@ -26,8 +26,19 @@
     <div class="profile_dash">
         <div class="profile_dash__left">
             <h1>{{ Auth::user()->first_name}} {{ Auth::user()->last_name}}</h1>
-            <p>{{ Auth::user()->bio}}</p>
-            <h2>Gender: {{ Auth::user()->gender}}</h2>
+            <p>{{ Auth::user()->Bio}}</p>
+            <h2>Gender: 
+            @switch(Auth::user()->gender)
+                @case("M")
+                    Male
+                @break
+                @case("F")
+                    Female
+                    @break
+                @default
+                    Other
+            @endswitch           
+            </h2>
             <h2>Location: {{ Auth::user()->country_name}}</h2>
         </div>
         <div class="profile_dash__right">

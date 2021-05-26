@@ -65,47 +65,46 @@
                             <h1>Country</h1>
                             <select id="country" name="country_name" class="form-control">
                                 <option selected="true" disabled="disabled">Choose your country</option>
-                                <option value="Albania">Albania</option>
-                                <option value="Algeria">Algeria</option>
-                                <option value="Argentina">Argentina</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Austria">Austria</option>
-                                <option value="Bahrain">Bahrain</option>
-                                <option value="Belarus">Belarus</option>
-                                <option value="Belgium">Belgium</option>
-                                <option value="Brazil">Brazil</option>
-                                <option value="Canada">Canada</option>
-                                <option value="China">China</option>
-                                <option value="Colombia">Colombia</option>
-                                <option value="Croatia">Croatia</option>
-                                <option value="Czech Republic">Czech Republic</option>
-                                <option value="Denmark">Denmark</option>
-                                <option value="Egypt">Egypt</option>
-                                <option value="Finland">Finland</option>
-                                <option value="France">France</option>
-                                <option value="Germany">Germany</option>
-                                <option value="Ghana">Ghana</option>
-                                <option value="Gibraltar">Gibraltar</option>
-                                <option value="Greece">Greece</option>
-                                <option value="Hong Kong">Hong Kong</option>
-                                <option value="Hungary">Hungary</option>
-                                <option value="Iceland">Iceland</option>
-                                <option value="India">India</option>
-                                <option value="Indonesia">Indonesia</option>
-                                <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
-                                <option value="Iraq">Iraq</option>
-                                <option value="Ireland">Ireland</option>
-                                <option value="Israel">Israel</option>
-                                <option value="Italy">Italy</option>
-                                <option value="Japan">Japan</option>
-                                <option value="Liechtenstein">Liechtenstein</option>
-                                <option value="Lithuania">Lithuania</option>
-                                <option value="Luxembourg">Luxembourg</option>
-                                <option value="Maldives">Maldives</option>
-                                <option value="Mexico">Mexico</option>
-                                <option value="Monaco">Monaco</option>
-                                <option value="Mongolia">Mongolia</option>
-                                <option value="Montenegro">Montenegro</option>
+                                <option value="Albania" {{ old('country_name', Auth::user()->country_name) == 'Albania' ? 'selected' : '' }}>Albania</option>
+                                <option value="Algeria" {{ old('country_name', Auth::user()->country_name) == 'Algeria' ? 'selected' : '' }}>Algeria</option>
+                                <option value="Argentina" {{ old('country_name', Auth::user()->country_name) == 'Argentina' ? 'selected' : '' }}>Argentina</option>
+                                <option value="Australia" {{ old('country_name', Auth::user()->country_name) == 'Australia' ? 'selected' : '' }}>Australia</option>
+                                <option value="Austria" {{ old('country_name', Auth::user()->country_name) == 'Austria' ? 'selected' : '' }}>Austria</option>
+                                <option value="Bahrain" {{ old('country_name', Auth::user()->country_name) == 'Bahrain' ? 'selected' : '' }}>Bahrain</option>
+                                <option value="Belarus" {{ old('country_name', Auth::user()->country_name) == 'Belarus' ? 'selected' : '' }}>Belarus</option>
+                                <option value="Belgium" {{ old('country_name', Auth::user()->country_name) == 'Belgium' ? 'selected' : '' }}>Belgium</option>
+                                <option value="Brazil" {{ old('country_name', Auth::user()->country_name) == 'Brazil' ? 'selected' : '' }}>Brazil</option>
+                                <option value="Canada" {{ old('country_name', Auth::user()->country_name) == 'Canada' ? 'selected' : '' }}>Canada</option>
+                                <option value="China" {{ old('country_name', Auth::user()->country_name) == 'China' ? 'selected' : '' }}>China</option>
+                                <option value="Colombia" {{ old('country_name', Auth::user()->country_name) == 'Colombia' ? 'selected' : '' }}>Colombia</option>
+                                <option value="Croatia" {{ old('country_name', Auth::user()->country_name) == 'Croatia' ? 'selected' : '' }}>Croatia</option>
+                                <option value="Czech Republic" {{ old('country_name', Auth::user()->country_name) == 'Czech Republic' ? 'selected' : '' }}>Czech Republic</option>
+                                <option value="Denmark" {{ old('country_name', Auth::user()->country_name) == 'Denmark' ? 'selected' : '' }}>Denmark</option>
+                                <option value="Egypt" {{ old('country_name', Auth::user()->country_name) == 'Egypt' ? 'selected' : '' }}>Egypt</option>
+                                <option value="Finland" {{ old('country_name', Auth::user()->country_name) == 'Finland' ? 'selected' : '' }}>Finland</option>
+                                <option value="France"{{ old('country_name', Auth::user()->country_name) == 'France' ? 'selected' : '' }}>France</option>
+                                <option value="Germany"{{ old('country_name', Auth::user()->country_name) == 'Germany' ? 'selected' : '' }}>Germany</option>
+                                <option value="Ghana"{{ old('country_name', Auth::user()->country_name) == 'Ghana' ? 'selected' : '' }}>Ghana</option>
+                                <option value="Gibraltar"{{ old('country_name', Auth::user()->country_name) == 'Gibraltar' ? 'selected' : '' }}>Gibraltar</option>
+                                <option value="Greece"{{ old('country_name', Auth::user()->country_name) == 'Greece' ? 'selected' : '' }}>Greece</option>
+                                <option value="Hong Kong"{{ old('country_name', Auth::user()->country_name) == 'Hong Kong' ? 'selected' : '' }}>Hong Kong</option>
+                                <option value="Hungary"{{ old('country_name', Auth::user()->country_name) == 'Hungary' ? 'selected' : '' }}>Hungary</option>
+                                <option value="Iceland"{{ old('country_name', Auth::user()->country_name) == 'Iceland' ? 'selected' : '' }}>Iceland</option>
+                                <option value="India"{{ old('country_name', Auth::user()->country_name) == 'India' ? 'selected' : '' }}>India</option>
+                                <option value="Indonesia"{{ old('country_name', Auth::user()->country_name) == 'Indonesia' ? 'selected' : '' }}>Indonesia</option>
+                                <option value="Iraq" {{ old('country_name', Auth::user()->country_name) == 'Iraq' ? 'selected' : '' }}>Iraq</option>
+                                <option value="Ireland" {{ old('country_name', Auth::user()->country_name) == 'Ireland' ? 'selected' : '' }}>Ireland</option>
+                                <option value="Israel" {{ old('country_name', Auth::user()->country_name) == 'Israel' ? 'selected' : '' }}>Israel</option>
+                                <option value="Italy" {{ old('country_name', Auth::user()->country_name) == 'Italy' ? 'selected' : '' }}>Italy</option>
+                                <option value="Japan" {{ old('country_name', Auth::user()->country_name) == 'Japan' ? 'selected' : '' }}>Japan</option>
+                                <option value="Liechtenstein" {{ old('country_name', Auth::user()->country_name) == 'Liechtenstein' ? 'selected' : '' }}>Liechtenstein</option>
+                                <option value="Lithuania" {{ old('country_name', Auth::user()->country_name) == 'Lithuania' ? 'selected' : '' }}>Lithuania</option>
+                                <option value="Luxembourg" {{ old('country_name', Auth::user()->country_name) == 'Luxembourg' ? 'selected' : '' }}>Luxembourg</option>
+                                <option value="Maldives" {{ old('country_name', Auth::user()->country_name) == 'Maldives' ? 'selected' : '' }}>Maldives</option>
+                                <option value="Mexico" {{ old('country_name', Auth::user()->country_name) == 'Mexico' ? 'selected' : '' }}>Mexico</option>
+                                <option value="Monaco" {{ old('country_name', Auth::user()->country_name) == 'Monaco' ? 'selected' : '' }}>Monaco</option>
+                                <option value="Mongolia" {{ old('country_name', Auth::user()->country_name) == 'Mongolia' ? 'selected' : '' }}>Mongolia</option>
+                                <option value="Montenegro" {{ old('country_name', Auth::user()->country_name) == 'Montenegro' ? 'selected' : '' }}>Montenegro</option>
                                 <option value="Netherlands">Netherlands</option>
                                 <option value="New Zealand">New Zealand</option>
                                 <option value="Niger">Niger</option>
