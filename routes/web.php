@@ -17,6 +17,7 @@ use App\Http\Controllers\card_detailsController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ImageDetailsController;
 use App\Http\Controllers\payment_methodController;
 use App\Http\Controllers\PwResetController;
 
@@ -30,7 +31,7 @@ Route::get('/gallery/realism', [GalleryController::class, 'images_2'])->name('re
 Route::get('/gallery/medieval art', [GalleryController::class, 'images_3'])->name('medievalart');
 Route::get('/gallery/baroque', [GalleryController::class, 'images_4'])->name('baroque');
 
-Route::get('/art details', [GalleryController::class, 'artdetails'])->name('art_detail');
+Route::get('/art_details/{image}', [ImageDetailsController::class, 'index'])->name('art_detail');
 
 
 

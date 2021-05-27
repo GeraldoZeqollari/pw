@@ -31,17 +31,4 @@ class GalleryController extends Controller
         return view('pages.gallery.realism')->with('images', $images);
     }
 
-
-    public function artdetails(Request $request)
-    {
-
-        $image = Image::get()->first();
-
-        // dd(Image::find(11));
-
-        Image::where('id', $image->id)->first();
-        return view('pages.artdetail', [
-            'image' => $image
-        ]);
-    }
 }
