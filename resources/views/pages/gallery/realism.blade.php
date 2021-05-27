@@ -17,7 +17,7 @@
         @foreach ($images as $image)
         @if($image->category_id==2)
         <div class="image">
-            <a href={{route('art_detail')}}>
+            <a href={{route('art_detail', $image->id)}}>
                 <img src="../storage/images/{{$image->path_name}}" width="100%" alt="" />
                 <h3 class="img-title">{{$image->image_title}}</h3>
                 <h3 class="img-size">Digital, {{$image->resolution}}</h3>
