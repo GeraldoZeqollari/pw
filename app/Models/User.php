@@ -46,6 +46,7 @@ class User extends Authenticatable
         'reportBug',
         'bio',
         'new_password',
+        'profile_pic',
 
     ];
 

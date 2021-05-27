@@ -110,9 +110,23 @@ class UserController extends Controller
         return view('pages.userprofile')->with('userprofile', $userprofile);
     }
 
+    public function userChangeProfilePic(Request $request)
+    {
+// dd($request->profile_pic->hashName());
+        User::find(auth()->user()->id)->update([
+            'profile_pic' => $request->profile_pic->hashName(),
+        ]);
+        $request->profile_pic->store('images', 'public');
+        // dd(User::find(auth()->user()->id));
+//User::find(auth()->user()->id())->update(['password' => Hash::make($request->new_password)]);
+        return back();
+
+    }
+
 
     public function upload(Request $request)
     {
+
         $this->validate($request, [
 
             'image_title' => 'required',

@@ -557,7 +557,7 @@
                     @foreach ($bugs as $bug)
                     <div class="issue_details">
                         <h1>{{ $bug->user->email}}</h1>
-                        <h1>{{ \Carbon\Carbon::parse($bug->created_at)->diffForHumans() }}</h1>
+                        <h1>{{ ($bug->created_at)->diffForHumans() }}</h1>
 
                     </div>
                     <p>

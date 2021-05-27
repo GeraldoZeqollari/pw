@@ -4,16 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
+
 
 class Feedback extends Model
 {
     use HasFactory;
-    public $timestamps = false;
+    // public $timestamps = false;
     protected $fillable = [
         'body',
         'feedback_icon',
         'feedback_type',
         'user_id',
+        'created_at',
     ];
 
     public function user()

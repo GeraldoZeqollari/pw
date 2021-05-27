@@ -82,6 +82,7 @@ Route::post('/usersettings_upload', [UserController::class, 'upload'])->name('us
 Route::get('/account settings', [UserController::class, 'usersettings'])->name('user_settings');
 
 Route::get('/user/profile', [UserController::class, 'userprofile'])->name('user_profile');
+Route::post('/user/profile', [UserController::class, 'userChangeProfilePic']);
 
 Route::get('/reportbug', [ReportBugController::class, 'index'])->name('reportbug');
 Route::post('/reportbug', [ReportBugController::class, 'store']);

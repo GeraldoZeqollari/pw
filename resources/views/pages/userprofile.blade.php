@@ -9,13 +9,19 @@
         </div>
     </div>
     <div class="profile_pic">
-        <img src="../images/john_doe.jpg" alt="">
-        <form action="" class="change_pPic">
+        <img src="../storage/images/{{Auth::user()->profile_pic}}" alt="">
+        <form action="{{ route('user_profile') }}" method="POST" class="change_pPic" id="imageForm" enctype="multipart/form-data">
+            @csrf
             <label for="file-upload-profile" class="custom-file-upload">
                 <i class="fas fa-edit"></i>
             </label>
-            <input id="file-upload-profile" type="file" />
+            <input id="file-upload-profile" type="file" name="profile_pic"/>
         </form>
+        <script>
+        document.getElementById("file-upload-profile").onchange = function() {
+            document.getElementById("imageForm").submit();
+        };
+        </script>
         <div class="profile_names">
             <h1>{{ Auth::user()->first_name}} {{ Auth::user()->last_name}}</h1>
             <p>{{'@'}}{{ Auth::user()->username}}</p>
