@@ -18,16 +18,16 @@
         @foreach ($images as $image)
         @if($image->category_id==1)
         <div class="image">
-            <a href="index.html">
-                {{-- <img src="../../../../../storage/app/public/images/DJ5jxb8RBAKDA9H9fAv64j5DGuWGq7TegYCTnwhw.jpg" width="100%" alt="" /> --}}
-                <img src="{{ storage_path('../app/public/images/DJ5jxb8RBAKDA9H9fAv64j5DGuWGq7TegYCTnwhw.jpg')  }}" width="100%" alt="" />
-                {{-- <img src="/images/big-cat.jpg" width="100%" alt="" /> --}}
-                {{-- storage\app\public\images --}}
+            <a href={{route('art_detail')}}>
+
+                <img src="../storage/images/{{$image->path_name}}" width="100%" alt="" />
+
                 <h3 class="img-title">{{$image->image_title}}</h3>
-                <h3 class="img-title">{{dirname(__DIR__)}}</h3>
-        <h3 class="img-size">Digital, {{$image->resolution}}</h3>
-        <h3 class="artist-name">Artist: {{$image->author}}</h3>
-        <h3 class="img-price">Price: ${{$image->price}}</h3>
+
+                <h3 class="img-size">Digital, {{$image->resolution}}</h3>
+                <h3 class="artist-name">Artist: {{$image->author}}</h3>
+                <h3 class="img-price">Price: ${{$image->price}}</h3>
+                <input type="number" value="{{$image->id}}" name="image_id" />
             </a>
             <span class="favorite-img"><i class="fas fa-heart notLiked"></i></span>
         </div>

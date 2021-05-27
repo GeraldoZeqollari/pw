@@ -18,12 +18,11 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\payment_methodController;
+use App\Http\Controllers\PwResetController;
 
-
-
-Route::get('/art details', function () {
-    return view('pages.artdetail');
-})->name('art_detail');
+// Route::get('/art details', function () {
+//     return view('pages.artdetail');
+// })->name('art_detail');
 
 
 Route::get('/gallery/modern art', [GalleryController::class, 'images_1'])->name('modernart');
@@ -31,10 +30,13 @@ Route::get('/gallery/realism', [GalleryController::class, 'images_2'])->name('re
 Route::get('/gallery/medieval art', [GalleryController::class, 'images_3'])->name('medievalart');
 Route::get('/gallery/baroque', [GalleryController::class, 'images_4'])->name('baroque');
 
+Route::get('/art details', [GalleryController::class, 'artdetails'])->name('art_detail');
+
+
+
 Route::get('/report bug', function () {
     return view('pages.reportbug');
 })->name('reportBug');
-
 
 
 Route::get('/search', function () {
@@ -48,6 +50,10 @@ Route::get('/join us', function () {
 
 Route::get('/password reset', [ForgotPasswordController::class, 'forgot'])->name('pwreset');
 Route::post('/password reset', [ForgotPasswordController::class, 'password']);
+
+Route::get('/new_password/{email}/{code}', [ForgotPasswordController::class, 'resetlink'])->name('pwresetlink');
+Route::post('/new_password/{email}/{code}', [ForgotPasswordController::class, 'newPassword']);
+
 
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
@@ -72,14 +78,6 @@ Route::post('/usersettings_deleteByAdmin', [UserController::class, 'deleteByAdmi
 Route::post('/usersettings_upload', [UserController::class, 'upload'])->name('usersettings_upload');
 
 
-
-
-// Route::post('usersettings_upload', function (Request $request) {
-//     $request->path_name->store('images', 'public');
-// })->name('usersettings_upload');
-
-// Route::resource('usersettings', 'App\Http\Controllers\UploadController');
-
 Route::get('/account settings', [UserController::class, 'usersettings'])->name('user_settings');
 
 Route::get('/user/profile', [UserController::class, 'userprofile'])->name('user_profile');
@@ -92,9 +90,7 @@ Route::post('/reportbug', [ReportBugController::class, 'store']);
 // Route::get('/search', [SearchController::class, 'index'])->name('search');
 // Route::post('/search', [SearchController::class, 'store']);
 
-// Route::post('/search', function () {
-//     return view('/search');
-// })->name('search');
+
 
 // Route::get('/users/{user:username}/feedbacks', [UserPostController::class, 'index'])->name('users.posts');
 

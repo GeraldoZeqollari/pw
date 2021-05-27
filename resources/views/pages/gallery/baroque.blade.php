@@ -17,8 +17,8 @@
     @foreach ($images as $image)
     @if($image->category_id==4)
     <div class="image">
-      <a href="index.html">
-        <img src="../images/cGr5ti9eljsMCfSK5ZzfXJ7dhiZtdgrbAZ0LkS91.jpg" width="100%" alt="" />
+      <a href={{route('art_detail')}}>
+        <img src="../storage/images/{{$image->path_name}}" width="100%" alt="" />
         <h3 class="img-title">{{$image->image_title}}</h3>
         <h3 class="img-size">Digital, {{$image->resolution}}</h3>
         <h3 class="artist-name">Artist: {{$image->author}}</h3>

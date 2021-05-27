@@ -170,10 +170,10 @@
 
   <section class="social-media">
     <a href="#"><i class="fab fa-facebook-f" style="color: rgb(64,100,172)"></i></a>
-            <a href="#"><i class="fab fa-youtube" style="color: rgb(246,1,1)"></i></a>
-            <a href="#"><i class="fab fa-instagram" style="color:rgb(167,49,150)"></i></a>
-            <a href="#"><i class="fab fa-twitter" style="color: rgb(28,157,235)"></i></a>
-            <a href="#"><i class="fab fa-linkedin" style="color: rgb(10,98,189)"></i></a>
+    <a href="#"><i class="fab fa-youtube" style="color: rgb(246,1,1)"></i></a>
+    <a href="#"><i class="fab fa-instagram" style="color:rgb(167,49,150)"></i></a>
+    <a href="#"><i class="fab fa-twitter" style="color: rgb(28,157,235)"></i></a>
+    <a href="#"><i class="fab fa-linkedin" style="color: rgb(10,98,189)"></i></a>
   </section>
 
   <script type="text/javascript" src="{{ asset('js/nav.js') }}"></script>
@@ -194,6 +194,7 @@
   @yield('userProfile')
   @yield('search')
   @yield('users')
+  @yield('pwresetlink')
 
   <footer class="footer">
     <div class="container">

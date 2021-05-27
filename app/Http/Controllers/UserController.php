@@ -58,7 +58,7 @@ class UserController extends Controller
             'gender' => $request->gender,
             'age' => $request->age,
             'country_name' => $request->country_name,
-            'bio'=>$request->bio,
+            'bio' => $request->bio,
         ]);
 
         return back();

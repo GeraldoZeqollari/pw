@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Details extends Model
 {
     use HasFactory;
-
+    public $timestamps = false;
     protected $fillable = [
 
         'gender',

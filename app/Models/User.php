@@ -45,6 +45,7 @@ class User extends Authenticatable
         'payment_id',
         'reportBug',
         'bio',
+        'new_password',
 
     ];
 

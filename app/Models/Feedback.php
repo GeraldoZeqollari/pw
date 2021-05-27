@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Feedback extends Model
 {
     use HasFactory;
-
+    public $timestamps = false;
     protected $fillable = [
         'body',
         'feedback_icon',
