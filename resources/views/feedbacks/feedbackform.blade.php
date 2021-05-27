@@ -86,13 +86,13 @@
         <div class="reviews">
 
             <div class="reviews__header">
-                <img src="../images/john_doe.jpg" alt="">
+                <img src="../storage/images/{{$feedback->user->profile_pic}}"  alt="">
                 <div>
                     <a href=""> {{ $feedback->user->username}} </a>
                     <span style="font-family: Poppins, sans-serif; font-size: 14px">{{ $feedback->feedback_type}}</span>
                 </div>
                 <div>
-                    <span class="timer">{{ \Carbon\Carbon::parse($feedback->created_at)->diffForHumans() }}</span>
+                    <span class="timer">{{($feedback->created_at)->diffForHumans() }}</span>
                     {{-- <span>{{ $feedback->feedback_icon}}/5</span> --}}
                     
                     @switch($feedback->feedback_icon)

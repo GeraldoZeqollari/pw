@@ -2862,9 +2862,9 @@ NEWS
   margin-inline: auto;
 }
 .profile_container .profile_pic img {
-  object-fit: cover;
   border-radius: 50%;
   width: 100%;
+  height: 90px;
 }
 .profile_container .profile_pic .change_pPic {
   position: relative;
@@ -2901,6 +2901,7 @@ NEWS
 .profile_container .profile_pic .profile_names h1 {
   font-family: "Poppins", "sans-serif";
   min-width: 200px;
+  text-align: center;
   font-size: 18px;
 }
 .profile_container .profile_pic .profile_names p {

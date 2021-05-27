@@ -40,9 +40,12 @@
         margin-inline: auto;
 
         img {
-            object-fit: cover;
+            // object-fit: cover;
+            
             border-radius: 50%;
             width: 100%;
+            height: 90px;
+            // border: 2px solid red;
         }
 
         .change_pPic{
@@ -86,6 +89,7 @@
             h1 {
                 font-family: v.$HeaderFont;
                 min-width: 200px;
+                text-align: center;
                 font-size: 18px;
             }
 

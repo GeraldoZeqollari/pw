@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
+  <link rel="icon" href="../images/tab_logo.png">
+
 
   <link href="{{ asset('css/index.css') }}" rel="stylesheet" type="text/css">
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -129,7 +131,7 @@
     <div class="logIn">
       @auth
       {{-- <i class="fas fa-user user_icon"></i> --}}
-      <img src="../images/john_doe.jpg" class="user_icon" alt="error">
+      <img src="../storage/images/{{Auth::user()->profile_pic}}"  class="user_icon" alt="error">
 
       {{--  onclick='user_submenu()' --}}
       <div class="user_dropdown">
