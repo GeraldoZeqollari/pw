@@ -9,14 +9,14 @@ class ReportBug extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
+    
 
     protected $fillable = [
         'bug_desc',
         'user_id',
         'report_id',
         'created_at',
-        'updated_at,'
+        'updated_at',
     ];
     public function user()
     {

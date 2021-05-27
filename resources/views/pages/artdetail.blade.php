@@ -3,7 +3,7 @@
 @section('artDetail')
 <div class="art_details">
     <div class="art_details__img">
-        <img src="../storage/images/{{$image1->path_name}}" width="100%" alt="" />
+        <img src="../storage/images/{{$image->path_name}}" width="100%" alt="" />
     </div>
 
     <div class="art_details__desc">

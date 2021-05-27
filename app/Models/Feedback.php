@@ -8,12 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Feedback extends Model
 {
     use HasFactory;
-    public $timestamps = false;
+    
     protected $fillable = [
         'body',
         'feedback_icon',
         'feedback_type',
         'user_id',
+        'created_at',
+        'updated_at',
     ];
 
     public function user()
