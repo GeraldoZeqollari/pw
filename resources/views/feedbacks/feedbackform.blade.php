@@ -89,7 +89,7 @@
                 <img src="../images/john_doe.jpg" alt="">
                 <div>
                     <a href=""> {{ $feedback->user->username}} </a>
-                    <span>{{ $feedback->feedback_type}}</span>
+                    <span style="font-family: Poppins, sans-serif; font-size: 14px">{{ $feedback->feedback_type}}</span>
                 </div>
                 <div>
                     <span class="timer">{{ $feedback->created_at->diffForHumans() }}</span>
