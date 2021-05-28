@@ -78,7 +78,6 @@ Route::post('/usersettings_delete', [UserController::class, 'delete'])->name('us
 Route::post('/usersettings_deleteByAdmin', [UserController::class, 'deleteByAdmin'])->name('usersettings_deleteByAdmin');
 Route::post('/usersettings_upload', [UserController::class, 'upload'])->name('usersettings_upload');
 
-
 Route::get('/account settings', [UserController::class, 'usersettings'])->name('user_settings');
 
 Route::get('/user/profile', [UserController::class, 'userprofile'])->name('user_profile');
@@ -86,8 +85,6 @@ Route::post('/user/profile', [UserController::class, 'userChangeProfilePic']);
 
 Route::get('/reportbug', [ReportBugController::class, 'index'])->name('reportbug');
 Route::post('/reportbug', [ReportBugController::class, 'store']);
-
-
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 

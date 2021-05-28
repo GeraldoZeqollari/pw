@@ -4,38 +4,46 @@
 <div class="art_details">
 
     <div class="buy_window visibilityHidden">
-
         <span id="close_menu">X</span>
-        
+        @guest
+        <h1>Please login to purchase</h1>
+        @endguest
+        @auth
+
+
+
         <h1>Confirm Purchase</h1>
 
         <div class="buy_details">
-           <table>
-            <tr>
-                <td colspan="3"><img src="../storage/images/{{$image->path_name}}" alt="" width="150px" height="80px"></td>
-                {{-- <td></td>
+            <table>
+                <tr>
+                    <td colspan="3"><img src="../storage/images/{{$image->path_name}}" alt="" width="150px"
+                            height="80px"></td>
+                    {{-- <td></td>
                 <td></td> --}}
-            </tr>
-               <tr>
-                   <td style="text-align: left">item</td>
-                   <td>{{$image->image_title}}</td>
-                   <td style="text-align: right">${{$image->price}}</td>
-               </tr>
-               <tr>
-                   <td style="text-align: left">buyer</td>
-                   <td>{{auth()->user()->email}}</td>
-                   <td></td>
-               </tr>
-               <tr>
-                   <td style="text-align: left">order track code</td>
-                   <td>order id</td>
-                   <td></td>
-               </tr>
-           </table>
+                </tr>
+                <tr>
+                    <td style="text-align: left">item</td>
+                    <td>{{$image->image_title}}</td>
+                    <td style="text-align: right">${{$image->price}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">buyer</td>
+                    <td>{{auth()->user()->email}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">order track code</td>
+                    <td>order id</td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
 
         <h1 class="buy_total">Total: ${{$image->price}}</h1>
         <input type="submit" value="Confirm">
+
+        @endauth
     </div>
 
     <div class="art_details__img">

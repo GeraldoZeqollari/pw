@@ -117,7 +117,7 @@
     </ul>
     <div class="search-nest">
 
-      <form action="" method="GET" role="search" class="search-bar">
+      <form action="{{ route('search') }}" method="GET" role="search" class="search-bar">
 
         <input type="text" name="search" id="" class="search-bar-input" placeholder="Find your Art" aria-label="search"
           required />
