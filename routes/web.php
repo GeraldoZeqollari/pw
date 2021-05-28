@@ -40,9 +40,9 @@ Route::get('/report bug', function () {
 })->name('reportBug');
 
 
-Route::get('/search', function () {
-    return view('pages.search');
-})->name('search');
+// Route::get('/search', function () {
+//     return view('pages.search');
+// })->name('search');
 
 
 Route::get('/join us', function () {
@@ -89,9 +89,7 @@ Route::post('/reportbug', [ReportBugController::class, 'store']);
 
 
 
-// Route::get('/search', [SearchController::class, 'index'])->name('search');
-// Route::post('/search', [SearchController::class, 'store']);
-
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 
 // Route::get('/users/{user:username}/feedbacks', [UserPostController::class, 'index'])->name('users.posts');

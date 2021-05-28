@@ -117,8 +117,8 @@
     </ul>
     <div class="search-nest">
 
-      <form action="{{URL::to('/search')}}" method="POST" role="search" class="search-bar">
-        @csrf
+      <form action="" method="GET" role="search" class="search-bar">
+
         <input type="text" name="search" id="" class="search-bar-input" placeholder="Find your Art" aria-label="search"
           required />
         <button class="search-bar-submit" aria-label="submit search">
@@ -131,7 +131,7 @@
     <div class="logIn">
       @auth
       {{-- <i class="fas fa-user user_icon"></i> --}}
-      <img src="../storage/images/{{Auth::user()->profile_pic}}"  class="user_icon" alt="error">
+      <img src="../storage/images/{{Auth::user()->profile_pic}}" class="user_icon" alt="error">
 
       {{--  onclick='user_submenu()' --}}
       <div class="user_dropdown">
