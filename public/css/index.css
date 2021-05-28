@@ -1567,6 +1567,10 @@ NEWS
 .gallery-container .art-gallery .image a:hover .img-title::after {
   padding-left: 40px;
 }
+.gallery-container .art-gallery .image a img {
+  height: 175px;
+  object-fit: contain;
+}
 .gallery-container .art-gallery .image .img-title {
   font-size: 20px;
   position: relative;
