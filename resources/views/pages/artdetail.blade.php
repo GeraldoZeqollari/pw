@@ -2,8 +2,44 @@
 
 @section('artDetail')
 <div class="art_details">
+
+    <div class="buy_window visibilityHidden">
+
+        <span id="close_menu">X</span>
+        
+        <h1>Confirm Purchase</h1>
+
+        <div class="buy_details">
+           <table>
+            <tr>
+                <td colspan="3"><img src="../storage/images/{{$image->path_name}}" alt="" width="150px" height="80px"></td>
+                {{-- <td></td>
+                <td></td> --}}
+            </tr>
+               <tr>
+                   <td style="text-align: left">item</td>
+                   <td>{{$image->image_title}}</td>
+                   <td style="text-align: right">${{$image->price}}</td>
+               </tr>
+               <tr>
+                   <td style="text-align: left">buyer</td>
+                   <td>{{auth()->user()->email}}</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td style="text-align: left">order track code</td>
+                   <td>order id</td>
+                   <td></td>
+               </tr>
+           </table>
+        </div>
+
+        <h1 class="buy_total">Total: ${{$image->price}}</h1>
+        <input type="submit" value="Confirm">
+    </div>
+
     <div class="art_details__img">
-        <img src="../storage/images/{{$image1->path_name}}" width="100%" alt="" />
+        <img src="../storage/images/{{$image->path_name}}" width="100%" alt="" />
     </div>
 
     <div class="art_details__desc">
@@ -15,7 +51,7 @@
 
             <i class="fas fa-heart notLiked pl"></i>
 
-            <a href="image.jpg" download="image.jpg"><i class="fas fa-cart-arrow-down"></i></a>
+            <a id="buy_btn"><i class="fas fa-cart-arrow-down"></i></a>
 
             <a href="image.jpg" download="image.jpg" class="download_btn"><i class="fas fa-download"></i></a>
         </div>
@@ -39,4 +75,19 @@
         </div>
     </div>
 </div>
+
+<script>
+    const closeBuy = document.querySelector('#close_menu');
+    const openBuy = document.querySelector('#buy_btn');
+    const buyMenu = document.querySelector('.buy_window');
+
+    openBuy.addEventListener('click', () => {
+        buyMenu.classList.remove('visibilityHidden');
+    })
+
+    closeBuy.addEventListener('click', () => {
+        buyMenu.classList.add('visibilityHidden');
+    })
+
+</script>
 @endsection

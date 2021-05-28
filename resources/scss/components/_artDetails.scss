@@ -6,10 +6,99 @@
     padding-top: 105px;
     width: min(90%, 100rem);
     margin-inline: auto;
+    position: relative;
     // border: 2px solid red;
 
     @include mediaQ(phone) {
         width: 95%;
+    }
+
+    .buy_window{
+        position: fixed;
+        // width: 500px;
+        border: 1px solid black;
+        // height: 500px;
+        max-width: 650px;
+        // border: 2px solid red;
+        background-color: white;
+        margin: 5% auto;
+        left: 0;
+        padding: 30px 20px;
+        // top: 150px;
+        right: 0;
+        text-align: center;
+        z-index: 9;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        #close_menu{
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            font-family: v.$HeaderFont;
+            top: 10px;
+            right: 10px;
+            border: 2px solid black;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 0.3s all ease;
+
+            &:hover{
+                background-color: black;
+                color: white;
+            }
+        }
+
+        h1{
+            font-family: v.$HeaderFont;
+            font-size: 16px;
+        }
+
+        .buy_details{
+            // border: 2px solid red;
+            border-top: 2px solid gray;
+            border-bottom: 2px solid gray;
+            padding: 10px;
+
+            table, td, tr{
+                // border: 1px solid black;
+                // border-collapse: collapse;
+            }
+
+            td{
+                width: 33%;
+                font-family: v.$NormalFont;
+            }
+
+            table{
+                width: 100%;
+            }
+            
+        }
+        .buy_total{
+            justify-self: flex-end;
+            align-self: flex-end;
+            // border: 2px solid red;
+        }
+
+        input[type='submit']{
+            @include buttonType(
+                black,
+                v.$HeaderFont,
+                2px solid black,
+                white,
+                140px,
+                12px
+            );
+            align-self: center;
+            padding: 6px 12px;
+
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }
     }
 
     &__img {
@@ -75,4 +164,9 @@
             }
         }
     }
+}
+
+
+.visibilityHidden{
+ display: none !important;
 }
