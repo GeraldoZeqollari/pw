@@ -20,14 +20,13 @@
         <div class="image">
             <a href={{route('art_detail', $image->id)}}>
 
-                <img src="../storage/images/{{$image->path_name}}" width="100%" alt="" />
+                <img src="../storage/images/{{$image->path_name}}" width="100%" height="175px" alt="" />
 
                 <h3 class="img-title">{{$image->image_title}}</h3>
 
                 <h3 class="img-size">Digital, {{$image->resolution}}</h3>
                 <h3 class="artist-name">Artist: {{$image->author}}</h3>
                 <h3 class="img-price">Price: ${{$image->price}}</h3>
-                <input type="number" value="{{$image->id}}" name="image_id" />
             </a>
             <span class="favorite-img"><i class="fas fa-heart notLiked"></i></span>
         </div>

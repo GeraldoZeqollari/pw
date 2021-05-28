@@ -15,7 +15,7 @@
                 </div>
                  <div class="invalid-message">
                      @if (session('status'))
-                        {{session('status')}}
+                        <h1>Wrong email or password. Please try again!</h1>
                       @endif
                  </div>
               </div>
