@@ -47,6 +47,22 @@
           </g>
         </svg>
 
+        <svg width="120" height="45" viewBox="0 0 120 45" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg_logo_mobile">
+          <g id="main_logo">
+            <rect width="120" height="45" fill="white" />
+            <g id="letter_e_mobile">
+              <rect id="Rectangle_1_mobile" x="58" y="12" width="19.0041" height="4.21422" />
+              <rect id="Rectangle_3_mobile" x="58" y="30.3741" width="19.0041" height="4.21422" />
+              <rect id="Rectangle_2_mobile" x="58" y="21.187" width="14.324" height="4.21422" />
+            </g>
+            <path id="letter_a_mobile" d="M112.148 12H108.73L101 34.59H105.394L110.561 19.1476L115.321 34.59H120L112.148 12Z"
+             />
+            <path id="letter_c_mobile"
+              d="M99 17.6324C97.1338 14.8376 93.9721 13 90.3859 13C84.6499 13 80 17.701 80 23.5C80 29.299 84.6499 34 90.3859 34C93.9721 34 97.1338 32.1624 99 29.3676"
+              stroke="#6a040f" />
+          </g>
+        </svg>
+
       </a>
     </div>
     <ul class="nav-links">
@@ -81,25 +97,34 @@
         </div>
       </div>
 
-      <li class="temporary-subheaders"><a href="#ourGoal">Our Goal</a></li>
-      <li class="temporary-subheaders"><a href="#news">News</a></li>
-      <li class="temporary-subheaders"><a href="#joinUs">Join Us</a></li>
-      <li class="temporary-subheaders"><a href="#ourTeam">Our Team</a></li>
+      @guest     
+      <li class="mobile-socialMedia">
+        <a href={{ route('login') }}>Log in</a>
+      </li>
+      @endguest
+
+      @auth
+      <li class="temporary-subheaders"><a href={{ route('user_profile') }}>My Profile</a></li>
+      <li class="temporary-subheaders"><a href={{ route('user_settings') }}>Edit Profile</a></li>
+      <li class="temporary-subheaders"><a href={{ route('reportBug') }}>Report Bug</a></li>
+      <li class="temporary-subheaders">
+        <form action="{{ route('logout') }}" method="POST">
+        @csrf
+          <button type="submit" class="logout-button">Log Out</button>
+        </form>
+      </li>
+      @endauth
+
+      <li class="temporary-subheaders"><a onclick="changeUrlGoal()">Our Goal</a></li>
+      <li class="temporary-subheaders"><a onclick="changeUrlNews()">News</a></li>
+      <li class="temporary-subheaders"><a onclick="changeUrlJoin()">Join Us</a></li>
+      <li class="temporary-subheaders"><a onclick="changeUrlTeam()">Our Team</a></li>
       <li><a href={{ route('modernart') }}>Gallery</a></li>
       <li><a href={{ route('feedback') }}>Community</a></li>
 
-      {{-- 
-         <a href="#"><i class="fab fa-facebook-f" style="color: rgb(64,100,172)"></i></a>
-            <a href="#"><i class="fab fa-youtube" style="color: rgb(246,1,1)"></i></a>
-            <a href="#"><i class="fab fa-instagram" style="color:rgb(167,49,150)"></i></a>
-            <a href="#"><i class="fab fa-twitter" style="color: rgb(28,157,235)"></i></a>
-            <a href="#"><i class="fab fa-linkedin" style="color: rgb(10,98,189)"></i></a>
-        --}}
+      
 
-      <li class="mobile-socialMedia mobileLogIn">
-        <a href={{ route('login') }}>Log in</a>
-      </li>
-      <li class="mobile-socialMedia">
+      <li class="mobile-socialMedia" style="margin-top: 20px">
         <a href="#"><i class="fab fa-facebook-f" style="color: rgb(64,100,172)"></i></a>
       </li>
       <li class="mobile-socialMedia">
@@ -119,7 +144,7 @@
 
       <form action="{{ route('search') }}" method="GET" role="search" class="search-bar">
 
-        <input type="text" name="search" id="" class="search-bar-input" placeholder="Find your Art" aria-label="search"
+        <input type="text" name="search" autocomplete="off" id="" class="search-bar-input" placeholder="Find your Art" aria-label="search"
           required />
         <button class="search-bar-submit" aria-label="submit search">
           <i class="fas fa-search"></i>

@@ -16,7 +16,7 @@
     }
 
     @include mediaQ(phone) {
-        width: min(100%, 100rem);
+        width: min(95%, 100rem);
     }
 
     .feedback_form {

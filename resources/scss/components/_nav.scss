@@ -38,67 +38,82 @@ nav {
             cursor: pointer;
             transition: all 1s ease-in;
             position: relative;
-          }
-    
-          #paintbrush {
+
+            @include mediaQ(phone) {
+                display: none;
+            }
+        }
+
+        #paintbrush {
             transition: all 1s ease-in;
             transform: translateX(100%);
             // fill: black;
             // stroke: black;
-          }
-    
-          #letter_e {
+        }
+
+        #letter_e {
             transform: translateX(27px) translateY(-1.4px);
             transition: all 0.3s ease-in;
             transition-delay: 0.7s;
             fill: #6a040f;
-          }
-    
-          #Rectangle_2 {
+        }
+
+        #Rectangle_2 {
             transform: translateX(-1px);
             transition-delay: 0.7s;
             fill: #6a040f;
+        }
 
-          }
-    
-          #letter_a {
+        #letter_a {
             transform: translateX(-24px) translateY(-1.4px);
             transition: all 0.3s ease-in;
             transition-delay: 0.7s;
             fill: #6a040f;
-          }
-    
-          #letter_c {
+        }
+
+        #letter_c {
             transform: scale(1.86) translateX(-41.3px) translateY(-11.4px);
             position: absolute;
             transition: all 0.3s ease-in;
             transition-delay: 0.7s;
             stroke-width: 1;
-          }
-    
-          svg:hover #paintbrush {
+        }
+
+        svg:hover #paintbrush {
             transform: translateX(0%);
-          }
-    
-          svg:hover #letter_c {
+        }
+
+        svg:hover #letter_c {
             transform: translateX(0px);
             stroke-width: 3.5;
-          }
-    
-          svg:hover #Rectangle_2 {
+        }
+
+        svg:hover #Rectangle_2 {
             transform: translateX(0px);
-          }
-    
-          svg:hover #letter_a {
+        }
+
+        svg:hover #letter_a {
             transform: translateX(0px);
-          }
-    
-          svg:hover #letter_e {
+        }
+
+        svg:hover #letter_e {
             transform: translateX(0px);
-          }
+        }
 
         .svg_logo_mobile {
             display: none;
+            margin-left: -80px;
+
+            #letter_e_mobile {
+                fill: #6a040f;
+            }
+            #letter_c_mobile {
+                stroke-width: 3.5;
+            }
+            
+            #letter_a_mobile {
+                fill: #6a040f;
+            }
             @include mediaQ(phone) {
                 display: block;
             }
@@ -115,7 +130,7 @@ nav {
             position: absolute;
             right: 0px;
             height: 90vh;
-            top: 67px;
+            top: 65px;
             background-color: rgb(233, 233, 233);
             display: flex;
             flex-direction: column;
@@ -243,6 +258,14 @@ nav {
 
     .temporary-subheaders {
         display: none;
+
+        button{
+            background-color: transparent;
+            border: 0;
+            font-family: v.$HeaderFont;
+            font-size: 18px;
+        }
+
         @include mediaQ(tablet) {
             display: inline-block;
         }
@@ -299,7 +322,7 @@ nav {
             display: none;
         }
 
-        img{
+        img {
             width: 50px;
             height: 50px;
             margin-top: 10px;

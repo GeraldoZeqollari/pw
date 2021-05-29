@@ -149,7 +149,6 @@
         eum. Excepturi amet, exercitationem possimus sequi molestias
         nesciunt officia impedit qui esse tempora doloribus itaque.
       </p>
-      <a href="" class="button-type button-type-border">learn more</a>
     </div>
     <div class="out-goal-img">
       <img src="../images/our-team-img.jpg" width="100%" alt="Error" />
