@@ -6,6 +6,7 @@ use App\Models\Like;
 use App\Models\Role;
 use App\Models\Details;
 use App\Models\Feedback;
+use App\Contracts\Likeable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -90,10 +91,10 @@ class User extends Authenticatable
         return $this->belongsToMany(User::class, 'id');
     }
 
-    // public function likes()
-    // {
-    //     return $this->hasMany(Like::class);
-    // }
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
 
     // public function receivedLikes()
     // {

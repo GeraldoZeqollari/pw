@@ -25,6 +25,7 @@
                 <h3 class="img-price">Price: ${{$image->price}}</h3>
             </a>
             <span class="favorite-img"><i class="fas fa-heart notLiked"></i></span>
+            @include('like', ['model' => $image])
         </div>
         @endif
 
