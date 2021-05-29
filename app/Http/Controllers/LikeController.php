@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Image;
+use App\Models\Like;
 use Illuminate\Http\Request;
 
 class LikeController extends Controller
@@ -14,22 +15,33 @@ class LikeController extends Controller
     //     $this->middleware(['auth']);
     // }
 
-    public function store(Image $image, Request $request)
+    public function store(Image $image)
     {
+        Like::where('user_id', auth()->user()->id)->create([
 
-        $image->likes()->create([
             'user_id' => auth()->user()->id,
-
+            'image_id' => $image->id
         ]);
 
         return back();
     }
 
-    public function destroy(Image $image, Request $request)
+    public function destroy(Image $image)
     {
-        //auth()->user()->likes->where('image_id', $image->id)->delete();
-        //dd(User::find(auth()->user()->image_id));
-        //$request->user()->likes()->where('image_id', $image->id)->delete();
+
+        // dd(Like::find(
+        //     '15',
+        //     'image_id'
+        // ));
+
+
+
+        Like::where([
+            'user_id' => auth()->user()->id,
+            'image_id' => $image->id,
+        ])->delete();
+
+
         return back();
     }
 }

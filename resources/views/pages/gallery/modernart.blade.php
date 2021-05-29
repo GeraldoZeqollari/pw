@@ -31,16 +31,18 @@
             @if(!$image->likedBy(auth()->user()))
             <form action="{{route('modernart.likes', $image->id)}}" method="POST">
                 @csrf
-                <button type="submit">Like</button>
+                <button type="submit"> 
+                    <span class="favorite-img"><i class="fas fa-heart notLiked"></i>
+                    </span>
+                </button>
 
-                {{-- <span class="favorite-img"><i class="fas fa-heart notLiked"></i></span> --}}
             </form>
             @else
             <form action="{{route('modernart.likes', $image->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button type="submit">Unlike</button>
-                {{-- <span class="favorite-img"><i class="fas fa-heart notLiked"></i></span> --}}
+                <button type="submit"><span class="favorite-img"><i class="fas fa-heart liked"></i></span></button>
+                
             </form>
             @endif
 

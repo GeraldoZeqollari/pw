@@ -10,10 +10,7 @@ class Like extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id'
+        'user_id',
+        'image_id',
     ];
-    public function user()
-    {
-        return $this->belongsToMany(User::class, 'id');
-    }
 }

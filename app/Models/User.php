@@ -88,7 +88,7 @@ class User extends Authenticatable
     }
     public function user()
     {
-        return $this->belongsToMany(User::class, 'id');
+        return $this->belongsToMany(User::class);
     }
 
     public function likes()

@@ -91,7 +91,21 @@ Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 
 Route::post('/gallery/modern art/{image}/likes', [LikeController::class, 'store'])->name('modernart.likes');
-Route::delete('/gallery/modern art/{image}/likes', [LikeController::class, 'destroy'])->name('modernart.likes');
+Route::delete('/gallery/modern art/{image}/likes', [LikeController::class, 'destroy']);
+
+
+Route::post('/gallery/realism/{image}/likes', [LikeController::class, 'store'])->name('realism.likes');
+Route::delete('/gallery/realism/{image}/likes', [LikeController::class, 'destroy']);
+
+Route::post('/gallery/medieval art/{image}/likes', [LikeController::class, 'store'])->name('medievalart.likes');
+Route::delete('/gallery/medieval art/{image}/likes', [LikeController::class, 'destroy']);
+
+Route::post('/gallery/baroque/{image}/likes', [LikeController::class, 'store'])->name('baroque.likes');
+Route::delete('/gallery/baroque/{image}/likes', [LikeController::class, 'destroy']);
+
+
+Route::post('/art_details/{image}/likes', [LikeController::class, 'store'])->name('art_detail.likes');
+Route::delete('/art_details/{image}/likes', [LikeController::class, 'destroy']);
 
 // Route::get('/users/{user:username}/feedbacks', [UserPostController::class, 'index'])->name('users.posts');
 

@@ -39,6 +39,8 @@ class FeedbackController extends Controller
         ]);
 
 
+        // dd(Feedback::where('id', '1'));
+
         return back();
     }
 }
