@@ -49,15 +49,18 @@ nav .logo #letter_e {
   transform: translateX(27px) translateY(-1.4px);
   transition: all 0.3s ease-in;
   transition-delay: 0.7s;
+  fill: #6a040f;
 }
 nav .logo #Rectangle_2 {
   transform: translateX(-1px);
   transition-delay: 0.7s;
+  fill: #6a040f;
 }
 nav .logo #letter_a {
   transform: translateX(-24px) translateY(-1.4px);
   transition: all 0.3s ease-in;
   transition-delay: 0.7s;
+  fill: #6a040f;
 }
 nav .logo #letter_c {
   transform: scale(1.86) translateX(-41.3px) translateY(-11.4px);
@@ -71,7 +74,7 @@ nav .logo svg:hover #paintbrush {
 }
 nav .logo svg:hover #letter_c {
   transform: translateX(0px);
-  stroke-width: 3;
+  stroke-width: 3.5;
 }
 nav .logo svg:hover #Rectangle_2 {
   transform: translateX(0px);
@@ -2035,9 +2038,6 @@ NEWS
   display: flex;
   justify-content: center;
 }
-.art_details__img img {
-  min-width: 200px;
-}
 .art_details__desc__header {
   display: flex;
   margin-top: 50px;
@@ -2084,7 +2084,8 @@ NEWS
 }
 
 .settings_background {
-  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 50%, rgba(255, 255, 255, 0.02) 61%, rgba(0, 0, 0, 0.02) 73%), linear-gradient(33deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background-blend-mode: normal, color-burn;
 }
 
 .settings_container {
