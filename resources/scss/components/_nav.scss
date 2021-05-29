@@ -43,23 +43,29 @@ nav {
           #paintbrush {
             transition: all 1s ease-in;
             transform: translateX(100%);
+            // fill: black;
+            // stroke: black;
           }
     
           #letter_e {
             transform: translateX(27px) translateY(-1.4px);
             transition: all 0.3s ease-in;
             transition-delay: 0.7s;
+            fill: #6a040f;
           }
     
           #Rectangle_2 {
             transform: translateX(-1px);
             transition-delay: 0.7s;
+            fill: #6a040f;
+
           }
     
           #letter_a {
             transform: translateX(-24px) translateY(-1.4px);
             transition: all 0.3s ease-in;
             transition-delay: 0.7s;
+            fill: #6a040f;
           }
     
           #letter_c {
@@ -76,7 +82,7 @@ nav {
     
           svg:hover #letter_c {
             transform: translateX(0px);
-            stroke-width: 3;
+            stroke-width: 3.5;
           }
     
           svg:hover #Rectangle_2 {

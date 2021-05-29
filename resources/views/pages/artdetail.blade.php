@@ -47,7 +47,7 @@
     </div>
 
     <div class="art_details__img">
-        <img src="../storage/images/{{$image->path_name}}" width="100%" alt="" />
+        <img src="../storage/images/{{$image->path_name}}" alt="" />
     </div>
 
     <div class="art_details__desc">
@@ -78,7 +78,7 @@
                 <li><b>Right:</b> Private collection</li>
                 <li><b>Stock:</b> {{$image->stock}}</li>
                 <li><b>Artist:</b> {{$image->author}}</li>
-                <li><b>Price:</b> {{$image->price}}</li>
+                <li><b>Price:</b> ${{$image->price}}</li>
             </ul>
         </div>
     </div>
