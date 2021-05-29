@@ -5,21 +5,22 @@ use App\Models\Details;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\DetailsController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\PwResetController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\ReportBugController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\card_detailsController;
+use App\Http\Controllers\ImageDetailsController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ForgotPasswordController;
-use App\Http\Controllers\GalleryController;
-use App\Http\Controllers\ImageDetailsController;
 use App\Http\Controllers\payment_methodController;
-use App\Http\Controllers\PwResetController;
 
 // Route::get('/art details', function () {
 //     return view('pages.artdetail');
@@ -89,10 +90,24 @@ Route::post('/reportbug', [ReportBugController::class, 'store']);
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 
+Route::post('/gallery/modern art/{image}/likes', [LikeController::class, 'store'])->name('modernart.likes');
+Route::delete('/gallery/modern art/{image}/likes', [LikeController::class, 'destroy']);
+
+
+Route::post('/gallery/realism/{image}/likes', [LikeController::class, 'store'])->name('realism.likes');
+Route::delete('/gallery/realism/{image}/likes', [LikeController::class, 'destroy']);
+
+Route::post('/gallery/medieval art/{image}/likes', [LikeController::class, 'store'])->name('medievalart.likes');
+Route::delete('/gallery/medieval art/{image}/likes', [LikeController::class, 'destroy']);
+
+Route::post('/gallery/baroque/{image}/likes', [LikeController::class, 'store'])->name('baroque.likes');
+Route::delete('/gallery/baroque/{image}/likes', [LikeController::class, 'destroy']);
+
+
+Route::post('/art_details/{image}/likes', [LikeController::class, 'store'])->name('art_detail.likes');
+Route::delete('/art_details/{image}/likes', [LikeController::class, 'destroy']);
+
 // Route::get('/users/{user:username}/feedbacks', [UserPostController::class, 'index'])->name('users.posts');
 
 // Route::get('/feedback/{feedback}', [FeedbackController::class, 'show'])->name('feedback.show');
 // Route::delete('/feedback/{feedback}', [FeedbackController::class, 'destroy'])->name('feedback.destroy');
-
-// Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes');
-// Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->name('posts.likes');

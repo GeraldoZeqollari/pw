@@ -56,8 +56,24 @@
                 <h1>{{$image->image_title}}</h1>
                 {{-- <p>Tooru,2021</p> --}}
             </div>
+            @if(!$image->likedBy(auth()->user()))
+            <form action="{{route('art_detail.likes', $image->id)}}" method="POST">
+                @csrf
+                <button type="submit">
+                    <span class="favorite-img"><i class="fas fa-heart notLiked"></i>
+                    </span>
+                </button>
 
-            <i class="fas fa-heart notLiked pl"></i>
+            </form>
+            @else
+            <form action="{{route('art_detail.likes', $image->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit"><span class="favorite-img"><i class="fas fa-heart liked"></i></span></button>
+
+            </form>
+            @endif
+
 
             <a id="buy_btn"><i class="fas fa-cart-arrow-down"></i></a>
 

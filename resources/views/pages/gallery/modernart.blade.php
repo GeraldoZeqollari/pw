@@ -28,7 +28,24 @@
                 <h3 class="artist-name">Artist: {{$image->author}}</h3>
                 <h3 class="img-price">Price: ${{$image->price}}</h3>
             </a>
-            <span class="favorite-img"><i class="fas fa-heart notLiked"></i></span>
+            @if(!$image->likedBy(auth()->user()))
+            <form action="{{route('modernart.likes', $image->id)}}" method="POST">
+                @csrf
+                <button type="submit"> 
+                    <span class="favorite-img"><i class="fas fa-heart notLiked"></i>
+                    </span>
+                </button>
+
+            </form>
+            @else
+            <form action="{{route('modernart.likes', $image->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit"><span class="favorite-img"><i class="fas fa-heart liked"></i></span></button>
+                
+            </form>
+            @endif
+
         </div>
         @endif
 

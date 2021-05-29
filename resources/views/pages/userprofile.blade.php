@@ -51,35 +51,13 @@
             <h1>What this user liked</h1>
             <div class="fav_user_imgs">
                 <div class="profile_favs">
+
+                    
                     <a href="">
-                        <img src="../images/cat_screaming.jpg" alt="">
+                        
                     </a>
                 </div>
-                <div class="profile_favs">
-                    <a href="">
-                        <img src="../images/cat_screaming.jpg" alt="">
-                    </a>
-                </div>
-                <div class="profile_favs">
-                    <a href="">
-                        <img src="../images/cat_screaming.jpg" alt="">
-                    </a>
-                </div>
-                <div class="profile_favs">
-                    <a href="">
-                        <img src="../images/cat_screaming.jpg" alt="">
-                    </a>
-                </div>
-                <div class="profile_favs">
-                    <a href="">
-                        <img src="../images/cat_screaming.jpg" alt="">
-                    </a>
-                </div>
-                <div class="profile_favs">
-                    <a href="">
-                        <img src="../images/cat_screaming.jpg" alt="">
-                    </a>
-                </div>
+            
             </div>
         </div>
     </div>
