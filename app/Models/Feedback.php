@@ -10,7 +10,7 @@ use Carbon\Carbon;
 class Feedback extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'body',
         'feedback_icon',
@@ -23,4 +23,5 @@ class Feedback extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+    
 }
