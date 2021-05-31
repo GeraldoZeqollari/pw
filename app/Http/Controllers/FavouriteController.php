@@ -10,7 +10,7 @@ class FavouriteController extends Controller
 {
     public function index()
     {
-        $likes = Like::get();
+        $likes = Like::all();
 
         return view('pages.userprofile')->with('likes', $likes);
     }

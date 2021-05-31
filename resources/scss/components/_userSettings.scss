@@ -4,8 +4,24 @@
 
 .settings_background {
     // background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
- background-blend-mode: normal,color-burn;
+    background: linear-gradient(
+            to bottom,
+            #d5dee7 0%,
+            #e8ebf2 50%,
+            #e2e7ed 100%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.02) 50%,
+            rgba(255, 255, 255, 0.02) 61%,
+            rgba(0, 0, 0, 0.02) 73%
+        ),
+        linear-gradient(
+            33deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(0, 0, 0, 0.2) 100%
+        );
+    background-blend-mode: normal, color-burn;
 }
 
 .settings_container {
@@ -446,11 +462,13 @@
                 &__img {
                     // width: 200px;
                     // display: flex;
-                    // height: 200px;
+                    height: 150px;
                     // border: 2px solid red;
 
                     img {
                         width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                         transition: all 0.5s ease;
                         &:hover {
                             transform: scale(1.08);
@@ -644,11 +662,36 @@
                     top: 218px;
                 }
             }
+            max-height: 400px;
+            overflow-x: hidden;
+                overflow-y: scroll;
+                padding-right: 10px;
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    padding-left: 50px; // display: none;
+                }
+
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                }
+
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #888;
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
 
             .user_row {
                 // border: 2px solid red;
                 display: flex;
                 justify-content: space-between;
+                
 
                 table,
                 tr,
@@ -703,6 +746,31 @@
             }
 
             .issue_row {
+                max-height: 360px;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                padding-right: 10px;
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    padding-left: 50px; // display: none;
+                }
+
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                }
+
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #888;
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+
                 .issue_details {
                     display: flex;
 
