@@ -422,7 +422,7 @@
         }
 
         &__favorited {
-            min-height: 280px;
+            min-height: 450px;
             &::after {
                 top: 84px;
 
@@ -659,6 +659,26 @@
                 overflow-x: hidden;
                 overflow-y: scroll;
                 padding-right: 10px;
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    padding-left: 50px; // display: none;
+                }
+    
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                }
+    
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #888;
+                }
+    
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
             }
 
             &::after {
@@ -670,25 +690,7 @@
                 }
             }
 
-            &::-webkit-scrollbar {
-                width: 10px;
-                padding-left: 50px; // display: none;
-            }
-
-            /* Track */
-            &::-webkit-scrollbar-track {
-                background: #f1f1f1;
-            }
-
-            /* Handle */
-            &::-webkit-scrollbar-thumb {
-                background: #888;
-            }
-
-            /* Handle on hover */
-            &::-webkit-scrollbar-thumb:hover {
-                background: #555;
-            }
+            
 
             .user_row {
                 // border: 2px solid red;

@@ -9,7 +9,7 @@
   <div class="category-select">
     <a href={{route('modernart')}} class="button-type button-type-border notActive">Modern Art</a>
     <a href={{route('realism')}} class="button-type button-type-border notActive">Realism</a>
-    <a href="#" class="button-type button-type-border notActive selected-button">Medieval Art</a>
+    <a href="#" class="button-type button-type-border notActive selected-button">Renaissance</a>
     <a href={{route('baroque')}} class="button-type button-type-border notActive">Baroque</a>
   </div>
 

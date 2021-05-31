@@ -3,7 +3,7 @@
 @section('search')
 
 <div class="search_container">
-    <h1>Results for ({{$search}}) </h1>
+    <h1>Results for {{$search}} </h1>
 
 
     <div class="searched_results">

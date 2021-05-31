@@ -141,6 +141,10 @@ CATEGORIES CSS
     margin-inline: auto;
     margin-top: 50px;
 
+    h1{
+        font-family: v.$HeaderFont;
+    }
+
     .c-title {
         font-family: v.$HeaderFont;
         font-size: 28px;
@@ -204,7 +208,13 @@ CATEGORIES CSS
             transition: all 0.15s ease-in-out;
             padding-top: 20px;
 
+            @include mediaQ(tablet) {
+                width: 50%;
+                margin: auto;
+            }
+
             @include mediaQ(phone) {
+                width: 100%;
                 padding-top: 25px;
             }
         }
@@ -233,7 +243,6 @@ CATEGORIES CSS
         }
     }
 }
-
 
 /* 
 =============================================================
