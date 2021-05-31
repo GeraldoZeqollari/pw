@@ -92,8 +92,6 @@
                 <li><b>Name:</b> {{$image->image_title}}</li>
                 <li><b>Year of creation:</b> {{$image->year}}</li>
                 <li><b>Resolution:</b> {{$image->resolution}}</li>
-                <li><b>Medium:</b> digital</li>
-                <li><b>Right:</b> Private collection</li>
                 <li><b>Stock:</b> {{$image->stock}}</li>
                 <li><b>Artist:</b> {{$image->author}}</li>
                 <li><b>Price:</b> ${{$image->price}}</li>

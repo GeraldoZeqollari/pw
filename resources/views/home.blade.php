@@ -22,13 +22,13 @@
       <a href={{route('modernart')}}>Read More <i class="fas fa-angle-double-right"></i></a>
     </div>
     <div class="category-img">
-      <img src="../images/big-cat.jpg" width="100%" alt="" />
+      <img src="../images/homepage/modernart_1-min.jpg" width="100%" alt="" />
     </div>
     <div class="category-img">
-      <img src="../images/big-cat.jpg" width="100%" alt="" />
+      <img src="../images/homepage/modernart_2-min.jpg" width="100%" alt="" />
     </div>
     <div class="category-img">
-      <img src="../images/big-cat.jpg" width="100%" alt="" />
+      <img src="../images/homepage/modernart_3-min.jpg" width="100%" alt="" />
     </div>
   </div>
   <div class="category-row">
@@ -37,28 +37,28 @@
       <a href={{route('realism')}}>Read More <i class="fas fa-angle-double-right"></i></a>
     </div>
     <div class="category-img">
-      <img src="../images/big-cat.jpg" width="100%" alt="" />
+      <img src="../images/homepage/realism_1-min.jpg" width="100%" alt="" />
     </div>
     <div class="category-img">
-      <img src="../images/big-cat.jpg" width="100%" alt="" />
+      <img src="../images/homepage/realism_2-min.jpg" width="100%" alt="" />
     </div>
     <div class="category-img">
-      <img src="../images/big-cat.jpg" width="100%" alt="" />
+      <img src="../images/homepage/realism_3-min.jpg" width="100%" alt="" />
     </div>
   </div>
   <div class="category-row loadMore">
     <div class="category-title">
-      <h1>Medieval Art</h1>
+      <h1>Renaissance</h1>
       <a href={{route('medievalart')}}>Read More <i class="fas fa-angle-double-right"></i></a>
     </div>
     <div class="category-img">
-      <img src="../images/big-cat.jpg" width="100%" alt="" />
+      <img src="../images/homepage/renaissance_1-min.jpg" width="100%" alt="" />
     </div>
     <div class="category-img">
-      <img src="../images/big-cat.jpg" width="100%" alt="" />
+      <img src="../images/homepage/renaissance_2-min.jpg" width="100%" alt="" />
     </div>
     <div class="category-img">
-      <img src="../images/big-cat.jpg" width="100%" alt="" />
+      <img src="../images/homepage/renaissance_3-min.jpg" width="100%" alt="" />
     </div>
   </div>
   <div class="category-row loadMore">
@@ -67,13 +67,13 @@
       <a href={{route('baroque')}}>Read More <i class="fas fa-angle-double-right"></i></a>
     </div>
     <div class="category-img">
-      <img src="../images/big-cat.jpg" width="100%" alt="" />
+      <img src="../images/homepage/baroque_1-min.jpg" width="100%" alt="" />
     </div>
     <div class="category-img">
-      <img src="../images/big-cat.jpg" width="100%" alt="" />
+      <img src="../images/homepage/baroque_2-min.jpg" width="100%" alt="" />
     </div>
     <div class="category-img">
-      <img src="../images/big-cat.jpg" width="100%" alt="" />
+      <img src="../images/homepage/baroque_3-min.jpg" width="100%" alt="" />
     </div>
   </div>
   <div id="loadMore" style="text-align: right" class="loadMoreBtn">
