@@ -2053,6 +2053,10 @@ NEWS
   width: 33%;
   font-family: "Open Sans", "sans-serif";
 }
+.art_details .buy_window .buy_details td img {
+  width: 200px;
+  object-fit: cover;
+}
 .art_details .buy_window .buy_details table {
   width: 100%;
 }
