@@ -73,6 +73,7 @@ Route::post('/usersettings_delete', [UserController::class, 'delete'])->name('us
 Route::post('/usersettings_deleteByAdmin', [UserController::class, 'deleteByAdmin'])->name('usersettings_deleteByAdmin');
 Route::post('/usersettings_upload', [UserController::class, 'upload'])->name('usersettings_upload');
 
+
 Route::get('/account settings', [UserController::class, 'usersettings'])->name('user_settings');
 
 Route::get('/user/profile', [UserController::class, 'userprofile'])->name('user_profile');
@@ -102,6 +103,8 @@ Route::post('/art_details/{image}/likes', [LikeController::class, 'store'])->nam
 Route::delete('/art_details/{image}/likes', [LikeController::class, 'destroy']);
 
 Route::get('/user/profile', [FavouriteController::class, 'index'])->name('user_profile');
+
+
 
 // Route::get('/users/{user:username}/feedbacks', [UserPostController::class, 'index'])->name('users.posts');
 

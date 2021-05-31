@@ -56,6 +56,7 @@
                 <h1>{{$image->image_title}}</h1>
                 {{-- <p>Tooru,2021</p> --}}
             </div>
+            @auth
             @if(!$image->likedBy(auth()->user()))
             <form action="{{route('art_detail.likes', $image->id)}}" method="POST">
                 @csrf
@@ -73,11 +74,12 @@
 
             </form>
             @endif
-
+            @endauth
 
             <a id="buy_btn"><i class="fas fa-cart-arrow-down"></i></a>
-
+            @auth
             <a href="image.jpg" download="image.jpg" class="download_btn"><i class="fas fa-download"></i></a>
+            @endauth
         </div>
         <div class="art_details__desc__description">
             <p>

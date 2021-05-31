@@ -52,12 +52,14 @@
             <h1>What this user liked</h1>
             <div class="fav_user_imgs">
                 @foreach ($likes as $like)
+                @if($like->user_id== auth()->user()->id)
                 <div class="profile_favs">
                     <a href={{route('art_detail', $like->image_id)}}>
 
                         <img src="../storage/images/{{$like->path_name}}" width="100%" height="175px" alt="" />
                     </a>
                 </div>
+                @endif
                 @endforeach
             </div>
         </div>

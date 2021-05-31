@@ -29,11 +29,11 @@
                 <h3 class="artist-name">Artist: {{$image->author}}</h3>
                 <h3 class="img-price">Price: ${{$image->price}}</h3>
             </a>
-
+            @auth
             @if(!$image->likedBy(auth()->user()))
             <form action="{{route('modernart.likes', $image->id)}}" method="POST">
                 @csrf
-                <button type="submit" class="bugBtn"> 
+                <button type="submit" class="bugBtn">
                     <span class="favorite-img"><i class="fas fa-heart notLiked"></i>
                     </span>
                 </button>
@@ -46,10 +46,10 @@
                 <button type="submit" class="bugBtn">
                     <span class="favorite-img"><i class="fas fa-heart liked"></i></span>
                 </button>
-                
+
             </form>
             @endif
-
+            @endauth
         </div>
         @endif
         @endforeach

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Like;
 use App\Models\User;
 use App\Models\Image;
 use App\Models\ReportBug;
@@ -70,8 +71,9 @@ class UserController extends Controller
     {
         $users = User::paginate(3);
         $bugs = ReportBug::paginate(3);
+        $likes = Like::get();
 
-        return view('users.usersettings')->with('users', $users)->with('bugs', $bugs);
+        return view('users.usersettings')->with('users', $users)->with('bugs', $bugs)->with('likes', $likes);
     }
 
 
@@ -112,15 +114,14 @@ class UserController extends Controller
 
     public function userChangeProfilePic(Request $request)
     {
-// dd($request->profile_pic->hashName());
+        // dd($request->profile_pic->hashName());
         User::find(auth()->user()->id)->update([
             'profile_pic' => $request->profile_pic->hashName(),
         ]);
         $request->profile_pic->store('images', 'public');
         // dd(User::find(auth()->user()->id));
-//User::find(auth()->user()->id())->update(['password' => Hash::make($request->new_password)]);
+        //User::find(auth()->user()->id())->update(['password' => Hash::make($request->new_password)]);
         return back();
-
     }
 
 

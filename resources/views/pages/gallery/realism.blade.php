@@ -27,6 +27,7 @@
                 <h3 class="artist-name">Artist: {{$image->author}}</h3>
                 <h3 class="img-price">Price: ${{$image->price}}</h3>
             </a>
+            @auth
             @if(!$image->likedBy(auth()->user()))
             <form action="{{route('realism.likes', $image->id)}}" method="POST">
                 @csrf
@@ -44,7 +45,7 @@
 
             </form>
             @endif
-
+            @endauth
         </div>
         @endif
 

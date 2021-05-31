@@ -22,7 +22,7 @@
                         class="desktop_view">Upload</span></a>
                 <a onclick="tabs(6)" class="setting"><i class="far fa-flag"></i><span
                         class="desktop_view">Issues</span></a>
-                @else
+
 
                 @endif
             </ul>
@@ -381,59 +381,21 @@
                 <div class="no_fav" style="display: none">
                     <h1>Start adding to your collection by clicking the heart button of the art pieces you like!</h1>
                 </div>
-                <div class="fav_flexbox">
-                    <div class="fav_flexbox__img">
-                        <a href="">
-                            <img src="../images/cat_screaming.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="fav_flexbox__img">
-                        <a href="">
-                            <img src="../images/cat_screaming.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="fav_flexbox__img">
-                        <a href="">
-                            <img src="../images/cat_screaming.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="fav_flexbox__img">
-                        <a href="">
-                            <img src="../images/cat_screaming.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="fav_flexbox__img">
-                        <a href="">
-                            <img src="../images/cat_screaming.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="fav_flexbox__img">
-                        <a href="">
-                            <img src="../images/cat_screaming.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="fav_flexbox__img">
-                        <a href="">
-                            <img src="../images/cat_screaming.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="fav_flexbox__img">
-                        <a href="">
-                            <img src="../images/cat_screaming.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="fav_flexbox__img">
-                        <a href="">
-                            <img src="../images/cat_screaming.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="fav_flexbox__img">
-                        <a href="">
-                            <img src="../images/cat_screaming.jpg" alt="">
-                        </a>
-                    </div>
 
+                <div class="fav_flexbox">
+                    @foreach ($likes as $like)
+                    @if($like->user_id== auth()->user()->id)
+                    <div class="fav_flexbox__img">
+                        <a href={{route('art_detail', $like->image_id)}}>
+                            <img src="../storage/images/{{$like->path_name}}" alt="" />
+                        </a>
+                    </div>
+                    @endif
+                    @endforeach
                 </div>
+
+
+
             </div>
         </div>
 
