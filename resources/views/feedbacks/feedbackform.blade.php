@@ -73,7 +73,10 @@
         </div>
 
         <div class="fb_btn">
+
             <button type="submit">Submit</button>
+
+
         </div>
 
     </form>
@@ -86,7 +89,7 @@
         <div class="reviews">
 
             <div class="reviews__header">
-                <img src="../storage/images/{{$feedback->user->profile_pic}}"  alt="">
+                <img src="../storage/images/{{$feedback->user->profile_pic}}" alt="">
                 <div>
                     <a href=""> {{ $feedback->user->username}} </a>
                     <span style="font-family: Poppins, sans-serif; font-size: 14px">{{ $feedback->feedback_type}}</span>
@@ -94,50 +97,50 @@
                 <div>
                     <span class="timer">{{($feedback->created_at)->diffForHumans() }}</span>
                     {{-- <span>{{ $feedback->feedback_icon}}/5</span> --}}
-                    
+
                     @switch($feedback->feedback_icon)
-                        @case("1")
-                            <div class="star_rating">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            @break
-                        @case("2")
-                        <div class="star_rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                            @break
-                        @case("3")
-                        <div class="star_rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                            @break
-                        @case("4")
-                        <div class="star_rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                            @break
-                        @case("5")
-                        <div class="star_rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                            @break
-                        @default
-                            
+                    @case("1")
+                    <div class="star_rating">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    @break
+                    @case("2")
+                    <div class="star_rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    @break
+                    @case("3")
+                    <div class="star_rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    @break
+                    @case("4")
+                    <div class="star_rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    @break
+                    @case("5")
+                    <div class="star_rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    @break
+                    @default
+
                     @endswitch
                 </div>
-               
+
             </div>
-            
+
             <p>{{ $feedback->body }}</p>
         </div>
         @endforeach

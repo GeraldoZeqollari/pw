@@ -19,7 +19,27 @@
                 <h3 class="img-price">Price: ${{$image->price}}</h3>
 
             </a>
-            <span class="favorite-img"><i class="fas fa-heart notLiked"></i></span>
+            @auth
+
+
+            @if(!$image->likedBy(auth()->user()))
+            <form action="{{route('baroque.likes', $image->id)}}" method="POST">
+                @csrf
+                <button type="submit">
+                    <span class="favorite-img"><i class="fas fa-heart notLiked"></i>
+                    </span>
+                </button>
+
+            </form>
+            @else
+            <form action="{{route('baroque.likes', $image->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit"><span class="favorite-img"><i class="fas fa-heart liked"></i></span></button>
+
+            </form>
+            @endif
+            @endauth
         </div>
         @endforeach
         @else
