@@ -97,3 +97,14 @@ const changeUrlJoin = () => {
 const changeUrlNews = () => {
     window.location.replace('http://127.0.0.1:8000/#news');
 }
+
+const temp1 = document.querySelector(".header-submenu");
+const temp2 = document.querySelector(".after_arrow");
+
+temp1.addEventListener('mouseover', () => {
+    temp2.style.transform = "rotate(180deg)";
+})
+
+temp1.addEventListener('mouseleave', () => {
+    temp2.style.transform = "rotate(0deg)";
+})

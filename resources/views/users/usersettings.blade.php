@@ -408,9 +408,6 @@
             <div class="settings_display__security">
                 <form action=" {{route('usersettings_passwordChange')}}" method="POST">
                     @csrf
-                    <div class="current_pw">
-                    </div>
-
                     <div class="current_pw disabled_pw">
                         <input type="password" placeholder="Enter your old password" name="current_password">
                         <input type="password" placeholder="Enter your new password" name="new_password">
@@ -442,14 +439,14 @@
 
                     <table>
                         <tr>
-                            <td>
+                            <td class="user_table_details">
                                 <h1>{{ $user->email}}</h1>
                             </td>
-                            <td>
+                            <td class="user_table_details">
                                 <h1>{{ $user->username}}</h1>
                             </td>
                             <td style="display: none"><input type="number" name="currentID" value={{ $user->id}}></td>
-                            <td><input type="submit" value="Delete Account"></td>
+                            <td class="user_table_details"><input type="submit" value="Delete Account"></td>
                         </tr>
                     </table>
                     {{-- <p>{{ $user->email}}</p>

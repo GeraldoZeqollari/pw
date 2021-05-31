@@ -66,7 +66,7 @@
       </a>
     </div>
     <ul class="nav-links">
-      <li class="about-submenu">About</li>
+      <li class="about-submenu">About <span class="after_arrow"><i class="fas fa-chevron-down"></i></span></li>
 
       <div class="header-submenu">
         <div class="header-submenu-row">

@@ -26,14 +26,12 @@
 
 .settings_container {
     width: min(70%, 100rem);
-    // background-color: red;
     margin-inline: auto;
     padding-top: 105px;
     padding-bottom: 100px;
     position: relative;
     display: flex;
     justify-content: center;
-    // border: 2px solid red;
 
     @include mediaQ(laptop) {
         width: min(80%, 100rem);
@@ -67,6 +65,7 @@
 
             @include mediaQ(phone) {
                 width: auto;
+                padding: 5px 5px;
             }
         }
 
@@ -87,8 +86,8 @@
             text-align: center;
 
             @include mediaQ(phone) {
-                width: 60px;
-                font-size: 30px;
+                width: 40px;
+                font-size: 18px;
                 padding: 5px 10px;
             }
         }
@@ -148,10 +147,10 @@
                 transform: rotate(45deg);
                 border-left: 1px solid black;
                 border-bottom: 1px solid black;
-                background-color: rgb(192, 229, 246);
+                background-color: #dce2eb;
 
                 @include mediaQ(phone) {
-                    top: 25px;
+                    top: 13px;
                 }
             }
 
@@ -270,14 +269,12 @@
         }
 
         &__paymentDetails {
-            // border: 2px solid red;
 
             .accData {
                 margin-top: 10px;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                // border: 2px solid red;
 
                 input:nth-child(2),
                 .two_select {
@@ -298,7 +295,6 @@
                     flex-direction: column;
                     align-items: center;
                     // margin-top: 20px;
-                    // border: 2px solid red;
                     input {
                         width: 80%;
 
@@ -320,19 +316,15 @@
                     display: flex;
                     margin-top: 20px;
                     justify-content: space-between;
-                    // background-color: red;
 
                     @include mediaQ(s-phone) {
                         flex-wrap: wrap;
                     }
-                    // border: 2px solid red;
                     i {
-                        // background-color: red;
 
                         padding: 0px 20px;
                         font-size: 40px;
                         cursor: pointer;
-                        // background-color: white;
                         transition: all 0.3s ease;
 
                         @include mediaQ(phone) {
@@ -346,7 +338,6 @@
 
                     input[type="radio"]:checked + label i {
                         // background-color: rgb(58, 58, 58);
-                        // outline: 2px solid red;
                         // font-size: 40px;
                         transform: scale(1.3);
                         // color: white;
@@ -407,12 +398,11 @@
                 top: 49px;
                 left: -6px;
                 transform: rotate(45deg);
-                // border: 2px solid red;
                 border-left: 1px solid black;
                 border-bottom: 1px solid black;
 
                 @include mediaQ(phone) {
-                    top: 89px;
+                    top: 50px;
                 }
             }
 
@@ -425,9 +415,10 @@
             min-height: 450px;
             &::after {
                 top: 84px;
+                background-color: #e0e6ed;
 
                 @include mediaQ(phone) {
-                    top: 153px;
+                    top: 91px;
                 }
             }
 
@@ -441,7 +432,6 @@
             }
 
             .fav_flexbox {
-                // border: 2px solid red;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 grid-template-rows: auto;
@@ -463,7 +453,6 @@
                     // width: 200px;
                     // display: flex;
                     height: 150px;
-                    // border: 2px solid red;
 
                     img {
                         width: 100%;
@@ -494,14 +483,13 @@
                 min-height: 420px;
             }
             // width: 200px;
-            // border: 2px solid red;
 
             &::after {
                 top: 119px;
-                background-color: rgb(206, 231, 243);
+                background-color: #e5e9f0;
 
                 @include mediaQ(phone) {
-                    top: 218px;
+                    top: 130px;
                 }
             }
 
@@ -522,29 +510,29 @@
                     align-items: center;
                 }
 
-                a {
-                    @include buttonType(
-                        rgb(0, 0, 0),
-                        v.$HeaderFont,
-                        2px solid black,
-                        rgb(255, 255, 255),
-                        220px,
-                        14px
-                    );
-                    padding: 10px 12px;
+                // a {
+                //     @include buttonType(
+                //         rgb(0, 0, 0),
+                //         v.$HeaderFont,
+                //         2px solid black,
+                //         rgb(255, 255, 255),
+                //         220px,
+                //         14px
+                //     );
+                //     padding: 10px 12px;
 
-                    @include mediaQ(tablet) {
-                        width: 160px;
-                        font-size: 12px;
-                        padding: 5px 7px;
-                    }
+                //     @include mediaQ(tablet) {
+                //         width: 160px;
+                //         font-size: 12px;
+                //         padding: 5px 7px;
+                //     }
 
-                    &:hover {
-                        background-color: red;
-                        border: 2px solid red;
-                        color: white;
-                    }
-                }
+                //     &:hover {
+                //         background-color: red;
+                //         border: 2px solid blue;
+                //         color: white;
+                //     }
+                // }
 
                 .old_pw {
                     width: 120px;
@@ -664,36 +652,34 @@
                     width: 10px;
                     padding-left: 50px; // display: none;
                 }
-    
+
                 /* Track */
                 &::-webkit-scrollbar-track {
                     background: #f1f1f1;
                 }
-    
+
                 /* Handle */
                 &::-webkit-scrollbar-thumb {
                     background: #888;
                 }
-    
+
                 /* Handle on hover */
                 &::-webkit-scrollbar-thumb:hover {
                     background: #555;
                 }
+
             }
 
             &::after {
                 top: 157px;
-                background-color: rgb(206, 231, 243);
+                background-color: #e4e9f0;
                 overflow: visible;
                 @include mediaQ(phone) {
-                    top: 218px;
+                    top: 170px;
                 }
             }
 
-            
-
             .user_row {
-                // border: 2px solid red;
                 display: flex;
                 justify-content: space-between;
 
@@ -701,16 +687,46 @@
                 tr,
                 td {
                     border-collapse: collapse;
-                    // border: 1px solid red;
+                    // padding: 0;
+                }
+
+                table,
+                thead,
+                tbody,
+                th,
+                td,
+                tr {
+                    @include mediaQ(phone) {
+                        display: block;
+                    }
                 }
 
                 table {
                     width: 100%;
                     background-color: white;
+                    // border: 1px solid black;
                 }
 
                 td {
+                    @include mediaQ(phone) {
+                        position: relative;
+                        display: grid;
+                        justify-items: center;
+                    }
+                    // width: 200%;
+                }
+
+                .user_table_details {
                     width: 33%;
+                    // border: 2px solid black;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                    // padding: 0;
+
+                    @include mediaQ(phone) {
+                        width: 100%;
+                        justify-self: center;
+                    }
                 }
 
                 h1 {
@@ -729,6 +745,12 @@
                     justify-self: flex-end;
                     float: right;
                     margin-right: 20px;
+
+                    @include mediaQ(phone) {
+                        float: none;
+                        justify-self: center;
+                        margin-right: -10px;
+                    }
                 }
             }
         }
@@ -742,10 +764,10 @@
 
             &::after {
                 top: 229px;
-                background-color: rgb(224, 235, 240);
+                background-color: #e7ebf1;
 
                 @include mediaQ(phone) {
-                    top: 218px;
+                    top: 250px;
                 }
             }
 
@@ -778,9 +800,16 @@
                 .issue_details {
                     display: flex;
 
+                    @include mediaQ(phone){
+                        flex-direction: column;
+                    }
+
                     :nth-child(2) {
                         margin-left: 10px;
                         color: gray;
+
+                        @include mediaQ(phone){
+margin-left: 0;                        }
                     }
                 }
 
@@ -809,10 +838,10 @@
 
             &::after {
                 top: 193px;
-                background-color: rgb(206, 231, 244);
+                background-color: #e6eaf1;
 
                 @include mediaQ(phone) {
-                    top: 218px;
+                    top: 210px;
                 }
             }
 

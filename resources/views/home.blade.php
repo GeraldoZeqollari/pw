@@ -22,7 +22,7 @@
       <a href={{route('modernart')}}>Read More <i class="fas fa-angle-double-right"></i></a>
     </div>
     <div class="category-img">
-      <img src="../images/homepage/modernart_1-min.jpg" width="100%" alt="" />
+      <img src="../images/homepage/modernart_1-min.jpg" width="100%"  alt="" />
     </div>
     <div class="category-img">
       <img src="../images/homepage/modernart_2-min.jpg" width="100%" alt="" />
@@ -55,7 +55,7 @@
       <img src="../images/homepage/renaissance_1-min.jpg" width="100%" alt="" />
     </div>
     <div class="category-img">
-      <img src="../images/homepage/renaissance_2-min.jpg" width="100%" alt="" />
+      <img src="../images/homepage/renaissance_2-min.jpg" width="100%" height="100%" alt="" />
     </div>
     <div class="category-img">
       <img src="../images/homepage/renaissance_3-min.jpg" width="100%" alt="" />

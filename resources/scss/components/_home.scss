@@ -208,6 +208,10 @@ CATEGORIES CSS
             transition: all 0.15s ease-in-out;
             padding-top: 20px;
 
+            img{
+                height: 100%;
+            }
+
             @include mediaQ(tablet) {
                 width: 50%;
                 margin: auto;
