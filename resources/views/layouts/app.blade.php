@@ -24,11 +24,11 @@
             <g id="paintbrush">
               <path
                 d="M23.3385 21.6922C24.7864 21.0434 25.4603 17.5908 25.6163 15.9456L26.3911 15.9476L26.3565 31.6167L25.5816 31.6147C25.5851 30.0407 25.1395 26.681 23.3293 25.8349C21.0666 24.7773 18.5019 25.5005 16.7726 25.818C16.3269 25.8998 10.3051 27.3825 7.34949 28.1977C2.50003 28.8506 1.06984 25.6915 1.00008 24.2962C0.979121 19.4021 5.23734 18.9624 7.36906 19.3542L16.7818 21.6753C18.3641 21.9513 21.8906 22.341 23.3385 21.6922Z"
-                fill="#874000" stroke="#874000" />
-              <path d="M28.619 32.61L28.6584 14.7943L27.6253 14.7916L27.5858 32.6073L28.619 32.61Z"  fill="#874000" stroke="#874000"/>
-              <path d="M34.266 31.8512L34.3015 15.7742L30.0099 15.7631L29.9743 31.8401L34.266 31.8512Z"  fill="#874000" stroke="#874000"/>
+                fill="#DCB387" stroke="#DCB387" />
+              <path d="M28.619 32.61L28.6584 14.7943L27.6253 14.7916L27.5858 32.6073L28.619 32.61Z"  fill="#C0C0CA" stroke="#C0C0CA"/>
+              <path d="M34.266 31.8512L34.3015 15.7742L30.0099 15.7631L29.9743 31.8401L34.266 31.8512Z"  fill="#C0C0CA" stroke="#C0C0CA"/>
               <path
-                d="M37.1453 31.8556L37.1815 15.521C40.8638 15.509 52.2717 12.7059 54 12L53.9899 15.822C49.4894 15.75 45.4347 17.5794 43.0912 17.7967C46.2213 18.469 52.8723 17.7967 53.9855 17.7967L54 20.25C51.6957 20.4706 46.1957 21.7941 48.5 22.5C47.9239 22.5936 52.8478 23.2941 53.9436 23.2941L54 26.25C51.4772 26.0217 44.7455 26.2624 43.0912 26.7904C46.6186 28.25 52.8478 28.6793 53.9614 28.6793L54 30.9813C51.6957 30.9813 47.6318 31.3293 47.234 31.5C49.5696 33.1904 52.2717 33.1765 53.9436 33.5625L54 36C50.2214 34.5879 41.5153 32.382 37.1453 31.8556Z" fill="#FBCF70" stroke="#FBCF70" opacity="1"
+                d="M37.1453 31.8556L37.1815 15.521C40.8638 15.509 52.2717 12.7059 54 12L53.9899 15.822C49.4894 15.75 45.4347 17.5794 43.0912 17.7967C46.2213 18.469 52.8723 17.7967 53.9855 17.7967L54 20.25C51.6957 20.4706 46.1957 21.7941 48.5 22.5C47.9239 22.5936 52.8478 23.2941 53.9436 23.2941L54 26.25C51.4772 26.0217 44.7455 26.2624 43.0912 26.7904C46.6186 28.25 52.8478 28.6793 53.9614 28.6793L54 30.9813C51.6957 30.9813 47.6318 31.3293 47.234 31.5C49.5696 33.1904 52.2717 33.1765 53.9436 33.5625L54 36C50.2214 34.5879 41.5153 32.382 37.1453 31.8556Z" fill="#F4D68E" stroke="#F4D68E" opacity="1"
                 />
               <path
                 d="M35.7098 14.8108L35.6704 32.6265M43.0912 17.7967C45.4347 17.5794 49.4894 15.75 53.9899 15.822L54 12C52.2717 12.7059 40.8638 15.509 37.1815 15.521L37.1453 31.8556C41.5153 32.382 50.2214 34.5879 54 36L53.9436 33.5625C52.2717 33.1765 49.5696 33.1904 47.234 31.5C47.6318 31.3293 51.6957 30.9813 54 30.9813L53.9614 28.6793C52.8478 28.6793 46.6186 28.25 43.0912 26.7904C44.7455 26.2624 51.4772 26.0217 54 26.25L53.9436 23.2941C52.8478 23.2941 47.9239 22.5936 48.5 22.5M43.0912 17.7967C42.5808 17.844 42.8695 18.1214 42.5796 18.05C42.9432 18.0598 42.6462 17.7883 43.0912 17.7967ZM43.0912 17.7967C46.2213 18.469 52.8723 17.7967 53.9855 17.7967L54 20.25C51.6957 20.4706 46.1957 21.7941 48.5 22.5M48.5 22.5C50 22.9595 49.7245 23.6006 49.5 23C50 23 48 22.5 48.5 22.5ZM25.6163 15.9456C25.4603 17.5908 24.7864 21.0434 23.3385 21.6922C21.8906 22.341 18.3641 21.9513 16.7818 21.6753L7.36906 19.3542C5.23734 18.9624 0.979121 19.4021 1.00008 24.2962C1.06984 25.6915 2.50003 28.8506 7.34949 28.1977C10.3051 27.3825 16.3269 25.8998 16.7726 25.818C18.5019 25.5005 21.0666 24.7773 23.3293 25.8349C25.1395 26.681 25.5851 30.0407 25.5816 31.6147L26.3565 31.6167L26.3911 15.9476L25.6163 15.9456ZM28.6584 14.7943L28.619 32.61L27.5858 32.6073L27.6253 14.7916L28.6584 14.7943ZM34.3015 15.7742L34.266 31.8512L29.9743 31.8401L30.0099 15.7631L34.3015 15.7742Z" 
@@ -42,6 +42,22 @@
             <path id="letter_a" d="M112.148 12H108.73L101 34.59H105.394L110.561 19.1476L115.321 34.59H120L112.148 12Z"
              />
             <path id="letter_c"
+              d="M99 17.6324C97.1338 14.8376 93.9721 13 90.3859 13C84.6499 13 80 17.701 80 23.5C80 29.299 84.6499 34 90.3859 34C93.9721 34 97.1338 32.1624 99 29.3676"
+              stroke="#6a040f" />
+          </g>
+        </svg>
+
+        <svg width="120" height="45" viewBox="0 0 120 45" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg_logo_mobile">
+          <g id="main_logo">
+            <rect width="120" height="45" fill="white" />
+            <g id="letter_e_mobile">
+              <rect id="Rectangle_1_mobile" x="58" y="12" width="19.0041" height="4.21422" />
+              <rect id="Rectangle_3_mobile" x="58" y="30.3741" width="19.0041" height="4.21422" />
+              <rect id="Rectangle_2_mobile" x="58" y="21.187" width="14.324" height="4.21422" />
+            </g>
+            <path id="letter_a_mobile" d="M112.148 12H108.73L101 34.59H105.394L110.561 19.1476L115.321 34.59H120L112.148 12Z"
+             />
+            <path id="letter_c_mobile"
               d="M99 17.6324C97.1338 14.8376 93.9721 13 90.3859 13C84.6499 13 80 17.701 80 23.5C80 29.299 84.6499 34 90.3859 34C93.9721 34 97.1338 32.1624 99 29.3676"
               stroke="#6a040f" />
           </g>
@@ -81,25 +97,34 @@
         </div>
       </div>
 
-      <li class="temporary-subheaders"><a href="#ourGoal">Our Goal</a></li>
-      <li class="temporary-subheaders"><a href="#news">News</a></li>
-      <li class="temporary-subheaders"><a href="#joinUs">Join Us</a></li>
-      <li class="temporary-subheaders"><a href="#ourTeam">Our Team</a></li>
+      @guest     
+      <li class="mobile-socialMedia">
+        <a href={{ route('login') }}>Log in</a>
+      </li>
+      @endguest
+
+      @auth
+      <li class="temporary-subheaders"><a href={{ route('user_profile') }}>My Profile</a></li>
+      <li class="temporary-subheaders"><a href={{ route('user_settings') }}>Edit Profile</a></li>
+      <li class="temporary-subheaders"><a href={{ route('reportBug') }}>Report Bug</a></li>
+      <li class="temporary-subheaders">
+        <form action="{{ route('logout') }}" method="POST">
+        @csrf
+          <button type="submit" class="logout-button">Log Out</button>
+        </form>
+      </li>
+      @endauth
+
+      <li class="temporary-subheaders"><a onclick="changeUrlGoal()">Our Goal</a></li>
+      <li class="temporary-subheaders"><a onclick="changeUrlNews()">News</a></li>
+      <li class="temporary-subheaders"><a onclick="changeUrlJoin()">Join Us</a></li>
+      <li class="temporary-subheaders"><a onclick="changeUrlTeam()">Our Team</a></li>
       <li><a href={{ route('modernart') }}>Gallery</a></li>
       <li><a href={{ route('feedback') }}>Community</a></li>
 
-      {{-- 
-         <a href="#"><i class="fab fa-facebook-f" style="color: rgb(64,100,172)"></i></a>
-            <a href="#"><i class="fab fa-youtube" style="color: rgb(246,1,1)"></i></a>
-            <a href="#"><i class="fab fa-instagram" style="color:rgb(167,49,150)"></i></a>
-            <a href="#"><i class="fab fa-twitter" style="color: rgb(28,157,235)"></i></a>
-            <a href="#"><i class="fab fa-linkedin" style="color: rgb(10,98,189)"></i></a>
-        --}}
+      
 
-      <li class="mobile-socialMedia mobileLogIn">
-        <a href={{ route('login') }}>Log in</a>
-      </li>
-      <li class="mobile-socialMedia">
+      <li class="mobile-socialMedia" style="margin-top: 20px">
         <a href="#"><i class="fab fa-facebook-f" style="color: rgb(64,100,172)"></i></a>
       </li>
       <li class="mobile-socialMedia">
@@ -119,7 +144,7 @@
 
       <form action="{{ route('search') }}" method="GET" role="search" class="search-bar">
 
-        <input type="text" name="search" id="" class="search-bar-input" placeholder="Find your Art" aria-label="search"
+        <input type="text" name="search" autocomplete="off" id="" class="search-bar-input" placeholder="Find your Art" aria-label="search"
           required />
         <button class="search-bar-submit" aria-label="submit search">
           <i class="fas fa-search"></i>

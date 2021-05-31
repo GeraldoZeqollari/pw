@@ -11,7 +11,7 @@
     }
 
     @include mediaQ(phone) {
-        width: min(90%, 100rem);
+        width: min(95%, 100rem);
     }
 
     .view-categories {
@@ -75,6 +75,19 @@
         .image {
             position: relative;
             z-index: 3;
+            @include mediaQ(phone) {
+                max-width: 350px;
+                margin: auto;
+            }
+
+            @include mediaQ(s-phone) {
+                max-width: 100%;
+                margin: auto;
+            }
+
+            button {
+                border: 0px;
+            }
 
             a {
                 text-decoration: none;
@@ -87,7 +100,7 @@
                     }
                 }
 
-                img{
+                img {
                     height: 175px;
                     object-fit: contain;
                 }
