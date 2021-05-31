@@ -69,8 +69,8 @@ class UserController extends Controller
 
     public function usersettings()
     {
-        $users = User::paginate(3);
-        $bugs = ReportBug::paginate(3);
+        $users = User::all();
+        $bugs = ReportBug::all();
         $likes = Like::get();
 
         return view('users.usersettings')->with('users', $users)->with('bugs', $bugs)->with('likes', $likes);

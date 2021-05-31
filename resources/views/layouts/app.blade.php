@@ -255,17 +255,17 @@
           <h2>Company</h2>
           <ul>
             <li><a href={{ route('modernart') }}>Gallery</a></li>
-            <li><a href="#ourGoal">Our Goal</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#joinUs">Join Us</a></li>
-            <li><a href="#ourTeam">Our Team</a></li>
+            <li><a onclick="changeUrlGoal()">Our Goal</a></li>
+            <li><a onclick="changeUrlNews()">News</a></li>
+            <li><a onclick="changeUrlJoin()">Join Us</a></li>
+            <li><a onclick="changeUrlTeam()">Our Team</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h2>Support</h2>
           <ul>
             <li><a href={{ route('login') }}>Log in</a></li>
-            <li><a href="#">Registration</a></li>
+            <li><a href={{ route('register') }}>Registration</a></li>
             <li><a href="#">Terms & Policies</a></li>
           </ul>
         </div>

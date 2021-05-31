@@ -379,9 +379,12 @@
 
         <div class="settings_display">
             <div class="settings_display__favorited">
-                <div class="no_fav" style="display: none">
-                    <h1>Start adding to your collection by clicking the heart button of the art pieces you like!</h1>
-                </div>
+
+                @if ($likes->count()==0)
+                    <div class="no_fav">
+                        <h1>Start adding to your collection by clicking the heart button of the art pieces you like!</h1>
+                    </div>
+                @else
 
                 <div class="fav_flexbox">
                     @foreach ($likes as $like)
@@ -395,7 +398,7 @@
                     @endforeach
                 </div>
 
-
+                @endif
 
             </div>
         </div>
@@ -455,7 +458,7 @@
                     <input type="submit" value="Delete Account"> --}}
                 </form>
                 @endforeach
-                {{ $users->links('pagination.pagination') }}
+                {{-- {{ $users->links('pagination.pagination') }} --}}
                 @else
 
                 <div class="reviews">
@@ -528,7 +531,7 @@
                     </p>
 
                     @endforeach
-                    {{ $bugs->links('pagination.pagination') }}
+                    {{-- {{ $bugs->links('pagination.pagination') }} --}}
                     @else
 
                     <div>
