@@ -23,7 +23,7 @@ class UserController extends Controller
     public function carddetails(Request $request)
     {
         $this->validate($request, [
-            'card_number' => 'required',
+            'card_number' => 'required|unique:card_details,card_number',
             'address1' => 'required',
             'expiration_dateM' => 'required',
             'expiration_dateY' => 'required',

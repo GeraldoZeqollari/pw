@@ -51,8 +51,8 @@ Route::get('/new_password/{email}/{code}', [ForgotPasswordController::class, 're
 Route::post('/new_password/{email}/{code}', [ForgotPasswordController::class, 'newPassword']);
 
 
-Route::get('/', [HomeController::class, 'index'])
-    ->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/', [HomeController::class, 'store']);
 
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
@@ -103,6 +103,7 @@ Route::post('/art_details/{image}/likes', [LikeController::class, 'store'])->nam
 Route::delete('/art_details/{image}/likes', [LikeController::class, 'destroy']);
 
 Route::get('/user/profile', [FavouriteController::class, 'index'])->name('user_profile');
+
 
 
 

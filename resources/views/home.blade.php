@@ -198,8 +198,9 @@
         works available to purchase
       </p>
 
-      <form class="newsletter-form">
-        <input type="email" name="" id="" placeholder="Enter your E-mail" />
+      <form class="newsletter-form" action="{{route('home')}}" method="POST">
+        @csrf
+        <input type="email" name="email" id="" placeholder="Enter your E-mail" />
         <button type="submit">
           <i class="far fa-newspaper"></i>
         </button>

@@ -315,7 +315,8 @@
 
                     <div class="accData mt">
                         <label for="card_number">Enter your card number</label>
-                        <input type="number" name="card_number" placeholder="1111-2222-3333-4444">
+                        <input type="number" name="card_number" placeholder="1111-2222-3333-4444" @error('username')
+                            error-input @enderror">
 
                         <label class="mt" for="address1">Enter your address</label>
                         <input type="text" name="address1" placeholder="">

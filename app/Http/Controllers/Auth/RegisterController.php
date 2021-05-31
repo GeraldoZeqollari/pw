@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Ramsey\Uuid\Rfc4122\Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
+use Symfony\Component\Console\Input\Input;
 
 class RegisterController extends Controller
 {
@@ -24,7 +27,7 @@ class RegisterController extends Controller
         $this->validate($request, [
 
             'username' => 'required|max:255',
-            'email' => 'required|email|max:255',
+            'email' => 'required|email|max:255|unique:users,email',
             'password' => [
                 'required',
                 'string'
@@ -45,9 +48,10 @@ class RegisterController extends Controller
 
         ]);
 
+    
+
         auth()->attempt($request->only('email', 'password'));
 
         return redirect()->route('home');
     }
-    
 }
