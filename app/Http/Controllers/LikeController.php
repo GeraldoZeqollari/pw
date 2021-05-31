@@ -20,7 +20,8 @@ class LikeController extends Controller
         Like::where('user_id', auth()->user()->id)->create([
 
             'user_id' => auth()->user()->id,
-            'image_id' => $image->id
+            'image_id' => $image->id,
+            'path_name' => $image->path_name,
         ]);
 
         return back();
@@ -39,6 +40,7 @@ class LikeController extends Controller
         Like::where([
             'user_id' => auth()->user()->id,
             'image_id' => $image->id,
+            'path_name' => $image->path_name,
         ])->delete();
 
 

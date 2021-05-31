@@ -13,6 +13,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PwResetController;
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\ReportBugController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
@@ -22,9 +23,6 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\payment_methodController;
 
-// Route::get('/art details', function () {
-//     return view('pages.artdetail');
-// })->name('art_detail');
 
 
 Route::get('/gallery/modern art', [GalleryController::class, 'images_1'])->name('modernart');
@@ -40,10 +38,6 @@ Route::get('/report bug', function () {
     return view('pages.reportbug');
 })->name('reportBug');
 
-
-// Route::get('/search', function () {
-//     return view('pages.search');
-// })->name('search');
 
 
 Route::get('/join us', function () {
@@ -106,6 +100,8 @@ Route::delete('/gallery/baroque/{image}/likes', [LikeController::class, 'destroy
 
 Route::post('/art_details/{image}/likes', [LikeController::class, 'store'])->name('art_detail.likes');
 Route::delete('/art_details/{image}/likes', [LikeController::class, 'destroy']);
+
+Route::get('/user/profile', [FavouriteController::class, 'index'])->name('user_profile');
 
 // Route::get('/users/{user:username}/feedbacks', [UserPostController::class, 'index'])->name('users.posts');
 
