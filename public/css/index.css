@@ -1991,6 +1991,7 @@ NEWS
   width: min(90%, 100rem);
   margin-inline: auto;
   position: relative;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .art_details {
@@ -2074,6 +2075,15 @@ NEWS
 .art_details__img {
   display: flex;
   justify-content: center;
+  max-height: 400px;
+}
+.art_details__img img {
+  object-fit: contain;
+}
+@media (max-width: 900px) {
+  .art_details__img img {
+    width: 100%;
+  }
 }
 .art_details__desc__header {
   display: flex;
@@ -2109,6 +2119,13 @@ NEWS
 .art_details__desc__header .download_btn {
   position: absolute;
   right: 50px;
+}
+@media (max-width: 768px) {
+  .art_details__desc__header .download_btn {
+    position: relative;
+    right: 0;
+    padding-left: 20px;
+  }
 }
 .art_details__desc__description p {
   font-family: "Open Sans", "sans-serif";
