@@ -31,7 +31,7 @@ Route::get('/gallery/medieval art', [GalleryController::class, 'images_3'])->nam
 Route::get('/gallery/baroque', [GalleryController::class, 'images_4'])->name('baroque');
 
 Route::get('/art_details/{image}', [ImageDetailsController::class, 'index'])->name('art_detail');
-
+Route::post('/art_details', [ImageDetailsController::class, 'store'])->name('art_detail');
 
 
 Route::get('/report bug', function () {

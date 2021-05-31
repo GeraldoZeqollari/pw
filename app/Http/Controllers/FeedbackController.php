@@ -37,8 +37,6 @@ class FeedbackController extends Controller
 
         ]);
 
-
-
         return back();
     }
 }

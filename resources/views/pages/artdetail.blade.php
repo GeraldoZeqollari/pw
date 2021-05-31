@@ -41,8 +41,10 @@
         </div>
 
         <h1 class="buy_total">Total: ${{$image->price}}</h1>
-        <input type="submit" value="Confirm">
-
+        <form action="{{route('art_detail')}}" method="POST">
+            @csrf
+            <input type="submit" value="Confirm" name="buy">
+        </form>
         @endauth
     </div>
 
