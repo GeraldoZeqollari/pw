@@ -433,6 +433,7 @@
         <div class="settings_display">
             <div class="settings_display__users">
 
+                <div class="temp_users">
 
                 @if ((isset($users)))
                 @foreach ($users as $user)
@@ -465,7 +466,7 @@
                     <h1>There are no users</h1>
                 </div>
                 @endif
-
+                </div>
             </div>
         </div>
 

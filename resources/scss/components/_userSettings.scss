@@ -649,49 +649,51 @@
 
         &__users {
             min-height: 360px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            position: relative;
+
+            .temp_users {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                position: relative;
+                max-height: 400px;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                padding-right: 10px;
+            }
 
             &::after {
                 top: 157px;
                 background-color: rgb(206, 231, 243);
-
+                overflow: visible;
                 @include mediaQ(phone) {
                     top: 218px;
                 }
             }
-            max-height: 400px;
-            overflow-x: hidden;
-                overflow-y: scroll;
-                padding-right: 10px;
 
-                &::-webkit-scrollbar {
-                    width: 10px;
-                    padding-left: 50px; // display: none;
-                }
+            &::-webkit-scrollbar {
+                width: 10px;
+                padding-left: 50px; // display: none;
+            }
 
-                /* Track */
-                &::-webkit-scrollbar-track {
-                    background: #f1f1f1;
-                }
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
 
-                /* Handle */
-                &::-webkit-scrollbar-thumb {
-                    background: #888;
-                }
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+            }
 
-                /* Handle on hover */
-                &::-webkit-scrollbar-thumb:hover {
-                    background: #555;
-                }
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
 
             .user_row {
                 // border: 2px solid red;
                 display: flex;
                 justify-content: space-between;
-                
 
                 table,
                 tr,

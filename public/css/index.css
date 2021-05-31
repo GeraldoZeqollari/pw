@@ -2796,6 +2796,11 @@ NEWS
 }
 .settings_container .settings_display__users {
   min-height: 360px;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.settings_container .settings_display__users .temp_users {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -2804,13 +2809,11 @@ NEWS
   overflow-x: hidden;
   overflow-y: scroll;
   padding-right: 10px;
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
 }
 .settings_container .settings_display__users::after {
   top: 157px;
   background-color: #cee7f3;
+  overflow: visible;
 }
 @media (max-width: 768px) {
   .settings_container .settings_display__users::after {
@@ -3217,6 +3220,9 @@ NEWS
   position: relative;
   width: 200px;
   z-index: 3;
+}
+.search_container .searched_results .image button {
+  border: 0px;
 }
 .search_container .searched_results .image a {
   text-decoration: none;
