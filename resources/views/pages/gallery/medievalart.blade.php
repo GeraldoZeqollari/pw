@@ -17,6 +17,11 @@
     @foreach ($images as $image)
     @if($image->category_id==3)
     <div class="image">
+      @if ($image->stock == 0)
+      <div class="outOfStock">
+          <h1>Out of stock</h1>
+      </div>
+      @endif
       <a href={{route('art_detail', $image->id)}}>
 
         <img src="../storage/images/{{$image->path_name}}" width="100%" height="175px" alt="" />
