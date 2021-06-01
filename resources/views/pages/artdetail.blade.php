@@ -6,14 +6,20 @@
     <div class="buy_window visibilityHidden">
         <span id="close_menu">X</span>
         @guest
-        <h1>Please login to purchase</h1>
+        <h1>Please <a href={{route('login')}}>login</a> to purchase</h1>
         @endguest
         @auth
+        @foreach ($card as $cards)
 
+
+        @if($cards->user_id != auth()->user()->id)
+        <h1>Please enter your payment information in your <a href={{route('user_settings')}}>settings</a>
+        </h1>
+
+        @else
 
 
         <h1>Confirm Purchase</h1>
-
         <div class="buy_details">
             <table>
                 <tr>
@@ -32,9 +38,15 @@
                     <td></td>
                 </tr>
                 <tr>
+                    {{-- @foreach ($order as $orders)
+                    @if($orders->id) --}}
+
                     <td style="text-align: left">order track code</td>
-                    <td>order id</td>
+                    {{-- <td>{{$orders->id}}</td> --}}
+                    <td>orderid</td>
                     <td></td>
+                    {{-- @endif
+                    @endforeach --}}
                 </tr>
             </table>
         </div>
@@ -44,8 +56,10 @@
             @csrf
             <input type="submit" value="Confirm" name="buy">
         </form>
-
+        @endif
+        @endforeach
         @endauth
+
     </div>
 
     <div class="art_details__img">
@@ -81,8 +95,8 @@
             <a id="buy_btn"><i class="fas fa-cart-arrow-down"></i></a>
             @endif
             @auth
-            <a href="../storage/images/{{$image->path_name}}" download="{{$image->path_name}}"
-                class="download_btn"><i class="fas fa-download"></i></a>
+            <a href="../storage/images/{{$image->path_name}}" download="{{$image->path_name}}" class="download_btn"><i
+                    class="fas fa-download"></i></a>
             @endauth
         </div>
         <div class="art_details__desc__description">

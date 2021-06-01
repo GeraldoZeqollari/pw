@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\card_details;
 use App\Models\Image;
 use App\Models\Order;
 use Illuminate\Http\Request;
@@ -10,17 +11,17 @@ class ImageDetailsController extends Controller
 {
     public function index(Image $image)
     {
-        //dd($image);
-
+        $card = card_details::get();
+        $order = Order::get();
 
         return view('pages.artdetail', [
             'image' => $image,
-        ]);
+
+        ])->with('card', $card)->with('order', $order);
     }
 
     public function store(Request $request, Image $image)
     {
-
 
         Order::where('user_id', auth()->user()->id)->create([
             'user_id' => auth()->user()->id,
