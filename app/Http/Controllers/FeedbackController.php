@@ -28,14 +28,30 @@ class FeedbackController extends Controller
             'feedback_type' => 'required'
         ]);
 
+        if (Feedback::where('user_id', auth()->user()->id)->exists()) {
 
-        Feedback::where('id', auth()->user()->id)->create([
-            'user_id' => auth()->user()->id,
-            'body' => $request->body,
-            'feedback_icon' => $request->feedback_icon,
-            'feedback_type' => $request->feedback_type,
+            Feedback::where('user_id', auth()->user()->id)->update([
 
-        ]);
+                'body' => $request->body,
+                'feedback_icon' => $request->feedback_icon,
+                'feedback_type' => $request->feedback_type,
+
+            ]);
+        } else {
+
+
+            Feedback::where('id', auth()->user()->id)->create([
+                'user_id' => auth()->user()->id,
+                'body' => $request->body,
+                'feedback_icon' => $request->feedback_icon,
+                'feedback_type' => $request->feedback_type,
+
+            ]);
+        }
+
+
+
+
 
         return back();
     }

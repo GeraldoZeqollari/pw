@@ -72,8 +72,9 @@ class UserController extends Controller
         $users = User::all();
         $bugs = ReportBug::all();
         $likes = Like::get();
+        $images = Image::get();
 
-        return view('users.usersettings')->with('users', $users)->with('bugs', $bugs)->with('likes', $likes);
+        return view('users.usersettings')->with('users', $users)->with('bugs', $bugs)->with('likes', $likes)->with('images', $images);
     }
 
 

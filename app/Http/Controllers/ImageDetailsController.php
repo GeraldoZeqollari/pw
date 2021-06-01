@@ -10,7 +10,7 @@ class ImageDetailsController extends Controller
 {
     public function index(Image $image)
     {
-        // dd($image);
+        //dd($image);
 
 
         return view('pages.artdetail', [
@@ -18,24 +18,21 @@ class ImageDetailsController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(Request $request, Image $image)
     {
 
-        $image = Image::all();
-
-        $subset = $image->map(function ($image) {
-            return collect($image->toArray())
-                ->only(['id', 'stock', 'price'])
-                ->all();
-        });
 
         Order::where('user_id', auth()->user()->id)->create([
             'user_id' => auth()->user()->id,
-            'image_id' => $subset[0]['id'],
-            'stock' => $subset[0]['stock'],
-            'price' => $subset[0]['price'],
+            'image_id' => $image->id,
+            'price' => $image->price,
             'id' => $request->id
         ]);
+
+        Image::where('id', $image->id)->update([
+            'stock' => $image->stock - 1,
+        ]);
+
 
         return back();
     }

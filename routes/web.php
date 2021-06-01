@@ -31,7 +31,7 @@ Route::get('/gallery/medieval art', [GalleryController::class, 'images_3'])->nam
 Route::get('/gallery/baroque', [GalleryController::class, 'images_4'])->name('baroque');
 
 Route::get('/art_details/{image}', [ImageDetailsController::class, 'index'])->name('art_detail');
-Route::post('/art_details', [ImageDetailsController::class, 'store'])->name('art_detail');
+Route::post('/art_details/{image}', [ImageDetailsController::class, 'store'])->name('art_details');
 
 
 Route::get('/report bug', function () {
@@ -105,9 +105,3 @@ Route::delete('/art_details/{image}/likes', [LikeController::class, 'destroy']);
 Route::get('/user/profile', [FavouriteController::class, 'index'])->name('user_profile');
 
 
-
-
-// Route::get('/users/{user:username}/feedbacks', [UserPostController::class, 'index'])->name('users.posts');
-
-// Route::get('/feedback/{feedback}', [FeedbackController::class, 'show'])->name('feedback.show');
-// Route::delete('/feedback/{feedback}', [FeedbackController::class, 'destroy'])->name('feedback.destroy');

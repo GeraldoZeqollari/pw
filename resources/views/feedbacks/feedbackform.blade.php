@@ -76,7 +76,6 @@
 
             <button type="submit">Submit</button>
 
-
         </div>
 
     </form>
@@ -96,6 +95,7 @@
                 </div>
                 <div>
                     <span class="timer">{{($feedback->created_at)->diffForHumans() }}</span>
+                    <span class="timer">Edited {{($feedback->updated_at)->diffForHumans() }}</span>
                     {{-- <span>{{ $feedback->feedback_icon}}/5</span> --}}
 
                     @switch($feedback->feedback_icon)

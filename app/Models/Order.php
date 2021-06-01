@@ -15,7 +15,6 @@ class Order extends Model
         'user_id',
         'image_id',
         'order_id',
-        'stock',
         'price',
     ];
 }

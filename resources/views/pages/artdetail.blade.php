@@ -41,10 +41,11 @@
         </div>
 
         <h1 class="buy_total">Total: ${{$image->price}}</h1>
-        <form action="{{route('art_detail')}}" method="POST">
+        <form action="{{route('art_details' ,$image->id)}}" method="POST">
             @csrf
             <input type="submit" value="Confirm" name="buy">
         </form>
+
         @endauth
     </div>
 
@@ -80,7 +81,8 @@
 
             <a id="buy_btn"><i class="fas fa-cart-arrow-down"></i></a>
             @auth
-            <a href="image.jpg" download="image.jpg" class="download_btn"><i class="fas fa-download"></i></a>
+            <a href="../storage/images/{{$image->path_name}}" download="../storage/images/{{$image->path_name}}"
+                class="download_btn"><i class="fas fa-download"></i></a>
             @endauth
         </div>
         <div class="art_details__desc__description">

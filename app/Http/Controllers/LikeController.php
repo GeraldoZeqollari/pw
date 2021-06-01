@@ -21,8 +21,9 @@ class LikeController extends Controller
 
             'user_id' => auth()->user()->id,
             'image_id' => $image->id,
-            'path_name' => $image->path_name,
+
         ]);
+
 
         return back();
     }
@@ -30,17 +31,11 @@ class LikeController extends Controller
     public function destroy(Image $image)
     {
 
-        // dd(Like::find(
-        //     '15',
-        //     'image_id'
-        // ));
-
 
 
         Like::where([
             'user_id' => auth()->user()->id,
             'image_id' => $image->id,
-            'path_name' => $image->path_name,
         ])->delete();
 
 

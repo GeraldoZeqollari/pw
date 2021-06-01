@@ -381,9 +381,9 @@
             <div class="settings_display__favorited">
 
                 @if ($likes->count()==0)
-                    <div class="no_fav">
-                        <h1>Start adding to your collection by clicking the heart button of the art pieces you like!</h1>
-                    </div>
+                <div class="no_fav">
+                    <h1>Start adding to your collection by clicking the heart button of the art pieces you like!</h1>
+                </div>
                 @else
 
                 <div class="fav_flexbox">
@@ -391,7 +391,11 @@
                     @if($like->user_id== auth()->user()->id)
                     <div class="fav_flexbox__img">
                         <a href={{route('art_detail', $like->image_id)}}>
-                            <img src="../storage/images/{{$like->path_name}}" alt="" />
+                            @foreach ($images as $image)
+                            @if($image->id==$like->image_id)
+                            <img src="../storage/images/{{$image->path_name}}" width="100%" height="175px" alt="" />
+                            @endif
+                            @endforeach
                         </a>
                     </div>
                     @endif
@@ -435,37 +439,38 @@
 
                 <div class="temp_users">
 
-                @if ((isset($users)))
-                @foreach ($users as $user)
-                <form class="user_row" action="{{route('usersettings_deleteByAdmin')}}" method="POST">
-                    @csrf
+                    @if ((isset($users)))
+                    @foreach ($users as $user)
+                    <form class="user_row" action="{{route('usersettings_deleteByAdmin')}}" method="POST">
+                        @csrf
 
-                    <table>
-                        <tr>
-                            <td>
-                                <h1>{{ $user->email}}</h1>
-                            </td>
-                            <td>
-                                <h1>{{ $user->username}}</h1>
-                            </td>
-                            <td style="display: none"><input type="number" name="currentID" value={{ $user->id}}></td>
-                            <td><input type="submit" value="Delete Account"></td>
-                        </tr>
-                    </table>
-                    {{-- <p>{{ $user->email}}</p>
-                    <p>{{ $user->username}}</p>
-                    <input type="number" name="currentID" value={{ $user->id}} style="display: none">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h1>{{ $user->email}}</h1>
+                                </td>
+                                <td>
+                                    <h1>{{ $user->username}}</h1>
+                                </td>
+                                <td style="display: none"><input type="number" name="currentID" value={{ $user->id}}>
+                                </td>
+                                <td><input type="submit" value="Delete Account"></td>
+                            </tr>
+                        </table>
+                        {{-- <p>{{ $user->email}}</p>
+                        <p>{{ $user->username}}</p>
+                        <input type="number" name="currentID" value={{ $user->id}} style="display: none">
 
-                    <input type="submit" value="Delete Account"> --}}
-                </form>
-                @endforeach
-                {{-- {{ $users->links('pagination.pagination') }} --}}
-                @else
+                        <input type="submit" value="Delete Account"> --}}
+                    </form>
+                    @endforeach
+                    {{-- {{ $users->links('pagination.pagination') }} --}}
+                    @else
 
-                <div class="reviews">
-                    <h1>There are no users</h1>
-                </div>
-                @endif
+                    <div class="reviews">
+                        <h1>There are no users</h1>
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>
