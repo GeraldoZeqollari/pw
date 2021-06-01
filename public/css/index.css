@@ -2033,6 +2033,9 @@ NEWS
     width: 95%;
   }
 }
+.art_details .blurbackground {
+  background-color: red;
+}
 .art_details .buy_window {
   position: fixed;
   border: 1px solid black;
@@ -2047,6 +2050,9 @@ NEWS
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.art_details .buy_window a {
+  color: black;
 }
 .art_details .buy_window #close_menu {
   position: absolute;
