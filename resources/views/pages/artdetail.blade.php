@@ -38,15 +38,17 @@
                     <td></td>
                 </tr>
                 <tr>
-                    {{-- @foreach ($order as $orders)
-                    @if($orders->id) --}}
+
 
                     <td style="text-align: left">order track code</td>
-                    {{-- <td>{{$orders->id}}</td> --}}
-                    <td>orderid</td>
+                    {{-- @foreach ($order as $orders) --}}
+                    
+                    {{-- <td>{{$order->id}}</td> --}}
+                    {{-- @endforeach --}}
+                    {{-- <td>orderid</td> --}}
                     <td></td>
-                    {{-- @endif
-                    @endforeach --}}
+
+
                 </tr>
             </table>
         </div>

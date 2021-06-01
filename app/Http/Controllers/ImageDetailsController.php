@@ -12,12 +12,12 @@ class ImageDetailsController extends Controller
     public function index(Image $image)
     {
         $card = card_details::get();
-        $order = Order::get();
+
 
         return view('pages.artdetail', [
             'image' => $image,
 
-        ])->with('card', $card)->with('order', $order);
+        ])->with('card', $card);
     }
 
     public function store(Request $request, Image $image)
