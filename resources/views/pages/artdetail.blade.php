@@ -17,8 +17,7 @@
         <div class="buy_details">
             <table>
                 <tr>
-                    <td colspan="3"><img src="../storage/images/{{$image->path_name}}" alt="" width="150px"
-                            height="80px"></td>
+                    <td colspan="3"><img src="../storage/images/{{$image->path_name}}" alt=""></td>
                     {{-- <td></td>
                 <td></td> --}}
                 </tr>
