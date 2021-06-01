@@ -95,8 +95,6 @@
                 </div>
                 <div>
                     <span class="timer">{{($feedback->created_at)->diffForHumans() }}</span>
-                    <span class="timer">Edited {{($feedback->updated_at)->diffForHumans() }}</span>
-                    {{-- <span>{{ $feedback->feedback_icon}}/5</span> --}}
 
                     @switch($feedback->feedback_icon)
                     @case("1")
@@ -138,7 +136,10 @@
 
                     @endswitch
                 </div>
-
+<div>
+    <span class="timer">Edited {{($feedback->updated_at)->diffForHumans() }}</span>
+    <span  style="visibility: hidden" class="timer">fixer</span>
+</div>
             </div>
 
             <p>{{ $feedback->body }}</p>

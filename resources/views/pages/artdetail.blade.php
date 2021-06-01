@@ -77,10 +77,11 @@
             </form>
             @endif
             @endauth
-
+            @if ($image->stock !== 0)
             <a id="buy_btn"><i class="fas fa-cart-arrow-down"></i></a>
+            @endif
             @auth
-            <a href="../storage/images/{{$image->path_name}}" download="../storage/images/{{$image->path_name}}"
+            <a href="../storage/images/{{$image->path_name}}" download="{{$image->path_name}}"
                 class="download_btn"><i class="fas fa-download"></i></a>
             @endauth
         </div>
