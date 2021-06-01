@@ -32,19 +32,34 @@ class UserController extends Controller
             'payment_id' => 'required',
         ]);
 
-        card_details::where('id', auth()->user()->id)->create([
+        if (card_details::where('user_id', auth()->user()->id)->exists()) {
 
-            'user_id' => auth()->user()->id,
-            'card_number' => $request->card_number,
-            'address1' => $request->address1,
-            'expiration_dateM' => $request->expiration_dateM,
-            'expiration_dateY' => $request->expiration_dateY,
-            'csc' => $request->csc,
-            'zip_code' => $request->zip_code,
-            'payment_id' => $request->payment_id,
+            card_details::where('user_id', auth()->user()->id)->update([
 
-        ]);
+                'card_number' => $request->card_number,
+                'address1' => $request->address1,
+                'expiration_dateM' => $request->expiration_dateM,
+                'expiration_dateY' => $request->expiration_dateY,
+                'csc' => $request->csc,
+                'zip_code' => $request->zip_code,
+                'payment_id' => $request->payment_id,
 
+            ]);
+        } else {
+
+            card_details::where('id', auth()->user()->id)->create([
+
+                'user_id' => auth()->user()->id,
+                'card_number' => $request->card_number,
+                'address1' => $request->address1,
+                'expiration_dateM' => $request->expiration_dateM,
+                'expiration_dateY' => $request->expiration_dateY,
+                'csc' => $request->csc,
+                'zip_code' => $request->zip_code,
+                'payment_id' => $request->payment_id,
+
+            ]);
+        }
         return back();
     }
 
