@@ -161,34 +161,33 @@
 
     <div class="update-news">
       <div class="news-patch-notes">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-        <h1>News Article 1</h1>
+        <img src="../images/news_article1.jpg" width="100%" height="100%" alt="" />
+        <h1>Drawing During Pandemic</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-          tenetur laudantium natus quod aperiam veniam, eaque quia, illo
-          voluptas voluptatum totam ratione dolores vero, ad sit nostrum
-          fugit porro. Error?
+          During these hard times everyone needs something to do while
+          locked inside our homes. Join us in this new fun new challenge
+          to make a doodle or drawing every single day. Send us your work 
+          at the end of the month!
         </p>
       </div>
       <div class="news-patch-notes">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-        <h1>News Article 1</h1>
+        <img src="../images/news_article2.jpg" width="100%" height="100%" alt="" />
+        <h1>Discovered Painting</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-          tenetur laudantium natus quod aperiam veniam, eaque quia, illo
-          voluptas voluptatum totam ratione dolores vero, ad sit nostrum
-          fugit porro. Error?
+          New research using near-infrared imaging has revealed hidden 
+          paintings of Yolande of Anjou, first wife of Duke Francis I of
+          Brittany. It ultimately proved to be Yolande’s headdress painted 
+          over in azurite.
         </p>
       </div>
       <div class="news-patch-notes">
-        <img src="../images/big-cat.jpg" width="100%" alt="" />
-        <h1>News Article 1</h1>
+        <img src="../images/news_article3.jpg" width="100%" height="100%" alt="" />
+        <h1>Our Story</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-          tenetur laudantium natus quod aperiam veniam, eaque quia, illo
-          voluptas voluptatum totam ratione dolores vero, ad sit nostrum
-          fugit porro. Error?
-        </p>
+          When we began our business back in 2020 we had only one goal in
+           mind and we still do. To unite all people who share the same 
+           passion about art as we do. The journey had difficulties just 
+          like any other, but together we shall overcome them. </p>
       </div>
     </div>
     <div class="newsletter">

@@ -487,7 +487,7 @@
                             <option selected="true" disabled="disabled">Choose the category</option>
                             <option value="1">Modern</option>
                             <option value="2">Realism</option>
-                            <option value="3">Medieval</option>
+                            <option value="3">Renaissance</option>
                             <option value="4">Baroque</option>
                         </select>
                     </div>
