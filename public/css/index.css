@@ -1653,8 +1653,8 @@ NEWS
 }
 .gallery-container .art-gallery .image .favorite-img {
   position: absolute;
-  bottom: 100px;
-  right: 10px;
+  top: 210px;
+  right: 0;
   z-index: 9912;
   font-size: 26px;
   cursor: pointer;
@@ -3316,7 +3316,7 @@ NEWS
 }
 .search_container .searched_results .image .favorite-img {
   position: absolute;
-  bottom: 100px;
+  top: 220px;
   right: 0;
   z-index: 9912;
   font-size: 26px;

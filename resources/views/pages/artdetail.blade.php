@@ -10,12 +10,10 @@
         @auth
         @foreach ($card as $cards)
 
-
         @if($cards->user_id != auth()->user()->id)
         
         <h1>Please enter your payment information in your <a href={{route('user_settings')}}>settings</a>
         </h1>
-
         @else
 
 
