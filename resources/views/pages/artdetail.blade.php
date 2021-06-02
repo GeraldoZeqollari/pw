@@ -9,6 +9,7 @@
         <h1>Please <a href={{route('login')}}>login</a> to purchase</h1>
         @endguest
         @auth
+        @if($card->count())
         @foreach ($card as $cards)
 
 
@@ -42,7 +43,7 @@
 
                     <td style="text-align: left">order track code</td>
                     {{-- @foreach ($order as $orders) --}}
-                    
+
                     {{-- <td>{{$order->id}}</td> --}}
                     {{-- @endforeach --}}
                     {{-- <td>orderid</td> --}}
@@ -60,6 +61,9 @@
         </form>
         @endif
         @endforeach
+        @else
+        <h1>Please enter your payment information in your <a href={{route('user_settings')}}>settings</a></h1>
+        @endif
         @endauth
 
     </div>
