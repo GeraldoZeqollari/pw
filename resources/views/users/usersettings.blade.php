@@ -315,8 +315,8 @@
 
                     <div class="accData mt">
                         <label for="card_number">Enter your card number</label>
-                        <input type="number" name="card_number" placeholder="1111-2222-3333-4444" @error('username')
-                            error-input @enderror">
+                        <input type="number" name="card_number" maxlength="16" minlength="16" placeholder="1111-2222-3333-4444" class="@error('username')
+                            error-input @enderror ">
 
                         <label class="mt" for="address1">Enter your address</label>
                         <input type="text" name="address1" placeholder="">
@@ -358,11 +358,11 @@
                         <div class="cc_n mt">
                             <div class="single_double">
                                 <label for="csc">CSC</label>
-                                <input type="number" name="csc" placeholder="453">
+                                <input type="number" maxlength="3" minlength="3" name="csc" placeholder="453">
                             </div>
                             <div class="single_double">
                                 <label for="zip_code">Zip</label>
-                                <input type="number" name="zip_code" placeholder="1000">
+                                <input type="number" maxlength="5" minlength="1" name="zip_code" placeholder="1000">
                             </div>
 
                         </div>
@@ -487,7 +487,7 @@
                             <option selected="true" disabled="disabled">Choose the category</option>
                             <option value="1">Modern</option>
                             <option value="2">Realism</option>
-                            <option value="3">Medieval</option>
+                            <option value="3">Renaissance</option>
                             <option value="4">Baroque</option>
                         </select>
                     </div>
@@ -546,5 +546,6 @@
 
     </div>
 </div>
+
 <script type="text/javascript" src="{{ asset('js/settings.js') }}"></script>
 @endsection

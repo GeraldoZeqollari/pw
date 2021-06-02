@@ -2,7 +2,6 @@
 
 @section('artDetail')
 <div class="art_details">
-
     <div class="buy_window visibilityHidden">
         <span id="close_menu">X</span>
         @guest
@@ -12,11 +11,10 @@
         @if($card->count())
         @foreach ($card as $cards)
 
-
         @if($cards->user_id != auth()->user()->id)
+        
         <h1>Please enter your payment information in your <a href={{route('user_settings')}}>settings</a>
         </h1>
-
         @else
 
 

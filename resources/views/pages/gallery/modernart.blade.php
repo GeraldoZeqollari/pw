@@ -37,6 +37,7 @@
                 <h3 class="img-price">Price: ${{$image->price}}</h3>
             </a>
             @auth
+            
             @if(!$image->likedBy(auth()->user()))
             <form action="{{route('modernart.likes', $image->id)}}" method="POST">
                 @csrf
