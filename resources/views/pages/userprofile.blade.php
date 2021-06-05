@@ -1,13 +1,21 @@
 @extends('layouts.app')
 
 @section('userProfile')
-
+@if(Auth::guest())
+<script>
+    window.location.replace('http://127.0.0.1:8000');
+</script>
+@else
 <div class="profile_container">
     <div class="profile_cover">
         <div class="profile_cover__gradient">
 
         </div>
     </div>
+
+
+
+
     <div class="profile_pic">
         <img src="../storage/images/{{Auth::user()->profile_pic}}" alt="">
         <form action="{{ route('user_profile') }}" method="POST" class="change_pPic" id="imageForm"
@@ -70,7 +78,8 @@
             </div>
         </div>
     </div>
-</div>
 
+</div>
+@endif
 
 @endsection

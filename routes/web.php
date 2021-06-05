@@ -17,6 +17,7 @@ use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\ReportBugController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\card_detailsController;
 use App\Http\Controllers\ImageDetailsController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -32,12 +33,6 @@ Route::get('/gallery/baroque', [GalleryController::class, 'images_4'])->name('ba
 
 Route::get('/art_details/{image}', [ImageDetailsController::class, 'index'])->name('art_detail');
 Route::post('/art_details/{image}', [ImageDetailsController::class, 'store'])->name('art_details');
-
-
-Route::get('/report bug', function () {
-    return view('pages.reportbug');
-})->name('reportBug');
-
 
 
 Route::get('/join us', function () {
@@ -103,5 +98,3 @@ Route::post('/art_details/{image}/likes', [LikeController::class, 'store'])->nam
 Route::delete('/art_details/{image}/likes', [LikeController::class, 'destroy']);
 
 Route::get('/user/profile', [FavouriteController::class, 'index'])->name('user_profile');
-
-

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('reportBug')
+@section('reportbug')
 
 <div class="login_container">
   <div class="main_holder main_holder_bug">

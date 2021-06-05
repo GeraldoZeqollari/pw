@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
+
     public function index()
     {
         return view('user.usersettings');
@@ -88,6 +93,27 @@ class UserController extends Controller
 
 
 
+    public function userprofile()
+    {
+        $userprofile = User::get();
+
+        // user profile view
+
+        return view('pages.userprofile')->with('userprofile', $userprofile);
+    }
+
+    public function userChangeProfilePic(Request $request)
+    {
+        // ndryshimi i fotos se profilit
+        User::find(auth()->user()->id)->update([
+            'profile_pic' => $request->profile_pic->hashName(),
+        ]);
+
+
+        $request->profile_pic->store('images', 'public');
+
+        return back();
+    }
     public function usersettings()
     {
         $users = User::all();
@@ -132,28 +158,6 @@ class UserController extends Controller
         User::find($request->only('currentID'))->first()->delete();
 
         return redirect()->route('user_settings');
-    }
-
-    public function userprofile()
-    {
-        $userprofile = User::get();
-
-        // user profile view
-
-        return view('pages.userprofile')->with('userprofile', $userprofile);
-    }
-
-    public function userChangeProfilePic(Request $request)
-    {
-        // ndryshimi i fotos se profilit
-        User::find(auth()->user()->id)->update([
-            'profile_pic' => $request->profile_pic->hashName(),
-        ]);
-
-
-        $request->profile_pic->store('images', 'public');
-
-        return back();
     }
 
 
