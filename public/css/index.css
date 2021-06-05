@@ -2289,7 +2289,8 @@ NEWS
   transition: 0.2s all ease;
 }
 .settings_container .settings_display__accountDetails input[type=submit i]:hover, .settings_container .settings_display__paymentDetails input[type=submit i]:hover, .settings_container .settings_display__favorited input[type=submit i]:hover, .settings_container .settings_display__security input[type=submit i]:hover, .settings_container .settings_display__users input[type=submit i]:hover, .settings_container .settings_display__issues input[type=submit i]:hover, .settings_container .settings_display__upload input[type=submit i]:hover {
-  background-color: #fef1eb;
+  background-color: black;
+  color: white;
 }
 .settings_container .settings_display__accountDetails input::-webkit-outer-spin-button,
 .settings_container .settings_display__accountDetails input::-webkit-inner-spin-button, .settings_container .settings_display__paymentDetails input::-webkit-outer-spin-button,

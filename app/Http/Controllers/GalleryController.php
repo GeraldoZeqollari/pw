@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 class GalleryController extends Controller
 {
+
+    //kthen view me imazhet perkatese
     public function images_1()
     {
         $images = Image::get();

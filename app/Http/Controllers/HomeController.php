@@ -23,7 +23,7 @@ class HomeController extends Controller
     }
     public function store(Request $request)
     {
-
+        // newsletter
         $this->validate($request, [
             'email' => 'required|email|max:255|unique:news_letters,email',
         ]);

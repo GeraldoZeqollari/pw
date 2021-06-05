@@ -16,11 +16,13 @@ class ReportBugController extends Controller
     public function store(Request $request)
     {
 
+
+        //validimi
         $this->validate($request, [
             'bug_desc' => 'required',
         ]);
 
-
+        // krijimi
         ReportBug::where('id', auth()->user()->id)->create([
 
             'bug_desc' => $request->bug_desc,

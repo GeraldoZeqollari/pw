@@ -20,6 +20,8 @@ class ForgotPasswordController extends Controller
 
     public function password(Request $request)
     {
+
+        // user nga email qe ka futur
         $user = User::whereEmail($request->email)->first();
 
         if ($user == null) {
@@ -76,24 +78,26 @@ class ForgotPasswordController extends Controller
 
     public function newPassword(Request $request, $email, $code)
     {
-        // $this->validate($request, [
+        $this->validate($request, [
 
-        //     'new_password' => [
-        //         'required',
-        //         'string'
-        //     ],
+            'new_password' => [
+                'required',
+                'string',
+                'min:8',
+                'regex:/[a-z]/',
+                'regex:/[A-Z]/',
+                'regex:/[0-9]/',
+                'confirmed'
 
-        //     // 'min:8',
-        //     //     'regex:/[a-z]/',
-        //     //     'regex:/[A-Z]/',
-        //     //     'regex:/[0-9]/',
-        //     //     'confirmed'
+            ],
 
-        //     'new_confirm_password' => [
-        //         'required',
-        //         'string'
-        //     ]
-        // ]);
+    
+            'new_confirm_password' => [
+                'required',
+                'string',
+                'confirmed'
+            ]
+        ]);
         $user = User::whereEmail($email)->first();
 
         if ($user == null) {

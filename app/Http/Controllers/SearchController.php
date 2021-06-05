@@ -12,10 +12,10 @@ class SearchController extends Controller
 
     public function search(Request $request)
     {
-
+        // merr fjalen e kerkuar
         $search = $request->input('search');
         
-
+        // kontrollon fjalen tek image_title ose image_description
         $images = Image::query()
             ->where('image_title', 'LIKE', "%$search%")
             ->orWhere('image_description', 'LIKE', "%$search%")

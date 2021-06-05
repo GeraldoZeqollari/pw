@@ -11,7 +11,7 @@ class FeedbackController extends Controller
 {
     public function index()
     {
-
+        // 5 feedbacks per page
         $feedbacks = Feedback::paginate(5);
 
         return view('feedbacks.feedbackform', [
@@ -21,13 +21,14 @@ class FeedbackController extends Controller
 
     public function store(Request $request)
     {
-
+        // validimi i formes se feedback
         $this->validate($request, [
             'body' => 'required',
             'feedback_icon' => 'required',
             'feedback_type' => 'required'
         ]);
 
+        // ne menyre qe nje user te kete nje feedback
         if (Feedback::where('user_id', auth()->user()->id)->exists()) {
 
             Feedback::where('user_id', auth()->user()->id)->update([

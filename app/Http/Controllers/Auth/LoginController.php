@@ -19,6 +19,7 @@ class LoginController extends Controller
 
     public function store(Request $request)
     {
+        // shikon nese te dhenat e user ndodhen ne db
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required',

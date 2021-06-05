@@ -10,6 +10,7 @@ class FavouriteController extends Controller
 {
     public function index()
     {
+        //Merr likes, images dhe i kthen tek user profile 
         $likes = Like::all();
         $images = Image::get();
 

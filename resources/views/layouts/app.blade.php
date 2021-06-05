@@ -119,7 +119,7 @@
       <li class="temporary-subheaders"><a onclick="changeUrlNews()">News</a></li>
       <li class="temporary-subheaders"><a onclick="changeUrlJoin()">Join Us</a></li>
       <li class="temporary-subheaders"><a onclick="changeUrlTeam()">Our Team</a></li>
-      <li><a href={{ route('modernart') }}>Gallery</a></li>
+      <li style="margin-left: -10px"> <a href={{ route('modernart') }}>Gallery</a></li>
       <li><a href={{ route('feedback') }}>Community</a></li>
 
       

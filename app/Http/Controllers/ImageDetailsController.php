@@ -22,6 +22,7 @@ class ImageDetailsController extends Controller
 
     public function store(Request $request, Image $image)
     {
+        // purchase 
 
         Order::where('user_id', auth()->user()->id)->create([
             'user_id' => auth()->user()->id,
@@ -29,6 +30,8 @@ class ImageDetailsController extends Controller
             'price' => $image->price,
             'id' => $request->id
         ]);
+
+        // updatim stock-u per imazhin i cili blihet
 
         Image::where('id', $image->id)->update([
             'stock' => $image->stock - 1,

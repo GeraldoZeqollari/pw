@@ -17,6 +17,8 @@ class LikeController extends Controller
 
     public function store(Image $image)
     {
+
+        // krijon like
         Like::where('user_id', auth()->user()->id)->create([
 
             'user_id' => auth()->user()->id,
@@ -32,6 +34,7 @@ class LikeController extends Controller
     {
 
 
+        // unlike
 
         Like::where([
             'user_id' => auth()->user()->id,
