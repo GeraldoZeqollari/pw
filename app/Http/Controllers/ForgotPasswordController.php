@@ -78,26 +78,18 @@ class ForgotPasswordController extends Controller
 
     public function newPassword(Request $request, $email, $code)
     {
-        $this->validate($request, [
 
+        $request->validate([
             'new_password' => [
-                'required',
-                'string',
+                'required', 'string',
                 'min:8',
                 'regex:/[a-z]/',
                 'regex:/[A-Z]/',
                 'regex:/[0-9]/',
-                'confirmed'
-
             ],
-
-    
-            'new_confirm_password' => [
-                'required',
-                'string',
-                'confirmed'
-            ]
+            'new_confirm_password' => ['same:new_password'],
         ]);
+
         $user = User::whereEmail($email)->first();
 
         if ($user == null) {

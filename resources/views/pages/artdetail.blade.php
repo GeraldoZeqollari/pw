@@ -36,19 +36,6 @@
                     <td>{{auth()->user()->email}}</td>
                     <td></td>
                 </tr>
-                <tr>
-
-
-                    <td style="text-align: left">order track code</td>
-                    {{-- @foreach ($order as $orders) --}}
-
-                    {{-- <td>{{$order->id}}</td> --}}
-                    {{-- @endforeach --}}
-                    {{-- <td>orderid</td> --}}
-                    <td></td>
-
-
-                </tr>
             </table>
         </div>
 

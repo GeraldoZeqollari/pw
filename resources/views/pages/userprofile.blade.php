@@ -57,7 +57,7 @@
             <h2>Location: {{ Auth::user()->country_name}}</h2>
         </div>
         <div class="profile_dash__right">
-            <h1>What this user liked</h1>
+            <h1>What you liked</h1>
             <div class="fav_user_imgs">
                 @foreach ($likes as $like)
                 @if($like->user_id == auth()->user()->id)
